@@ -129,7 +129,11 @@ export const Bubbles =
       }
     },
     collisions: {
-      enable: true
+      enable: true,
+      overlap: {
+        enable: false,
+        retries: 999
+      }
     },
     color: {
       value: "#1a202c"
@@ -141,7 +145,7 @@ export const Bubbles =
       value: 1
     },
     stroke: {
-      width: 2,
+      width: 3,
       color: "#A7233A"
     },
     size: {
@@ -171,6 +175,10 @@ export const Bubbles =
         particles: {
           color: {
             value: "#ffffff"
+          },
+          stroke: {
+            width: 2,
+            color: "#A7233A"
           }
         }
       }
@@ -188,6 +196,10 @@ export const Bubbles =
         particles: {
           color: {
             value: "#1a202c"
+          },
+          stroke: {
+            width: 3,
+            color: "#A7233A"
           }
         }
       }
