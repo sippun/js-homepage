@@ -58,7 +58,37 @@
         "duration": 4,
         "speed": 2
       }
-    }
-  },
+    },
+    "themes":[
+      {
+        "name": "light",
+        "default": {
+          "value": true,
+          "mode": "light"
+        },
+        "options": {
+          "particles": {
+            "color": {
+              "value": "#ffffff"
+            }
+          }
+        }
+      },
+      {
+        "name": "dark",
+        "default": {
+          "value": true,
+          "mode": "dark"
+        },
+        "options": {
+          "particles": {
+            "color": {
+              "value": "#ffffff"
+            }
+          }
+        }
+      }
+    ],
   "retina_detect": true
+  }
 }
