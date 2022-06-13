@@ -1,4 +1,5 @@
 import { Container, Center, Text } from '@chakra-ui/react';
+import WorksModal from '../components/WorksModal';
 import Transitions from '../theme/Transitions';
 
 const Works = () => {
@@ -9,6 +10,7 @@ const Works = () => {
           <Text>
             Works Coming Soon.
           </Text>
+          <WorksModal />
         </Center>
       </Container>
     </Transitions>

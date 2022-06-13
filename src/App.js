@@ -4,12 +4,14 @@ import {
   Box,
   Container,
   theme,
+  useColorModeValue,
 } from '@chakra-ui/react';
 import { useLocation } from 'react-router-dom';
 import { Route, Routes } from 'react-router-dom';
 import Particles from 'react-tsparticles';
 import { loadFull } from 'tsparticles';
 import particlesConfig from './theme/particlesjs-config.json';
+import particlesConfigDark from './theme/particlesjs-configdark.json';
 import { AnimatePresence } from 'framer-motion';
 import Navbar from './components/Navbar';
 import Home from './pages/Home';
@@ -26,11 +28,11 @@ function App() {
   return (
     <ChakraProvider theme={theme}>
       <Box>
-        <Particles options={particlesConfig} init={particlesInit}/>
+        <Particles options={useColorModeValue(particlesConfig, particlesConfigDark)} init={particlesInit}/>
 
         <Navbar />
 
-        <Container maxW="container.md">
+        <Container maxW="container.md" overflow="hidden">
           <AnimatePresence exitBeforeEnter>
             <Routes location={location} key={location.pathname}>
               <Route path="/" element={<Home />} />

@@ -9,35 +9,53 @@ import {
   Stack,
   HStack,
   IconButton,
+  Image,
   Text,
-  useDisclosure,
+  Show,
+  Menu,
+  MenuButton,
+  MenuList,
+  MenuItem,
 } from '@chakra-ui/react';
-import { CloseIcon, HamburgerIcon } from '@chakra-ui/icons';
+import { HamburgerIcon } from '@chakra-ui/icons';
 import { ColorModeSwitcher } from './ColorModeSwitcher';
 
 const Navbar = () => {
-  const { isOpen, onOpen, onClose } = useDisclosure();
   return (
-    <Box bg='brand.400' px={4}>
+    <Box px={4}>
       <Container as={Stack} maxW={'6xl'}>
         <Flex h={16} alignItems={'center'} justifyContent={'space-between'}>
-          <IconButton
-            size={'md'}
-            icon={isOpen ? <CloseIcon /> : <HamburgerIcon />}
-            aria-label={'Open Menu'}
-            display={{ md: 'none' }}
-            onClick={isOpen ? onClose : onOpen}
-          />
+          <Menu>
+            <MenuButton
+              as={IconButton}
+              size={'md'}
+              icon={<HamburgerIcon />}
+              aria-label={'Open Menu'}
+              display={{ md: 'none' }}
+            />
+            <MenuList>
+              <MenuItem as={ReactLink} to="/works" zIndex="docked">
+                Works
+              </MenuItem>
+              <MenuItem as={ReactLink} to="/books" zIndex="docked">
+                Books
+              </MenuItem>
+            </MenuList>
+          </Menu>
+          
+          
           <HStack spacing={12} alignItems={'center'}>
-          <Link as={ReactLink} to="/">
-            <HStack spacing={2}>
-              
-                <Circle size='30px' bg='white'>
-                  {/* logo img goes here */}
-                </Circle>
-                <Text>Joel Sheng</Text>
-              
-            </HStack>
+            <Link as={ReactLink} to="/" zIndex="docked">
+              <HStack spacing={2}>
+                <Image
+                  boxSize='30px'
+                  src='/yot.png'
+                  alt='js img'
+                />
+                <Show above="sm">
+                  <Text>Joel Sheng</Text>
+                </Show>
+              </HStack>
             </Link>
             
             <HStack
@@ -45,10 +63,10 @@ const Navbar = () => {
               spacing={8}
               display={{ base: 'none', md: 'flex' }}
             >
-              <Link as={ReactLink} to="/works">
+              <Link as={ReactLink} to="/works" zIndex="docked">
                 Works
               </Link>
-              <Link as={ReactLink} to="/books">
+              <Link as={ReactLink} to="/books" zIndex="docked">
                 Books
               </Link>
             </HStack>
@@ -56,18 +74,6 @@ const Navbar = () => {
           <ColorModeSwitcher />
         </Flex>
       </Container>
-      {isOpen ? (
-        <Box pb={4} display={{ md: 'none' }}>
-          <Stack as={'nav'} spacing={4}>
-            <Link as={ReactLink} to="/works">
-              Works
-            </Link>
-            <Link as={ReactLink} to="/books">
-              Books
-            </Link>
-          </Stack>
-        </Box>
-      ) : null}
     </Box>
   );
 };
