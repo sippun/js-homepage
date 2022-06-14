@@ -95,9 +95,12 @@ export const IntroText = () => {
           </MotionBox>
         </Box>
         <Box key={lines[2]} overflow="hidden">
-          <MotionBox variants={textVariants2} initial="before" animate="after">
-            <Heading paddingTop={2} color="edward" fontSize="3xl" variant="code">
-              {lines[2]}
+          <MotionBox marginTop={2} variants={textVariants2} initial="before" animate="after">
+            <Heading as="span" color="edward" fontSize="3xl" variant="code">
+              I am an
+            </Heading>
+            <Heading bg="aqua" ml={2} px={2} as="span" color="edward" fontSize="3xl" variant="code">
+              aspiring polymath
             </Heading>
           </MotionBox>
         </Box>

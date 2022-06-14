@@ -122,7 +122,7 @@ export const Bubbles =
   fpsLimit: 120,
   particles: {
     number: {
-      value: 6,
+      value: 8,
       density: {
         enable: true,
         value_area: 800
