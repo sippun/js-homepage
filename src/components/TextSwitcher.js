@@ -1,9 +1,12 @@
 import React, { useState } from 'react';
 import { Heading, useColorModeValue } from '@chakra-ui/react';
+import { motion } from 'framer-motion';
 
 export const TextSwitcher = (props) => {
   const [index, setIndex] = useState(0);
   const imaColor = useColorModeValue("edwarddark", "edward");
+
+  const vowels = ['a', 'e', 'i', 'o', 'u'];
 
   const switchText = () => {
     console.log('clicked ' + index);
@@ -12,19 +15,42 @@ export const TextSwitcher = (props) => {
   }
 
   return(
-    <Heading
-      bg="canary"
-      ml={2}
-      px={2}
-      as="span"
-      color={imaColor}
-      fontSize={["lg", "3xl"]}
-      variant="code"
-      onClick={switchText}
-      cursor="pointer"
-      _hover={{bg: "edwarddark"}}
-    >
-      {props.texts[index]}
-    </Heading>
+    <>
+      <motion.div
+        key={vowels.includes(props.texts[index].charAt(0)).toString() + index}
+        initial={{ x: 124, opacity: 0.6 }}
+        animate={{ x: 0, y: 0, opacity: 1 }}
+        transition={{ duration: 1 }}
+      >
+        <Heading color={imaColor} fontSize={["xl", "3xl"]} variant="code">
+          {vowels.includes(props.texts[index].charAt(0)) ? props.intro[0] : props.intro[1]}
+        </Heading>
+      </motion.div>
+      <motion.div
+        key={index}
+        initial={{ x: 0, opacity: 0.6}}
+        animate=
+          {vowels.includes(props.texts[index].charAt(0)) ? (
+            { x: 124, opacity: 1 }
+          ) : (
+            { x: 106, opacity: 1 }
+          )}
+        transition={{ duration: 1 }}
+      >
+        <Heading
+          bg="aqua"
+          ml={2}
+          px={2}
+          color={imaColor}
+          fontSize={["xl", "3xl"]}
+          variant="code"
+          onClick={switchText}
+          cursor="pointer"
+          _hover={{bg: "canary"}}
+        >
+          {props.texts[index]}
+        </Heading>
+      </motion.div>
+    </>
   );
 };

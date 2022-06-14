@@ -12,8 +12,14 @@ import React from 'react'
 import { motion, isValidMotionProp } from 'framer-motion';
 import { TextSwitcher } from './TextSwitcher';
 
-const lines = ['Hi, my name is', 'Joel Sheng', 'I am an aspiring polymath'];
-const labels = ['aspiring polymath', 'bibliophile', 'MMA enthusiast'];
+const lines = ['Hi, my name is', 'Joel Sheng'];
+const labels = [
+  'aspiring polymath',
+  'software developer',
+  'martial artist',
+  'book lover',
+  'rhythm gamer',
+];
 
 const containerVariants = {
   before: {},
@@ -86,7 +92,6 @@ const MotionBox = chakra(motion.div, {
 
 export const IntroText = () => {
   const hiColor = useColorModeValue("icedark", "ice");
-  const imaColor = useColorModeValue("edwarddark", "edward");
 
   return (
     <Container>
@@ -105,12 +110,9 @@ export const IntroText = () => {
             </Heading>
           </MotionBox>
         </Box>
-        <Box key={lines[2]} overflow="hidden">
+        <Box key={lines[2]} overflow="hidden" justifyContent="space-between">
           <MotionBox marginTop={2} variants={textVariants2} initial="before" animate="after">
-            <Heading as="span" color={imaColor} fontSize={["lg", "3xl"]} variant="code">
-              I am an
-            </Heading>
-            <TextSwitcher texts={labels} />
+            <TextSwitcher texts={labels} intro={['I am an', 'I am a']}/>
           </MotionBox>
         </Box>
         
