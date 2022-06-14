@@ -1,11 +1,19 @@
 /* 
   This file contains awful code. Read at your own risk
 */
-import { Box, Heading, Container, chakra } from '@chakra-ui/react'
+import {
+  chakra,
+  Box,
+  Heading,
+  Container,
+  useColorModeValue,
+} from '@chakra-ui/react'
 import React from 'react'
 import { motion, isValidMotionProp } from 'framer-motion';
+import { TextSwitcher } from './TextSwitcher';
 
 const lines = ['Hi, my name is', 'Joel Sheng', 'I am an aspiring polymath'];
+const labels = ['aspiring polymath', 'bibliophile', 'MMA enthusiast'];
 
 const containerVariants = {
   before: {},
@@ -77,12 +85,15 @@ const MotionBox = chakra(motion.div, {
 });
 
 export const IntroText = () => {
+  const hiColor = useColorModeValue("icedark", "ice");
+  const imaColor = useColorModeValue("edwarddark", "edward");
+
   return (
     <Container>
       <MotionBox variants={containerVariants} initial="before" animate="after">
         <Box key={lines[0]} overflow="hidden">
           <MotionBox variants={textVariants} initial="before" animate="after">
-            <Heading color="ice" fontSize={["xl", "2xl"]} variant="mono">
+            <Heading color={hiColor} fontSize={["xl", "2xl"]} variant="mono">
               {lines[0]}
             </Heading>
           </MotionBox>
@@ -96,12 +107,10 @@ export const IntroText = () => {
         </Box>
         <Box key={lines[2]} overflow="hidden">
           <MotionBox marginTop={2} variants={textVariants2} initial="before" animate="after">
-            <Heading as="span" color="edward" fontSize={["lg", "3xl"]} variant="code">
+            <Heading as="span" color={imaColor} fontSize={["lg", "3xl"]} variant="code">
               I am an
             </Heading>
-            <Heading bg="canary" ml={2} px={2} as="span" color="edward" fontSize={["lg", "3xl"]} variant="code">
-              aspiring polymath
-            </Heading>
+            <TextSwitcher texts={labels} />
           </MotionBox>
         </Box>
         
