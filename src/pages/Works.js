@@ -1,14 +1,14 @@
 import { Box, Container, Center, Text } from '@chakra-ui/react';
 import WorksModal from '../components/WorksModal';
-import Transitions from '../theme/Transitions';
+import { LayoutTransitions, SectionTransitions } from '../theme/Transitions';
 
 const Works = () => {
   return (
-    <Transitions>
-      <Container h="calc(100vh - 64px)" maxW="container.xl" p={0}>
+    <LayoutTransitions>
+      <Container h={"calc(100vh - 64px)"} maxW="container.xl" p={0}>
         <Box
           maxW="container.md"
-          h="30%"
+          h="calc((100vh - 64px) * 0.3)"
           bgColor="RGBA(69, 86, 102, 0.3)"
           borderRadius="lg"
         >
@@ -19,17 +19,25 @@ const Works = () => {
             <WorksModal />
           </Center>
         </Box>
-        <Box
-          maxW="container.md"
-          h="60%"
-          marginTop={4}
-          bgColor="RGBA(69, 86, 102, 0.3)"
-          borderRadius="lg"
-        >
-          
-        </Box>
+        <SectionTransitions delay={0.1}>
+          <Box
+            maxW="container.md"
+            h="calc((100vh - 64px) * 0.6)"
+            marginTop="calc((100vh - 64px) * 0.05)"
+            bgColor="RGBA(69, 86, 102, 0.3)"
+            borderRadius="lg"
+          >
+            <Center h="full">
+              <Text>
+                Content Section.
+              </Text>
+              <WorksModal />
+            </Center>
+          </Box>
+        </SectionTransitions>
+        
       </Container>
-    </Transitions>
+    </LayoutTransitions>
   );
 };
 

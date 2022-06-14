@@ -6,19 +6,31 @@ const variants = {
   exit: { opacity: 0, x: -0, y: 20 }
 }
 
-const Transitions = ({ children }) => {
-    return (
-        <motion.article
-          initial="hidden"
-          animate="enter"
-          exit="exit"
-          variants={variants}
-          transition={{ duration: 0.4, type: 'easeInOut' }}
-          style={{ position: 'relative' }}
-        >
-            {children}
-        </motion.article>
-    );
+const LayoutTransitions = ({ children }) => {
+  return (
+      <motion.article
+        initial="hidden"
+        animate="enter"
+        exit="exit"
+        variants={variants}
+        transition={{ duration: 0.4, type: 'easeInOut' }}
+        style={{ position: 'relative' }}
+      >
+          {children}
+      </motion.article>
+  );
 };
 
-export default Transitions;
+const SectionTransitions = ({ children, delay = 0 }) => {
+  return (
+    <motion.article
+      initial={{ y: 10, opacity: 0 }}
+      animate={{ y: 0, opacity: 1 }}
+      transition={{ duration: 0.8, delay }}
+    >
+      {children}
+    </motion.article>
+  );
+};
+
+export { LayoutTransitions, SectionTransitions };

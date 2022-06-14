@@ -2,7 +2,7 @@ import React, { useEffect, useMemo, useState, useCallback } from "react";
 import Particles from "react-tsparticles";
 import { loadFull } from 'tsparticles';
 import { useColorModeValue } from "@chakra-ui/react";
-import { Bubbles } from './ParticlesConfig';
+import { Bubbles } from '../theme/ParticlesConfig';
 
 function ParticlesBackground() {
   const [particlesContainer, setParticlesContainer] = useState();
@@ -31,7 +31,7 @@ function ParticlesBackground() {
         options={Bubbles}
       />
     ),
-    []
+    [theme, particlesInit]
   );
 }
 
