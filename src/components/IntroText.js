@@ -82,24 +82,24 @@ export const IntroText = () => {
       <MotionBox variants={containerVariants} initial="before" animate="after">
         <Box key={lines[0]} overflow="hidden">
           <MotionBox variants={textVariants} initial="before" animate="after">
-            <Heading color="ice" fontSize="2xl" variant="mono">
+            <Heading color="ice" fontSize={["xl", "2xl"]} variant="mono">
               {lines[0]}
             </Heading>
           </MotionBox>
         </Box>
         <Box key={lines[1]}>
           <MotionBox variants={textVariants1} initial="before" animate="after">
-            <Heading fontSize="7xl">
+            <Heading fontSize={["6xl", "7xl"]}>
               {lines[1]}
             </Heading>
           </MotionBox>
         </Box>
         <Box key={lines[2]} overflow="hidden">
           <MotionBox marginTop={2} variants={textVariants2} initial="before" animate="after">
-            <Heading as="span" color="edward" fontSize="3xl" variant="code">
+            <Heading as="span" color="edward" fontSize={["lg", "3xl"]} variant="code">
               I am an
             </Heading>
-            <Heading bg="aqua" ml={2} px={2} as="span" color="edward" fontSize="3xl" variant="code">
+            <Heading bg="canary" ml={2} px={2} as="span" color="edward" fontSize={["lg", "3xl"]} variant="code">
               aspiring polymath
             </Heading>
           </MotionBox>
