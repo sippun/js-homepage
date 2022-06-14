@@ -156,7 +156,7 @@ export const Bubbles =
     },
     move: {
       enable: true,
-      speed: 10,
+      speed: 6,
       direction: "none",
       random: true,
       straight: false,

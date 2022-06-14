@@ -3,7 +3,6 @@ import {
   ChakraProvider,
   Box,
   Container,
-  theme,
 } from '@chakra-ui/react';
 import { useLocation } from 'react-router-dom';
 import { Route, Routes } from 'react-router-dom';
@@ -13,6 +12,7 @@ import Home from './pages/Home';
 import Works from './pages/Works';
 import Books from './pages/Books';
 import ParticlesBackground from './components/ParticlesBackground';
+import theme from './theme/theme';
 
 function App() {
   const location = useLocation();
