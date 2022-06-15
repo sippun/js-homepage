@@ -9,7 +9,6 @@ export const TextSwitcher = (props) => {
   const vowels = ['a', 'e', 'i', 'o', 'u'];
 
   const switchText = () => {
-    console.log('clicked ' + index);
     if (index < props.texts.length - 1) setIndex(index + 1);
     else setIndex(0);
   }
@@ -48,7 +47,7 @@ export const TextSwitcher = (props) => {
           cursor="pointer"
           _hover={{bg: "canary"}}
         >
-          {props.texts[index]}
+          &lt;{props.texts[index]}&gt;
         </Heading>
       </motion.div>
     </>
