@@ -1,6 +1,6 @@
 import { Box, Text, Image, } from '@chakra-ui/react';
 
-export const GridItem = ({ id, title, thumbnail, setWork }) => {
+export const GridItem = ({ id, title, thumbnail = "logo192.png", setWork }) => {
   
   const clicked = () => {
     setWork(title); 
@@ -13,7 +13,7 @@ export const GridItem = ({ id, title, thumbnail, setWork }) => {
       textAlign="center"
       cursor="pointer"
       pos="relative"
-      boxSize="120px"
+      boxSize="80px"
       onClick={clicked}
     >
       <Image
@@ -32,6 +32,7 @@ export const GridItem = ({ id, title, thumbnail, setWork }) => {
         top="5%"
         px={1}
         fontSize={14}
+        color="white"
         opacity={0}
         _groupHover={{
           opacity: 1
