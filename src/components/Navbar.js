@@ -36,8 +36,8 @@ const Navbar = () => {
               <MenuItem as={ReactLink} to="/works" zIndex="docked">
                 Works
               </MenuItem>
-              <MenuItem as={ReactLink} to="/books" zIndex="docked">
-                Books
+              <MenuItem as={ReactLink} to="/readinglist" zIndex="docked">
+                Reading List
               </MenuItem>
             </MenuList>
           </Menu>
@@ -65,8 +65,8 @@ const Navbar = () => {
               <Link as={ReactLink} to="/works" zIndex="docked">
                 Works
               </Link>
-              <Link as={ReactLink} to="/books" zIndex="docked">
-                Books
+              <Link as={ReactLink} to="/readinglist" zIndex="docked">
+                Reading List
               </Link>
             </HStack>
           </HStack>

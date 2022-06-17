@@ -14,8 +14,8 @@ import { TextSwitcher } from './TextSwitcher';
 
 const lines = ['Hi, my name is', 'Joel Sheng'];
 const labels = [
+  'software engineer',
   'aspiring polymath',
-  'software developer',
   'martial artist',
   'book lover',
   'rhythm gamer',

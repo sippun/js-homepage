@@ -38,7 +38,7 @@ const Works = () => {
             },
           }}
         >
-          <Heading fontSize="2xl" mb={3}>
+          <Heading fontSize="2xl" mb={3} variant="code">
             {showWork}
           </Heading>
           <Stack direction={{ base: 'column', sm: 'row'}} spacing='24px'>
@@ -86,7 +86,7 @@ const Works = () => {
               },
             }}
           >
-            <Heading fontSize="2xl" mb={3}>
+            <Heading fontSize="2xl" mb={3} variant="code">
               Works
             </Heading>
             <Box flex={1} alignItems="center">
