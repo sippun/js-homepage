@@ -52,7 +52,7 @@ const Navbar = () => {
                   alt='js img'
                 />
                 <Show above="sm">
-                  <Text>Joel Sheng</Text>
+                  <Text fontFamily="kanit" fontWeight="bold">Joel Sheng</Text>
                 </Show>
               </HStack>
             </Link>

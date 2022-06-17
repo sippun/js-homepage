@@ -96,7 +96,7 @@ export const IntroText = () => {
   return (
     <Container>
       <MotionBox variants={containerVariants} initial="before" animate="after">
-        <Box key={lines[0]} overflow="hidden">
+        <Box key={lines[0]}>
           <MotionBox variants={textVariants} initial="before" animate="after">
             <Heading color={hiColor} fontSize={["xl", "2xl"]} variant="mono">
               {lines[0]}
@@ -105,13 +105,13 @@ export const IntroText = () => {
         </Box>
         <Box key={lines[1]}>
           <MotionBox variants={textVariants1} initial="before" animate="after">
-            <Heading fontSize={["6xl", "7xl"]}>
+            <Heading variant="kanit" fontSize={["5xl", "7xl"]}>
               {lines[1]}
             </Heading>
           </MotionBox>
         </Box>
         <Box key={lines[2]} overflow="hidden" justifyContent="space-between">
-          <MotionBox marginTop={2} variants={textVariants2} initial="before" animate="after">
+          <MotionBox marginTop={0} variants={textVariants2} initial="before" animate="after">
             <TextSwitcher texts={labels} intro={['I am an', 'I am a']}/>
           </MotionBox>
         </Box>

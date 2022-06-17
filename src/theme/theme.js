@@ -15,7 +15,8 @@ const theme = extendTheme({
     heading: `"SF UI Text", "Helvetica Neue", "Segoe UI", "Oxygen", "Ubuntu", "Cantarell", "Open Sans", sans-serif`,
     body: `'Raleway', sans-serif`,
     mono: `"SF Mono", "Fira Code", "Fira Mono", "Roboto Mono", monospace`,
-    code: `'Source Code Pro', monospace`,  
+    code: `'Source Code Pro', monospace`,
+    kanit: `'Kanit', sans-serif;`,
   },
   components: {
     Heading: {
@@ -25,6 +26,9 @@ const theme = extendTheme({
         },
         'code': {
           fontFamily: 'code'
+        },
+        'kanit': {
+          fontFamily: 'kanit'
         }
       }
     }

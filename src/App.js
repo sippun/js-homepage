@@ -13,6 +13,7 @@ import Works from './pages/Works';
 import ReadingList from './pages/ReadingList';
 import ParticlesBackground from './components/ParticlesBackground';
 import theme from './theme/theme';
+import './theme/styles.css';
 
 function App() {
   const location = useLocation();

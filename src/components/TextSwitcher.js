@@ -1,10 +1,12 @@
 import React, { useState } from 'react';
-import { Heading, useColorModeValue } from '@chakra-ui/react';
+import { Heading, useBreakpointValue, useColorModeValue } from '@chakra-ui/react';
 import { motion } from 'framer-motion';
 
 export const TextSwitcher = (props) => {
   const [index, setIndex] = useState(0);
   const imaColor = useColorModeValue("edwarddark", "edward");
+  const animPropsVowel = useBreakpointValue({base: { x: 82, opacity: 1 }, sm: { x: 104, opacity: 1 }});
+  const animProps = useBreakpointValue({base: { x: 70, opacity: 1 }, sm: { x: 86, opacity: 1 }});
 
   const vowels = ['a', 'e', 'i', 'o', 'u'];
 
@@ -21,7 +23,7 @@ export const TextSwitcher = (props) => {
         animate={{ x: 0, y: 0, opacity: 1 }}
         transition={{ duration: 1 }}
       >
-        <Heading color={imaColor} fontSize={["xl", "3xl"]} variant="code">
+        <Heading color={imaColor} fontSize={["xl", "2xl"]} variant="code">
           {vowels.includes(props.texts[index].charAt(0)) ? props.intro[0] : props.intro[1]}
         </Heading>
       </motion.div>
@@ -30,9 +32,9 @@ export const TextSwitcher = (props) => {
         initial={{ x: 0, opacity: 0.6}}
         animate=
           {vowels.includes(props.texts[index].charAt(0)) ? (
-            { x: 124, opacity: 1 }
+            animPropsVowel
           ) : (
-            { x: 106, opacity: 1 }
+            animProps
           )}
         transition={{ duration: 1 }}
       >
@@ -40,14 +42,13 @@ export const TextSwitcher = (props) => {
           bg="aqua"
           ml={2}
           px={2}
-          color={imaColor}
-          fontSize={["xl", "3xl"]}
+          fontSize={["xl", "2xl"]}
           variant="code"
           onClick={switchText}
           cursor="pointer"
           _hover={{bg: "canary"}}
         >
-          &lt;{props.texts[index]}&gt;
+          &lt;{props.texts[index]}/&gt;
         </Heading>
       </motion.div>
     </>
