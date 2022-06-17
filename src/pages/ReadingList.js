@@ -1,12 +1,54 @@
 import { Box,
   Container,
   Heading,
+  Image,
   SimpleGrid,
   Text,
 } from "@chakra-ui/react";
 import { LayoutTransitions } from "../theme/Transitions";
 import { ContentBox } from "../components/ContentBox";
-import { BooksData } from "../components/BooksData";
+import { booksData } from "../components/BooksData";
+
+var bookList21 = booksData.books2021.map(function(books){
+  var bookImage = 'images/books/' + books.image;
+  return (
+    <Box
+      role="group"
+      w="100%"
+      textAlign="center"
+      cursor="pointer"
+      pos="relative"
+      boxSize="100px"
+    >
+      <Image
+        src={bookImage}
+        alt={books.title}
+        boxSize="full" 
+        rounded="md"
+        filter="auto"
+        _groupHover={{
+          brightness: "30%"
+        }}
+        transition="0.3s"
+        fit="cover"
+      />
+      <Text
+        pos="absolute"
+        top="5%"
+        px={1}
+        fontSize={14}
+        color="white"
+        opacity={0}
+        _groupHover={{
+          opacity: 1
+        }}
+        transition="0.3s"
+      >
+        {books.title}
+      </Text>
+    </Box>
+  );
+});
 
 const ReadingList = () => {
   return (
@@ -21,11 +63,8 @@ const ReadingList = () => {
           </Heading>
 
           <Box flex={1} alignItems="center">
-            <Text>
-              {BooksData.books2021[0].title}
-            </Text>
-            <SimpleGrid>
-
+            <SimpleGrid columns={5} rowGap={4}>
+              {bookList21}
             </SimpleGrid>
           </Box>
         </ContentBox>
