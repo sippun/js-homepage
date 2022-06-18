@@ -13,6 +13,7 @@ const ContentBox = (props) => {
       __css={{
         '&::-webkit-scrollbar': {
           width: '4px',
+          margin: '4px',
         },
         '&::-webkit-scrollbar-track': {
           width: '6px',

@@ -9,6 +9,7 @@ import { Route, Routes } from 'react-router-dom';
 import { AnimatePresence } from 'framer-motion';
 import Navbar from './components/Navbar';
 import Home from './pages/Home';
+import About from './pages/About';
 import Works from './pages/Works';
 import ReadingList from './pages/ReadingList';
 import ParticlesBackground from './components/ParticlesBackground';
@@ -27,6 +28,7 @@ function App() {
         <Container maxW="container.md" overflow="hidden" p={0}>
           <AnimatePresence exitBeforeEnter>
             <Routes location={location} key={location.pathname}>
+              <Route path="/about" element={<About />} />
               <Route path="/" element={<Home />} />
               <Route path="/works" element={<Works />} />
               <Route path="/readinglist" element={<ReadingList />} />

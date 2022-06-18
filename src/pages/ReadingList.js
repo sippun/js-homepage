@@ -55,15 +55,18 @@ const ReadingList = () => {
     <LayoutTransitions>
       <Container h="calc(100vh - 64px)" maxW="inherit" p={0}>
         <ContentBox h="calc((100vh - 64px) * 0.9)" maxW="inherit" >
-          <Heading fontSize="2xl" mb={3} as="span" variant="code">
+          <Heading fontSize="2xl" as="span" variant="code">
             Reading List 
           </Heading>
           <Heading fontSize="xl" as="span" variant="mono">
             &nbsp;-&nbsp;A list of recently read books
           </Heading>
 
-          <Box flex={1} alignItems="center">
-            <SimpleGrid columns={5} rowGap={4}>
+          <Heading mt={3} fontSize="xl">
+            2021
+          </Heading>
+          <Box mt={3} flex={1} alignItems="center">
+            <SimpleGrid columns={{base: 3, sm: 5}} rowGap={4}>
               {bookList21}
             </SimpleGrid>
           </Box>

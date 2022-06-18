@@ -91,7 +91,7 @@ const MotionBox = chakra(motion.div, {
 });
 
 export const IntroText = () => {
-  const hiColor = useColorModeValue("icedark", "ice");
+  const hiColor = useColorModeValue("teal.600", "ice");
 
   return (
     <Container>

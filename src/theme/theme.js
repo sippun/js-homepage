@@ -8,8 +8,20 @@ const theme = extendTheme({
     icedark: '#8fd6c8',
     cleargrey: 'RGBA(69, 86, 102, 0.3)',
     aqua: 'RGBA(131, 206, 191, 0.4)',
-    accent: '#A7233A3f',
+    particle: '#A7233A3f',
     canary: 'RGBA(255, 255, 159, 0.35)',
+    accent: {
+      50: '#e6faf6',
+      100: '#c7eae4',
+      200: '#a6dcd1',
+      300: '#83cebf',
+      400: '#61c0ad',
+      500: '#49a793',
+      600: '#388172',
+      700: '#275c52',
+      800: '#153831',
+      900: '#001410',
+    }
   },
   fonts: {
     heading: `"SF UI Text", "Helvetica Neue", "Segoe UI", "Oxygen", "Ubuntu", "Cantarell", "Open Sans", sans-serif`,
@@ -31,7 +43,15 @@ const theme = extendTheme({
           fontFamily: 'kanit'
         }
       }
+    },
+    Tabs: {
+      baseStyle: {
+        tab: {
+          fontFamily: 'code'
+        }
+      }
     }
+
   },
   config: {
     initialColorMode: 'dark',

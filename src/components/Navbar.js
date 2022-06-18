@@ -33,6 +33,9 @@ const Navbar = () => {
               display={{ md: 'none' }}
             />
             <MenuList>
+              <MenuItem as={ReactLink} to="/about" zIndex="docked">
+                About
+              </MenuItem>
               <MenuItem as={ReactLink} to="/works" zIndex="docked">
                 Works
               </MenuItem>
@@ -62,6 +65,9 @@ const Navbar = () => {
               spacing={8}
               display={{ base: 'none', md: 'flex' }}
             >
+              <Link as={ReactLink} to="/about" zIndex="docked">
+                About
+              </Link>
               <Link as={ReactLink} to="/works" zIndex="docked">
                 Works
               </Link>
