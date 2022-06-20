@@ -2,14 +2,16 @@ import { useState } from 'react';
 import {
   Box,
   Container,
+  Flex,
   Heading,
   SimpleGrid,
+  Tag,
   Text,
   Stack,
 } from '@chakra-ui/react';
 import { LayoutTransitions, SectionTransitions } from '../theme/Transitions';
 import { GridItem } from '../components/GridItem';
-import DescriptionCard from '../components/DescriptionCard';
+import { worksData } from '../data/WorksData';
 
 const Works = () => {
   const[showWork, setShowWork] = useState("js-homepage");
@@ -46,18 +48,19 @@ const Works = () => {
               <Box w='300px' h='200px' bg='aqua'>
                 Image here
               </Box>
-              <Text>
-                Tech Stack here
-              </Text>
+              <Flex direction="row" w="300px" h="inherit">
+                {worksData[0].stack.map((tech) => {
+                  return(
+                    <Tag>
+                      {tech}
+                    </Tag>
+                  );
+                })}
+              </Flex>
+              
             </Stack>
             <Text>
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit, 
-              sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
-              Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris 
-              nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in 
-              reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla 
-              pariatur. Excepteur sint occaecat cupidatat non proident, sunt in 
-              culpa qui officia deserunt mollit anim id est laborum.
+              {worksData[0].description}
             </Text>
           </Stack>
           

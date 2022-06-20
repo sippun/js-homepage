@@ -169,4 +169,4 @@ export const booksData = {
       url:"https://www.goodreads.com/book/show/11468377-thinking-fast-and-slow"
     },
   ],
-}
+};

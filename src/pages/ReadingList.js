@@ -7,7 +7,7 @@ import { Box,
 } from "@chakra-ui/react";
 import { LayoutTransitions } from "../theme/Transitions";
 import { ContentBox } from "../components/ContentBox";
-import { booksData } from "../components/BooksData";
+import { booksData } from "../data/BooksData";
 
 var bookList21 = booksData.books2021.map(function(books){
   var bookImage = 'images/books/' + books.image;

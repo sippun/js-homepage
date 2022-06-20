@@ -7,15 +7,14 @@ import {
   PopoverContent,
   PopoverHeader,
   PopoverBody,
-  PopoverFooter,
   PopoverArrow,
   PopoverCloseButton,
-  PopoverAnchor,
   Tabs, TabList, TabPanels, Tab, TabPanel,
 
 } from '@chakra-ui/react';
 import { LayoutTransitions } from '../theme/Transitions';
 import { ContentBox } from '../components/ContentBox';
+import worksData from '../data/WorksData';
 
 const About = () => {
   return (
@@ -36,19 +35,19 @@ const About = () => {
               One of my life goals is to develop tools that improve human&nbsp;
               <PopoverTrigger>
                 <Link color="accent.300" fontWeight="350">
-                  eudaimonic wellbeing
+                  eudaimonic
                 </Link>
               </PopoverTrigger>
-              .
+              &nbsp;wellbeing.
             </Heading>
             <PopoverContent w="sm">
               <PopoverArrow />
               <PopoverCloseButton />
-              <PopoverHeader>eudaimonia // eu·​dai·​mo·​nia</PopoverHeader>
+              <PopoverHeader>eudaimonic // eu·​dai·​mo·​nic</PopoverHeader>
               <PopoverBody>
-                “Pursuit of virtue, excellence, and the best within us.”
-                As opposed to hedonia, or the pursuit of comfort and pleasure.
-                (Which is good too.)<br />
+                Relating to the “pursuit of virtue, excellence, and the best within us.”
+                As opposed to hedonic, or the pursuit of comfort and pleasure.
+                (Which is also good.)<br />
                 <Link
                   color='accent.300'
                   href='https://positivepsychology.com/eudaimonia/'
@@ -69,9 +68,6 @@ const About = () => {
               </PopoverBody>
             </PopoverContent>
           </Popover>
-          <Heading ml={4} fontSize="lg" fontWeight="light">
-            To do that I am improving my tech skills, gaining knowledge, and pursuing my own truth.
-          </Heading>
           
           <Tabs mt={6} isFitted colorScheme="accent">
             <TabList>
