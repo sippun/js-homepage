@@ -3,7 +3,7 @@ import { Box, Text, Image, } from '@chakra-ui/react';
 export const GridItem = ({ id, title, thumbnail = "logo192.png", setWork }) => {
   
   const clicked = () => {
-    setWork(title); 
+    setWork(id); 
   };
 
   return (

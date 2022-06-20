@@ -1,6 +1,7 @@
 import { useState } from 'react';
 import {
   Box,
+  Button,
   Container,
   Flex,
   Heading,
@@ -8,13 +9,27 @@ import {
   Tag,
   Text,
   Stack,
+  VStack,
 } from '@chakra-ui/react';
 import { LayoutTransitions, SectionTransitions } from '../theme/Transitions';
 import { GridItem } from '../components/GridItem';
 import { worksData } from '../data/WorksData';
 
 const Works = () => {
-  const[showWork, setShowWork] = useState("js-homepage");
+
+  const showWorkInit = () => {
+    return worksData.find(({ id }) => id === "js-homepage");
+  };
+  const[showWork, setShowWork] = useState(showWorkInit());
+
+  const changeWork = (set) => {
+    setShowWork(worksData.find(({ id }) => id === set));
+  }
+  
+
+  const printTest = () => {
+    console.log("test");
+  }
 
   return (
     <LayoutTransitions>
@@ -41,17 +56,17 @@ const Works = () => {
           }}
         >
           <Heading fontSize="2xl" mb={3} variant="code">
-            {showWork}
+            {showWork.title}
           </Heading>
           <Stack direction={{ base: 'column', sm: 'row'}} spacing='24px'>
             <Stack direction="column">
-              <Box w='300px' h='200px' bg='aqua'>
+              <Box w='300px' h='200px' bg='aqua' mb={1}>
                 Image here
               </Box>
-              <Flex direction="row" w="300px" h="inherit">
-                {worksData[0].stack.map((tech) => {
+              <Flex flexFlow="row wrap" w="300px" h="inherit">
+                {showWork.stack.map((tech) => {
                   return(
-                    <Tag>
+                    <Tag w="fit-content" mr={4} mt={2}>
                       {tech}
                     </Tag>
                   );
@@ -59,9 +74,14 @@ const Works = () => {
               </Flex>
               
             </Stack>
-            <Text>
-              {worksData[0].description}
-            </Text>
+            <VStack>
+              <Text>
+                {showWork.description}
+              </Text>
+              <Button onClick={printTest}>
+                test
+              </Button>
+            </VStack>
           </Stack>
           
           
@@ -104,29 +124,24 @@ const Works = () => {
                   id="js-homepage"
                   title="js-homepage"
                   thumbnail="yot.png"
-                  setWork={setShowWork}
+                  setWork={changeWork}
                 />
                 <GridItem
-                  id="sad"
+                  id="kaizen"
                   title="work work sadface"
                   thumbnail="workwork.png"
-                  setWork={setShowWork}
+                  setWork={changeWork}
                 />
                 <GridItem
-                  id="smug"
+                  id="fighter-quiz"
                   title="sleep sleep smugface"
                   thumbnail="smug.jpg"
-                  setWork={setShowWork}
+                  setWork={changeWork}
                 />
                 <GridItem
-                  id="ezorg"
-                  title="EZOrg"
-                  setWork={setShowWork}
-                />
-                <GridItem
-                  id="elevate"
-                  title="Elevate"
-                  setWork={setShowWork}
+                  id="js-resume"
+                  title="Homepage v1"
+                  setWork={changeWork}
                 />
               </SimpleGrid>
             </Box>
