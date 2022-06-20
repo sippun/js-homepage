@@ -1,7 +1,18 @@
 import {
   Container,
   Heading,
+  Link,
+  Popover,
+  PopoverTrigger,
+  PopoverContent,
+  PopoverHeader,
+  PopoverBody,
+  PopoverFooter,
+  PopoverArrow,
+  PopoverCloseButton,
+  PopoverAnchor,
   Tabs, TabList, TabPanels, Tab, TabPanel,
+
 } from '@chakra-ui/react';
 import { LayoutTransitions } from '../theme/Transitions';
 import { ContentBox } from '../components/ContentBox';
@@ -15,12 +26,53 @@ const About = () => {
             About Me
           </Heading>
           <Heading ml={4} fontSize="lg" variant="kanit" fontWeight="light">
-            Product person passionately, perennially, perpetually perusing publications.
+            A product person passionately and perpetually perusing publications.
           </Heading>
+          <Heading ml={4} fontSize="lg">
+            I like to build stuff and read things.<br />
+          </Heading>
+          <Popover variant="definition">
+            <Heading ml={4} fontSize="lg" fontWeight="light" as="span">
+              One of my life goals is to develop tools that improve human&nbsp;
+              <PopoverTrigger>
+                <Link color="accent.300" fontWeight="350">
+                  eudaimonic wellbeing
+                </Link>
+              </PopoverTrigger>
+              .
+            </Heading>
+            <PopoverContent w="sm">
+              <PopoverArrow />
+              <PopoverCloseButton />
+              <PopoverHeader>eudaimonia // eu·​dai·​mo·​nia</PopoverHeader>
+              <PopoverBody>
+                “Pursuit of virtue, excellence, and the best within us.”
+                As opposed to hedonia, or the pursuit of comfort and pleasure.
+                (Which is good too.)<br />
+                <Link
+                  color='accent.300'
+                  href='https://positivepsychology.com/eudaimonia/'
+                  target="_blank"
+                  rel="noreferrer noopener"
+                >
+                  https://positivepsychology.com/eudaimonia/
+                </Link>
+                <br />
+                <Link
+                  color='accent.300'
+                  href='https://www.researchgate.net/publication/258819690_Eudaimonia_and_Its_Distinction_from_Hedonia_Developing_a_Classification_and_Terminology_for_Understanding_Conceptual_and_Operational_Definitions'
+                  target="_blank"
+                  rel="noreferrer noopener"
+                >
+                  Huta, V., &amp; Waterman, A. S. (2014)
+                </Link>
+              </PopoverBody>
+            </PopoverContent>
+          </Popover>
           <Heading ml={4} fontSize="lg" fontWeight="light">
-            <b>I like to build stuff and read things. </b><br />
-            One of my life goals: develop tools that improve human eudaimonic wellbeing.
+            To do that I am improving my tech skills, gaining knowledge, and pursuing my own truth.
           </Heading>
+          
           <Tabs mt={6} isFitted colorScheme="accent">
             <TabList>
               <Tab>Tech</Tab>
@@ -30,7 +82,7 @@ const About = () => {
             <TabPanels>
               <TabPanel>
                 <p>
-                  Currently working mostly with JavaScript and React. <br />
+                  I have a BSc. in Computer Science from UCSC, where I <br />
                   1. Short overview, loves to learn <br />
                   2. Academic achievements <br />
                   3. Current Strongest skills <br />
@@ -47,12 +99,7 @@ const About = () => {
               </TabPanel>
               <TabPanel>
                 <p>
-                  1. Have a wide array of hobbies <br />
-                  2. Martial Arts <br />
-                  3. Reading <br />
-                  4. Rhythm Games <br />
-                  5. Skateboarding <br />
-                  6. etc. <br />
+                  Currently on the dilettante to polymath pipeline.
                 </p>
               </TabPanel>
             </TabPanels>

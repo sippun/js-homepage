@@ -4,11 +4,14 @@
 import {
   chakra,
   Box,
+  Button,
+  Center,
   Heading,
   Container,
   useColorModeValue,
 } from '@chakra-ui/react'
 import React from 'react'
+import { Link as ReactLink } from 'react-router-dom';
 import { motion, isValidMotionProp } from 'framer-motion';
 import { TextSwitcher } from './TextSwitcher';
 
@@ -133,6 +136,20 @@ export const IntroText = () => {
             height="1px"
             bg="whiteAlpha.800"
           />
+        </MotionBox>
+        <MotionBox
+          initial= {{ y: 24 * 1.5, opacity: 0}}
+          animate= {{
+            y: 0,
+            opacity: 1,
+            transition: {ease: 'easeOut', duration: 0.4, delay: 0.4},
+          }}
+        >
+          <Center mt={6}>
+            <Button as={ReactLink} to="/about">
+              Learn more
+            </Button>
+          </Center>
         </MotionBox>
       </MotionBox>
     </Container>

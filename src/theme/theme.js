@@ -50,8 +50,17 @@ const theme = extendTheme({
           fontFamily: 'code'
         }
       }
-    }
-
+    },
+    Popover: {
+      variants: {
+        definition: {
+          PopoverContent: {
+            width: 'fit-content',
+            maxWidth: 'fit-content',
+          }
+        }
+      }
+    },
   },
   config: {
     initialColorMode: 'dark',

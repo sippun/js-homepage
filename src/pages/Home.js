@@ -1,4 +1,4 @@
-import { Container, Center, Text } from '@chakra-ui/react';
+import { Button, Container, Center } from '@chakra-ui/react';
 import { LayoutTransitions } from '../theme/Transitions';
 import { IntroText } from '../components/IntroText';
 
