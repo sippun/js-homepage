@@ -24,12 +24,19 @@ const Works = () => {
 
   const changeWork = (set) => {
     setShowWork(worksData.find(({ id }) => id === set));
-  }
-  
+  };
 
-  const printTest = () => {
-    console.log("test");
-  }
+  const gridWorkIcons = worksData.map((work) => {
+    return (
+      <GridItem
+        key={work.id}
+        id={work.id}
+        title={work.title}
+        thumbnail={work.thumbnail}
+        setWork={changeWork}
+      />
+    );
+  });
 
   return (
     <LayoutTransitions>
@@ -78,9 +85,6 @@ const Works = () => {
               <Text>
                 {showWork.description}
               </Text>
-              <Button onClick={printTest}>
-                test
-              </Button>
             </VStack>
           </Stack>
           
@@ -120,29 +124,7 @@ const Works = () => {
                 spacingX={[4, 8]}
                 spacingY={8}
               >
-                <GridItem
-                  id="js-homepage"
-                  title="js-homepage"
-                  thumbnail="yot.png"
-                  setWork={changeWork}
-                />
-                <GridItem
-                  id="kaizen"
-                  title="work work sadface"
-                  thumbnail="workwork.png"
-                  setWork={changeWork}
-                />
-                <GridItem
-                  id="fighter-quiz"
-                  title="sleep sleep smugface"
-                  thumbnail="smug.jpg"
-                  setWork={changeWork}
-                />
-                <GridItem
-                  id="js-resume"
-                  title="Homepage v1"
-                  setWork={changeWork}
-                />
+                {gridWorkIcons}
               </SimpleGrid>
             </Box>
           </Box>
