@@ -1,10 +1,16 @@
 export const booksData = {
-  "books2021" : [
+  "current" : [
     {
-      title:"Product Management's Sacred Seven",
-      info:"The Skills Required to Crush Product Manager Interviews and be a World-Class PM",
-      image:"55025971._SY475_.jpg",
-      url:"https://www.goodreads.com/book/show/55025971-product-management-s-sacred-seven"
+      title:"The Richest Man in Babylon",
+      info:"",
+      image:"",
+      url:""
+    },
+    {
+      title:"Thinking, Fast and Slow",
+      info:"",
+      image:"11468377.jpg",
+      url:"https://www.goodreads.com/book/show/11468377-thinking-fast-and-slow"
     },
     {
       title:"The Body Keeps The Score",
@@ -17,6 +23,28 @@ export const booksData = {
       info:"Healing Trauma and Restoring Wholeness with the Internal Family Systems Model",
       image:"51BFS345dcL._SL500_.jpg",
       url:"https://www.audible.com/pd/No-Bad-Parts-Audiobook/B09GKYDGZQ"
+    },
+  ],
+  "books2022" : [
+    {
+      title:"Bad Blood",
+      info:"",
+      image:"",
+      url:""
+    },
+    {
+      title:"Audition",
+      info:"",
+      image:"",
+      url:""
+    },
+  ],
+  "books2021" : [
+    {
+      title:"Product Management's Sacred Seven",
+      info:"The Skills Required to Crush Product Manager Interviews and be a World-Class PM",
+      image:"55025971._SY475_.jpg",
+      url:"https://www.goodreads.com/book/show/55025971-product-management-s-sacred-seven"
     },
     {
       title:"Can't Hurt Me",
@@ -162,11 +190,13 @@ export const booksData = {
       image:"9780140238563_p0_v1_s1200x630.jpg",
       url:"https://www.goodreads.com/book/show/270746.A_Short_History_of_Financial_Euphoria"
     },
+  ],
+  "wishlist" : [
     {
-      title:"Thinking, Fast and Slow",
+      title:"",
       info:"",
-      image:"11468377.jpg",
-      url:"https://www.goodreads.com/book/show/11468377-thinking-fast-and-slow"
-    },
+      image:"",
+      url:""
+    }
   ],
 };
