@@ -58,9 +58,6 @@ const ReadingList = () => {
           <Heading fontSize="2xl" as="span" variant="code">
             Reading List 
           </Heading>
-          <Heading fontSize="xl" as="span" variant="mono">
-            &nbsp;-&nbsp;A list of recently read books
-          </Heading>
 
           <Heading mt={3} fontSize="xl">
             2021
