@@ -13,6 +13,7 @@ import {
 } from '@chakra-ui/react';
 import { LayoutTransitions, SectionTransitions } from '../theme/Transitions';
 import { GridItem } from '../components/GridItem';
+import { ContentBox } from '../components/ContentBox';
 import { worksData } from '../data/WorksData';
 
 const Works = () => {
@@ -41,26 +42,9 @@ const Works = () => {
   return (
     <LayoutTransitions>
       <Container h={"calc(100vh - 64px)"} maxW="inherit" p={0}>
-        <Box
+        <ContentBox
           maxW="container.md"
           h="calc((100vh - 64px) * 0.6)"
-          bgColor="RGBA(69, 86, 102, 0.3)"
-          borderRadius="lg"
-          px={4}
-          py={2}
-          overflow="auto"
-          __css={{
-            '&::-webkit-scrollbar': {
-              width: '4px',
-            },
-            '&::-webkit-scrollbar-track': {
-              width: '6px',
-            },
-            '&::-webkit-scrollbar-thumb': {
-              background: "gray.400",
-              borderRadius: '24px',
-            },
-          }}
         >
           <Heading fontSize="2xl" mb={3} variant="code">
             {showWork.title}
@@ -87,31 +71,13 @@ const Works = () => {
               </Text>
             </VStack>
           </Stack>
-          
-          
-        </Box>
+        </ContentBox>
+
         <SectionTransitions delay={0.1}>
-          <Box
+          <ContentBox
             maxW="inherit"
             h="calc((100vh - 64px) * 0.25)"
             marginTop="calc((100vh - 64px) * 0.05)"
-            bgColor="RGBA(69, 86, 102, 0.3)"
-            borderRadius="lg"
-            px={4}
-            py={2}
-            overflow="auto"
-            __css={{
-              '&::-webkit-scrollbar': {
-                width: '4px',
-              },
-              '&::-webkit-scrollbar-track': {
-                width: '6px',
-              },
-              '&::-webkit-scrollbar-thumb': {
-                background: "gray.400",
-                borderRadius: '24px',
-              },
-            }}
           >
             <Heading fontSize="2xl" mb={3} variant="code">
               Works
@@ -127,7 +93,7 @@ const Works = () => {
                 {gridWorkIcons}
               </SimpleGrid>
             </Box>
-          </Box>
+          </ContentBox>
         </SectionTransitions>
         
       </Container>

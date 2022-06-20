@@ -5,6 +5,7 @@ const ContentBox = (props) => {
     <Box
       maxW={props.maxW}
       h={props.h}
+      marginTop={props.marginTop}
       bgColor="RGBA(69, 86, 102, 0.3)"
       borderRadius="lg"
       px={4}
