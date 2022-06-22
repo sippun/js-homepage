@@ -1,4 +1,6 @@
 import {
+  Box,
+  Button,
   Container,
   Heading,
   Link,
@@ -10,11 +12,15 @@ import {
   PopoverArrow,
   PopoverCloseButton,
   Tabs, TabList, TabPanels, Tab, TabPanel,
-
+  Text,
+  VStack,
+  HStack,
 } from '@chakra-ui/react';
+import { DownloadIcon } from '@chakra-ui/icons';
+import { Link as ReactLink } from 'react-router-dom';
 import { LayoutTransitions } from '../theme/Transitions';
 import { ContentBox } from '../components/ContentBox';
-import worksData from '../data/WorksData';
+import { aboutData } from '../data/AboutData';
 
 const About = () => {
   return (
@@ -71,28 +77,62 @@ const About = () => {
           
           <Tabs mt={6} isFitted colorScheme="accent">
             <TabList>
-              <Tab>Tech</Tab>
-              <Tab>Generalist</Tab>
-              <Tab>Personal</Tab>
+              <Tab>For employers</Tab>
+              <Tab>For collaborators</Tab>
+              <Tab>For the curious</Tab>
             </TabList>
             <TabPanels>
+              {/* For employers */}
               <TabPanel>
-                <p>
-                  I have a BSc. in Computer Science from UCSC, where I <br />
-                  1. Short overview, loves to learn <br />
-                  2. Academic achievements <br />
-                  3. Current Strongest skills <br />
-                </p>
+                <VStack h="full" justifyContent="space-between">
+                  <Box>
+                    <p>{aboutData.education}</p>
+                    <br />
+                    <p>{aboutData.tech}</p>
+                  </Box>
+                  {/* button positions forced now, fix later */}
+                  <HStack
+                    position="absolute"
+                    bottom="calc((100vh - 64px) * 0.1)"
+                    w="full" 
+                    pr={4}
+                    pb={4}
+                    justifyContent="end"
+                  >
+                    <Button as={ReactLink} to="/works">
+                      My works
+                    </Button>
+                    <Button
+                      as={Link}
+                      rightIcon={<DownloadIcon />}
+                      href="jsresume.pdf"
+                      target="_blank"
+                    >
+                      Resume
+                    </Button>
+                  </HStack>
+                </VStack>
               </TabPanel>
+              {/* For collaborators */}
               <TabPanel>
-                <p>
-                  1. Love of learning extends beyond tech, to xyz areas <br />
-                  2. Communication <br />
-                  3. Design <br />
-                  4. Business <br />
-                  5. etc. <br />
-                </p>
+                <p>{aboutData.interests}</p>
+                <HStack
+                  position="absolute"
+                  bottom="calc((100vh - 64px) * 0.1)"
+                  w="95%"
+                  pr={4}
+                  pb={4}
+                  justifyContent="end"
+                >
+                  <Button as={ReactLink} to="/works">
+                    My works
+                  </Button>
+                  <Button as={ReactLink} to="/readinglist">
+                    Reading List
+                  </Button>
+                </HStack>
               </TabPanel>
+              {/* For the curious */}
               <TabPanel>
                 <p>
                   Currently on the dilettante to polymath pipeline.

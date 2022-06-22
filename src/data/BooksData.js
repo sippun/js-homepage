@@ -193,10 +193,22 @@ export const booksData = {
   ],
   "wishlist" : [
     {
-      title:"",
+      title:"A Personal Matter",
       info:"",
       image:"",
-      url:""
+      url:"https://www.goodreads.com/book/show/25191.A_Personal_Matter"
+    },
+    {
+      title:"Snow Country",
+      info:"",
+      image:"",
+      url:"https://www.goodreads.com/book/show/14028.Snow_Country"
+    },
+    {
+      title:"No Longer Human",
+      info:"",
+      image:"",
+      url:"https://www.goodreads.com/book/show/194746.No_Longer_Human"
     }
   ],
 };
