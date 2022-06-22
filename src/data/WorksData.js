@@ -24,7 +24,7 @@ export const worksData = [
     thumbnail:"smug.jpg",
     description:"made from template old garbo",
     github:"https://github.com/sippun/fighter-quiz",
-    link:"https://joelsheng.com",
+    link:"https://sippun.github.io/fighter-quiz/",
   },
   {
     id:"js-resume",
