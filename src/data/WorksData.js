@@ -23,7 +23,7 @@ export const worksData = [
     stack:["React", "Chakra UI"],
     thumbnail:"smug.jpg",
     description:"made from template old garbo",
-    github:"https://github.com/sippun/js-resume",
+    github:"https://github.com/sippun/fighter-quiz",
     link:"https://joelsheng.com",
   },
   {
