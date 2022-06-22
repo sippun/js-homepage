@@ -9,46 +9,52 @@ import { LayoutTransitions } from "../theme/Transitions";
 import { ContentBox } from "../components/ContentBox";
 import { booksData } from "../data/BooksData";
 
-var bookList21 = booksData.books2021.map(function(books){
-  var bookImage = 'images/books/' + books.image;
-  return (
-    <Box
-      role="group"
-      w="100%"
-      textAlign="center"
-      cursor="pointer"
-      pos="relative"
-      boxSize="100px"
-    >
-      <Image
-        src={bookImage}
-        alt={books.title}
-        boxSize="full" 
-        rounded="md"
-        filter="auto"
-        _groupHover={{
-          brightness: "30%"
-        }}
-        transition="0.3s"
-        fit="cover"
-      />
-      <Text
-        pos="absolute"
-        top="5%"
-        px={1}
-        fontSize={14}
-        color="white"
-        opacity={0}
-        _groupHover={{
-          opacity: 1
-        }}
-        transition="0.3s"
+const mapBookIcons = (books) => {
+  return books.map(function(book){
+    var bookImage = 'images/books/' + book.image;
+    return (
+      <Box
+        role="group"
+        w="100%"
+        textAlign="center"
+        cursor="pointer"
+        pos="relative"
+        boxSize="100px"
       >
-        {books.title}
-      </Text>
-    </Box>
-  );
-});
+        <Image
+          src={bookImage}
+          alt={book.title}
+          boxSize="full" 
+          rounded="md"
+          filter="auto"
+          _groupHover={{
+            brightness: "30%"
+          }}
+          transition="0.3s"
+          fit="cover"
+        />
+        <Text
+          pos="absolute"
+          top="5%"
+          px={1}
+          fontSize={14}
+          color="white"
+          opacity={0}
+          _groupHover={{
+            opacity: 1
+          }}
+          transition="0.3s"
+        >
+          {book.title}
+        </Text>
+      </Box>
+    );
+  })
+};
+
+const currentList = mapBookIcons(booksData.current);
+const bookList22 = mapBookIcons(booksData.books2022);
+const bookList21 = mapBookIcons(booksData.books2021);
 
 const ReadingList = () => {
   return (
@@ -58,6 +64,24 @@ const ReadingList = () => {
           <Heading fontSize="2xl" as="span" variant="code">
             Reading List 
           </Heading>
+
+          <Heading mt={3} fontSize="xl">
+            Currently Reading
+          </Heading>
+          <Box mt={3} flex={1} alignItems="center">
+            <SimpleGrid columns={{base: 3, sm: 5}} rowGap={4}>
+              {currentList}
+            </SimpleGrid>
+          </Box>
+
+          <Heading mt={3} fontSize="xl">
+            2022
+          </Heading>
+          <Box mt={3} flex={1} alignItems="center">
+            <SimpleGrid columns={{base: 3, sm: 5}} rowGap={4}>
+              {bookList22}
+            </SimpleGrid>
+          </Box>
 
           <Heading mt={3} fontSize="xl">
             2021
