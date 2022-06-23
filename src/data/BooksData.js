@@ -3,8 +3,8 @@ export const booksData = {
     {
       title:"The Richest Man in Babylon",
       info:"",
-      image:"",
-      url:""
+      image:"1052.jpg",
+      url:"https://www.goodreads.com/book/show/1052.The_Richest_Man_in_Babylon"
     },
     {
       title:"Thinking, Fast and Slow",
@@ -27,16 +27,22 @@ export const booksData = {
   ],
   "books2022" : [
     {
-      title:"Bad Blood",
+      title:"Stumbling on Happiness",
       info:"",
-      image:"",
-      url:""
+      image:"518Av-psU2L._SL500_.jpg",
+      url:"https://www.audible.com/pd/Stumbling-on-Happiness-Audiobook/B002V5BAQU",
+    },
+    {
+      title:"Bad Blood",
+      info:"Secrets and Lies in a Silicon Valley Startup",
+      image:"37976541.jpg",
+      url:"https://www.goodreads.com/book/show/37976541-bad-blood"
     },
     {
       title:"Audition",
       info:"",
-      image:"",
-      url:""
+      image:"2847470._SX318_.jpg",
+      url:"https://www.goodreads.com/book/show/2847470-audition"
     },
   ],
   "books2021" : [
