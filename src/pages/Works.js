@@ -15,6 +15,7 @@ import { LayoutTransitions, SectionTransitions } from '../theme/Transitions';
 import { GridItem } from '../components/GridItem';
 import { ContentBox } from '../components/ContentBox';
 import { worksData } from '../data/WorksData';
+import { GithubIcon } from '../components/GithubIcon';
 
 const Works = () => {
 
@@ -69,6 +70,16 @@ const Works = () => {
               <Text>
                 {showWork.description}
               </Text>
+              {showWork.github === "" ? <></> :
+              <a href={showWork.github} target="_blank">
+                <Button 
+                  rightIcon={<GithubIcon />}
+                >
+                  Source
+                </Button>
+              </a>
+                
+              }
             </VStack>
           </Stack>
         </ContentBox>
