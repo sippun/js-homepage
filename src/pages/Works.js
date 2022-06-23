@@ -5,12 +5,14 @@ import {
   Container,
   Flex,
   Heading,
+  HStack,
   SimpleGrid,
   Tag,
   Text,
   Stack,
   VStack,
 } from '@chakra-ui/react';
+import { ExternalLinkIcon } from '@chakra-ui/icons';
 import { LayoutTransitions, SectionTransitions } from '../theme/Transitions';
 import { GridItem } from '../components/GridItem';
 import { ContentBox } from '../components/ContentBox';
@@ -66,20 +68,32 @@ const Works = () => {
               </Flex>
               
             </Stack>
-            <VStack>
-              <Text>
+            <VStack justifyContent="space-between" w="full">
+              <Text >
                 {showWork.description}
               </Text>
-              {showWork.github === "" ? <></> :
-              <a href={showWork.github} target="_blank">
-                <Button 
-                  rightIcon={<GithubIcon />}
-                >
-                  Source
-                </Button>
-              </a>
-                
-              }
+              <HStack w="full" justifyContent="flex-end">
+                {showWork.github === "" ? <></> :
+                  <a href={showWork.github} target="_blank" rel="noopener noreferrer">
+                    <Button 
+                      rightIcon={<GithubIcon />}
+                      order="1"
+                    >
+                      Source
+                    </Button>
+                  </a>
+                }
+                {showWork.link === "" ? <></> :
+                  <a href={showWork.link} target="_blank" rel="noopener noreferrer">
+                    <Button 
+                      rightIcon={<ExternalLinkIcon />}
+                      order="1"
+                    >
+                      Link
+                    </Button>
+                  </a>
+                }
+              </HStack>
             </VStack>
           </Stack>
         </ContentBox>
