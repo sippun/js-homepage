@@ -41,7 +41,7 @@ const Home = () => {
             </HStack>
             <HStack>
               <Text>Discord: </Text>
-              <Popover placement="top">
+              <Popover placement="bottom">
                 <PopoverTrigger>
                   <Button
                     rightIcon={<CopyIcon />}
