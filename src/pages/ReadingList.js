@@ -32,6 +32,7 @@ const mapBookIcons = (books) => {
           }}
           transition="0.3s"
           fit="cover"
+          objectPosition="top"
         />
         <Text
           pos="absolute"
