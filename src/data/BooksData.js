@@ -27,6 +27,12 @@ export const booksData = {
   ],
   "books2022" : [
     {
+      title:"Peace Is Every Step",
+      info:"The Path of Mindfulness in Everyday Life",
+      image:"14572.jpg",
+      url:"https://www.goodreads.com/book/show/14572.Peace_Is_Every_Step",
+    },
+    {
       title:"Stumbling on Happiness",
       info:"",
       image:"518Av-psU2L._SL500_.jpg",
