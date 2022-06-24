@@ -6,6 +6,7 @@ import {
   Flex,
   Heading,
   HStack,
+  Image,
   SimpleGrid,
   Tag,
   Text,
@@ -42,6 +43,13 @@ const Works = () => {
     );
   });
 
+  const workImage = () => {
+    var url = "images/works/" + showWork.image;
+    return (<Image  w='300px' h='200px' src={url} fit="cover" objectPosition="center">
+
+    </Image>)
+  }
+
   return (
     <LayoutTransitions>
       <Container h={"calc(100vh - 64px)"} maxW="inherit" p={0}>
@@ -55,7 +63,7 @@ const Works = () => {
           <Stack direction={{ base: 'column', sm: 'row'}} spacing='24px'>
             <Stack direction="column">
               <Box w='300px' h='200px' bg='aqua' mb={1}>
-                Image here
+                {workImage()}
               </Box>
               <Flex flexFlow="row wrap" w="300px" h="inherit">
                 {showWork.stack.map((tech) => {
@@ -69,10 +77,10 @@ const Works = () => {
               
             </Stack>
             <VStack justifyContent="space-between" w="full">
-              <Text >
+              <Text color="#dee3e3">
                 {showWork.description}
               </Text>
-              <HStack w="full" justifyContent="flex-end">
+              <HStack w="full" justifyContent="flex-end" pr={2}>
                 {showWork.github === "" ? <></> :
                   <a href={showWork.github} target="_blank" rel="noopener noreferrer">
                     <Button 
