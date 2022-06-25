@@ -1,6 +1,12 @@
 export const booksData = {
   "current" : [
     {
+      title:"Big Sur and the Oranges of Hieronymus Bosch",
+      info:"",
+      image:"248.jpg",
+      url:"https://www.goodreads.com/book/show/248.Big_Sur_and_the_Oranges_of_Hieronymus_Bosch"
+    },
+    {
       title:"The Richest Man in Babylon",
       info:"",
       image:"1052.jpg",

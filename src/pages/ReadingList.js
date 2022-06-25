@@ -2,6 +2,8 @@ import { Box,
   Container,
   Heading,
   Image,
+  LinkBox,
+  LinkOverlay,
   SimpleGrid,
   Text,
 } from "@chakra-ui/react";
@@ -13,42 +15,50 @@ const mapBookIcons = (books) => {
   return books.map(function(book){
     var bookImage = 'images/books/' + book.image;
     return (
-      <Box
-        role="group"
-        w="100%"
-        textAlign="center"
-        cursor="pointer"
-        pos="relative"
-        boxSize="100px"
-      >
-        <Image
-          src={bookImage}
-          alt={book.title}
-          boxSize="full" 
-          rounded="md"
-          filter="auto"
-          _groupHover={{
-            brightness: "30%"
-          }}
-          transition="0.3s"
-          fit="cover"
-          objectPosition="top"
-        />
-        <Text
-          pos="absolute"
-          top="5%"
-          px={1}
-          fontSize={14}
-          color="white"
-          opacity={0}
-          _groupHover={{
-            opacity: 1
-          }}
-          transition="0.3s"
+      <LinkBox>
+        <Box
+          role="group"
+          w="100%"
+          textAlign="center"
+          cursor="pointer"
+          pos="relative"
+          boxSize="100px"
         >
-          {book.title}
-        </Text>
-      </Box>
+          <Image
+            src={bookImage}
+            alt={book.title}
+            boxSize="full" 
+            rounded="md"
+            filter="auto"
+            _groupHover={{
+              brightness: "30%"
+            }}
+            transition="0.3s"
+            fit="cover"
+            objectPosition="top"
+          />
+          <LinkOverlay
+            href={book.url}
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            <Text
+              pos="absolute"
+              top="5%"
+              px={1}
+              fontSize={14}
+              color="white"
+              opacity={0}
+              _groupHover={{
+                opacity: 1
+              }}
+              transition="0.3s"
+            >
+              {book.title}
+            </Text>
+          </LinkOverlay>
+        </Box>
+      </LinkBox>
     );
   })
 };
