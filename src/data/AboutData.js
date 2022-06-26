@@ -2,6 +2,7 @@ export const aboutData = {
   education: "Graduated from UCSC in 2019 with a B.S. degree in Computer Science. While there I received Dean's Honors for 3 quarters, and was nominated by faculty to receive the David S. Lee Scholarship.",
   tech: "I've used many programming languages and technologies since I first started with Java in high school. Lately I have been working mainly on front end projects with Javascript, HTML, CSS, and React.",
   interests: "I love to learn about philosophy, psychology, design, economics, and business strategy. I also am  If you have any projects ",
+  collab: "",
   general: "test",
   personal: "test",
 };
@@ -23,8 +24,8 @@ export const quotesData = [
     link: "",
   },
   {
-    quote: "Escape competition through authenticity",
-    by: "Naval Ravikant",
-    link: "https://nav.al/competition-authenticity",
+    quote: "To my distress and perhaps to my delight, I order things in accordance with my passions... I put in my pictures everything I like. So much the worse for the things- they have to get along with one another.",
+    by: "Picasso",
+    link: "",
   }
 ];

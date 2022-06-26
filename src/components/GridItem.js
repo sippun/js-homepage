@@ -1,4 +1,4 @@
-import { Box, Text, Image, } from '@chakra-ui/react';
+import { Box, Text, Image, useBreakpointValue } from '@chakra-ui/react';
 
 export const GridItem = ({ id, title, thumbnail = "logo192.png", setWork }) => {
   
@@ -13,7 +13,7 @@ export const GridItem = ({ id, title, thumbnail = "logo192.png", setWork }) => {
       textAlign="center"
       cursor="pointer"
       pos="relative"
-      boxSize="80px"
+      boxSize={useBreakpointValue({base:"60px", sm:"80px"})}
       onClick={clicked}
     >
       <Image

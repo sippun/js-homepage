@@ -119,8 +119,8 @@ const Works = () => {
               <SimpleGrid
                 flex={1}
                 rows={{base: 3, sm: 1}}
-                columns={{base: 3, sm:6}}
-                spacingX={[4, 8]}
+                columns={{base: 4, sm:6}}
+                spacingX={{base: 2, sm: 8}}
                 spacingY={8}
               >
                 {gridWorkIcons}

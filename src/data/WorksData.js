@@ -15,7 +15,7 @@ export const worksData = [
     stack:["MongoDB", "Express.js", "React", "Node.js", "Chakra UI"],
     thumbnail:"workwork.png",
     image:"AdobeStock_439644641.jpeg",
-    description:"Currently building the front end for a mental health startup's product and speeding up their time to market. We're keeping the details under wraps for now but more information to be revealed in the near future.",
+    description:"Currently building the front end for a mental health startup's prototype and speeding up their time to market. We're keeping the details under wraps for now but more information to be revealed in the near future.",
     github:"",
     link:"",
   },
