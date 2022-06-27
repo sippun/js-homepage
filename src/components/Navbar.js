@@ -54,8 +54,9 @@ const Navbar = () => {
               <HStack spacing={2}>
                 <Image
                   boxSize='30px'
-                  src='/yot.png'
+                  src='/jslogo.jpg'
                   alt='js img'
+                  borderRadius={4}
                 />
                 <Show above="sm">
                   <Text fontFamily="kanit" fontWeight="bold">Joel Sheng</Text>
