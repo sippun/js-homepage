@@ -16,12 +16,12 @@ const Home = () => {
   const toast = useToast();
 
   const copy = (option) => {
-    var text = "";
+    let text = "";
     if (option === "email") text = "joel.s.sheng@gmail.com";
     if (option === "discord") text = "sippy#8480";
     navigator.clipboard.writeText(text).then(() => {
       toast({
-        title: "Copied '" + {text} + "' to clipboard",
+        title: "Copied '" + text + "' to clipboard",
         status: "success",
         variant: "subtle",
         duration: 2000,
@@ -39,8 +39,10 @@ const Home = () => {
               <Text alignSelf="start" mt={2}>Email:</Text>
               <VStack>
                 <Button
+                  //value="email"
                   rightIcon={<CopyIcon />}
                   onClick={() => copy("email")}
+                  //onClick={(e) => copy(e.target.value)}
                 >
                   joel.s.sheng@gmail.com
                 </Button>
