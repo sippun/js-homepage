@@ -33,4 +33,16 @@ const SectionTransitions = ({ children, delay = 0 }) => {
   );
 };
 
-export { LayoutTransitions, SectionTransitions };
+const ContentTransitions = ({ children }) => {
+  return (
+    <motion.article
+      initial={{ y: 10, opacity: 0 }}
+      animate={{ y: 0, opacity: 1 }}
+      transition={{ duration: 0.8 }}
+    >
+      {children}
+    </motion.article>
+  );
+};
+
+export { LayoutTransitions, SectionTransitions, ContentTransitions };

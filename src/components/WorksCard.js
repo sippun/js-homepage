@@ -15,16 +15,12 @@ import { ContentBox } from './ContentBox';
 import { ExternalLinkIcon } from '@chakra-ui/icons';
 import { GithubIcon } from './GithubIcon';
 
-
 const WorksCard = ({ data }) => {
 
   const url = "images/works/" + data.image;
 
   return (
-    <ContentBox
-      maxW="container.md"
-      h="calc((100vh - 64px) * 0.65)"
-    >
+    <>
       <Heading fontSize="2xl" mb={3} variant="code">
         {data.title}
       </Heading>
@@ -72,7 +68,7 @@ const WorksCard = ({ data }) => {
           </HStack>
         </VStack>
       </Stack>
-    </ContentBox>
+    </>
   );
 };
 

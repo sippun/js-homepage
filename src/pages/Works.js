@@ -1,21 +1,15 @@
 import { useState } from 'react';
 import {
   Box,
-  Button,
   Container,
-  Flex,
   Heading,
-  HStack,
-  Image,
   SimpleGrid,
-  Tag,
-  Text,
-  Stack,
-  VStack,
-  useColorModeValue,
 } from '@chakra-ui/react';
-
-import { LayoutTransitions, SectionTransitions } from '../theme/Transitions';
+import {
+  ContentTransitions,
+  LayoutTransitions,
+  SectionTransitions
+} from '../theme/Transitions';
 import { GridItem } from '../components/GridItem';
 import { ContentBox } from '../components/ContentBox';
 import WorksCard from '../components/WorksCard';
@@ -47,10 +41,16 @@ const Works = () => {
   return (
     <LayoutTransitions>
       <Container h={"calc(100vh - 64px)"} maxW="inherit" p={0}>
+        <ContentBox
+          maxW="container.md"
+          h="calc((100vh - 64px) * 0.65)"
+        >
+          <ContentTransitions key={showWork.id}>
+            <WorksCard data={showWork} />
+          </ContentTransitions>
+        </ContentBox>
 
-        <WorksCard data={showWork} />
-
-        <SectionTransitions delay={0.1}>
+        <SectionTransitions delay={0.25}>
           <ContentBox
             maxW="inherit"
             h="calc((100vh - 64px) * 0.25)"
