@@ -6,6 +6,7 @@ import {
   VStack,
   HStack,
   Heading,
+  StackDivider,
   Text,
   useToast,
 } from '@chakra-ui/react';
@@ -33,9 +34,9 @@ const Home = () => {
     <LayoutTransitions>
       <Container h="calc(100vh - 64px)" maxW="container.md" p={0}>
         <Center h="calc((100vh - 64px) * 0.8)">
-          <VStack w="full">
+          <VStack w="sm" spacing={8}>
             <Heading>Get in touch</Heading>
-            <HStack justifyContent="space-between">
+            <HStack w="full" justifyContent="space-between">
               <Text alignSelf="start" mt={2}>Email:</Text>
               <VStack>
                 <Button
@@ -50,12 +51,13 @@ const Home = () => {
                   as={Link}
                   href="mailto:joel.s.sheng@gmail.com"
                   rightIcon={<EmailIcon />}
+                  alignSelf="end"
                 >
                   Send email
                 </Button>
               </VStack>
             </HStack>
-            <HStack justifyContent="space-between">
+            <HStack w="full" justifyContent="space-between">
               <Text>Discord: </Text>
               <Button
                 rightIcon={<CopyIcon />}
