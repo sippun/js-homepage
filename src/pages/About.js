@@ -7,12 +7,14 @@ import {
   Tabs, TabList, TabPanels, Tab, TabPanel,
   VStack,
   HStack,
+  StackDivider,
+  Text,
 } from '@chakra-ui/react';
 import { DownloadIcon } from '@chakra-ui/icons';
 import { Link as ReactLink } from 'react-router-dom';
 import { LayoutTransitions } from '../theme/Transitions';
 import { ContentBox } from '../components/ContentBox';
-import { aboutData } from '../data/AboutData';
+import { aboutData, quotesData } from '../data/AboutData';
 import EudaimonicPopover from '../components/EudaimonicPopover';
 
 const About = () => {
@@ -40,43 +42,40 @@ const About = () => {
           
           <Tabs mt={6} isFitted colorScheme="accent">
             <TabList>
-              <Tab>For employers</Tab>
-              <Tab>For collaborators</Tab>
-              <Tab>For the curious</Tab>
+              <Tab>Professional</Tab>
+              <Tab>Personal</Tab>
+              <Tab>Philosophical</Tab>
             </TabList>
             <TabPanels>
-              {/* For employers */}
+              {/* Professional */}
               <TabPanel>
-                <VStack h="full" justifyContent="space-between">
+                <VStack h="full" justifyContent="space-between" flexFlow="column">
+                  <Button
+                    as={Link}
+                    rightIcon={<DownloadIcon />}
+                    href="jsresume.pdf"
+                    target="_blank"
+                    alignSelf="end"
+                  >
+                    Resume
+                  </Button>
                   <Box>
                     <p>{aboutData.education}</p>
                     <br />
                     <p>{aboutData.tech}</p>
                   </Box>
-                  {/* button positions forced now, fix later */}
-                  <HStack
-                    position="absolute"
-                    bottom="calc((100vh - 64px) * 0.1)"
-                    w="full" 
-                    pr={4}
-                    pb={4}
-                    justifyContent="end"
+                  
+                  <StackDivider h={16} />
+                  <Button
+                    as={ReactLink}
+                    to="/works"
+                    alignSelf="end"
                   >
-                    <Button as={ReactLink} to="/works">
-                      My works
-                    </Button>
-                    <Button
-                      as={Link}
-                      rightIcon={<DownloadIcon />}
-                      href="jsresume.pdf"
-                      target="_blank"
-                    >
-                      Resume
-                    </Button>
-                  </HStack>
+                    Works
+                  </Button>
                 </VStack>
               </TabPanel>
-              {/* For collaborators */}
+              {/* Personal */}
               <TabPanel>
                 <p>{aboutData.interests}</p>
                 <HStack
@@ -95,11 +94,18 @@ const About = () => {
                   </Button>
                 </HStack>
               </TabPanel>
-              {/* For the curious */}
+              {/* Philosophical */}
               <TabPanel>
-                <p>
-                  Currently on the dilettante to polymath pipeline.
-                </p>
+                {quotesData.map((q, i) => {
+                  return (
+                    <Text mb={4} key={i}>
+                      <q>{q.quote}</q>
+                      &nbsp;&mdash;&nbsp;{q.by}
+                    </Text>
+                  )
+                })
+                }
+                
               </TabPanel>
             </TabPanels>
           </Tabs>
