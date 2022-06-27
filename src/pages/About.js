@@ -79,6 +79,8 @@ const About = () => {
               {/* Personal */}
               <TabPanel>
                 <p>{aboutData.interests}</p>
+                <br />
+                <p>{aboutData.books}</p>
                 <HStack
                   position="absolute"
                   bottom="calc((100vh - 64px) * 0.1)"

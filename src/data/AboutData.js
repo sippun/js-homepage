@@ -1,7 +1,8 @@
 export const aboutData = {
   education: "Graduated from UCSC in 2019 with a B.S. degree in Computer Science. While there I received Dean's Honors for an academic school year, and was nominated by faculty to receive the David S. Lee Scholarship.",
   tech: "I've used many programming languages and technologies since I first started with Java in high school. Lately I have been working mainly on front end projects with Javascript, HTML, CSS, and React.",
-  interests: "I love to learn about philosophy, psychology, design, economics, and business strategy. My hobbies include reading, gaming, skateboarding, fitness, and playing piano.",
+  interests: "I love to learn about philosophy, psychology, design, economics, and business. My hobbies include reading, gaming, skateboarding, fitness, and playing piano.",
+  books: "My favorite books include Flow, by Mihaly Csikszentmihalyi, Quiet, by Susan Cain, and The Book, by Alan Watts.",
   collab: "",
   general: "test",
   personal: "test",
