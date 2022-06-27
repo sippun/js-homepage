@@ -56,7 +56,7 @@ const Works = () => {
       <Container h={"calc(100vh - 64px)"} maxW="inherit" p={0}>
         <ContentBox
           maxW="container.md"
-          h="calc((100vh - 64px) * 0.6)"
+          h="calc((100vh - 64px) * 0.65)"
         >
           <Heading fontSize="2xl" mb={3} variant="code">
             {showWork.title}

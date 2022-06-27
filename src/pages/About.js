@@ -9,6 +9,7 @@ import {
   HStack,
   StackDivider,
   Text,
+  useColorModeValue,
 } from '@chakra-ui/react';
 import { DownloadIcon } from '@chakra-ui/icons';
 import { Link as ReactLink } from 'react-router-dom';
@@ -21,7 +22,7 @@ const About = () => {
   return (
     <LayoutTransitions>
       <Container h="calc(100vh - 64px)" maxW="container.md" p={0}>
-        <ContentBox h="calc((100vh - 64px) * 0.9)" maxW="inherit" >
+        <ContentBox h="calc((100vh - 64px) * 0.95)" maxW="inherit" >
           <Heading mb={3} fontSize="2xl" variant="code">
             About Me
           </Heading>
@@ -41,7 +42,7 @@ const About = () => {
           </Heading>
           
           <Tabs mt={6} isFitted colorScheme="accent">
-            <TabList>
+            <TabList borderColor="cleargrey">
               <Tab>Professional</Tab>
               <Tab>Personal</Tab>
               <Tab>Philosophical</Tab>

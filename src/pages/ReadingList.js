@@ -71,7 +71,7 @@ const ReadingList = () => {
   return (
     <LayoutTransitions>
       <Container h="calc(100vh - 64px)" maxW="inherit" p={0}>
-        <ContentBox h="calc((100vh - 64px) * 0.9)" maxW="inherit" >
+        <ContentBox h="calc((100vh - 64px) * 0.95)" maxW="inherit" >
           <Heading fontSize="2xl" as="span" variant="code">
             Reading List 
           </Heading>

@@ -6,6 +6,7 @@ const theme = extendTheme({
     edwarddark: '#526060',
     ice: '#c6eae3',
     icedark: '#8fd6c8',
+    clearergrey: 'RGBA(176, 191, 206, 0.2)',
     cleargrey: 'RGBA(69, 86, 102, 0.3)',
     aqua: 'RGBA(131, 206, 191, 0.4)',
     particle: '#A7233A3f',

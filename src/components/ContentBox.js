@@ -7,7 +7,7 @@ const ContentBox = (props) => {
       maxW={props.maxW}
       h={props.h}
       marginTop={props.marginTop}
-      bgColor={useColorModeValue("RGBA(171, 186, 201, 0.3)", "RGBA(69, 86, 102, 0.3)")}
+      bgColor={useColorModeValue("clearergrey", "cleargrey")}
       borderRadius="lg"
       px={4}
       py={2}
