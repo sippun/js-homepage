@@ -14,12 +14,12 @@ import {
   VStack,
   useColorModeValue,
 } from '@chakra-ui/react';
-import { ExternalLinkIcon } from '@chakra-ui/icons';
+
 import { LayoutTransitions, SectionTransitions } from '../theme/Transitions';
 import { GridItem } from '../components/GridItem';
 import { ContentBox } from '../components/ContentBox';
+import WorksCard from '../components/WorksCard';
 import { worksData } from '../data/WorksData';
-import { GithubIcon } from '../components/GithubIcon';
 
 const Works = () => {
 
@@ -44,68 +44,11 @@ const Works = () => {
     );
   });
 
-  const workImage = () => {
-    var url = "images/works/" + showWork.image;
-    return (<Image  w='300px' h='200px' src={url} fit="cover" objectPosition="center">
-
-    </Image>)
-  }
-
   return (
     <LayoutTransitions>
       <Container h={"calc(100vh - 64px)"} maxW="inherit" p={0}>
-        <ContentBox
-          maxW="container.md"
-          h="calc((100vh - 64px) * 0.65)"
-        >
-          <Heading fontSize="2xl" mb={3} variant="code">
-            {showWork.title}
-          </Heading>
-          <Stack direction={{ base: 'column', sm: 'row'}} spacing='24px'>
-            <Stack direction="column">
-              <Box w='300px' h='200px' bg='aqua' mb={1}>
-                {workImage()}
-              </Box>
-              <Flex flexFlow="row wrap" w="300px" h="inherit">
-                {showWork.stack.map((tech) => {
-                  return(
-                    <Tag w="fit-content" mr={4} mt={2}>
-                      {tech}
-                    </Tag>
-                  );
-                })}
-              </Flex>
-              
-            </Stack>
-            <VStack justifyContent="space-between" w="full">
-              <Text color={useColorModeValue("#3e4444", "#dee3e3")}>
-                {showWork.description}
-              </Text>
-              <HStack w="full" justifyContent="flex-end" pr={2}>
-                {showWork.github === "" ? <></> :
-                  <a href={showWork.github} target="_blank" rel="noopener noreferrer">
-                    <Button 
-                      rightIcon={<GithubIcon />}
-                      order="1"
-                    >
-                      Source
-                    </Button>
-                  </a>
-                }
-                {showWork.link === "" ? <></> :
-                  <a href={showWork.link} target="_blank" rel="noopener noreferrer">
-                    <Button 
-                      rightIcon={<ExternalLinkIcon />}
-                      order="1"
-                    >
-                      Link
-                    </Button>
-                  </a>
-                }
-              </HStack>
-            </VStack>
-          </Stack>
-        </ContentBox>
+
+        <WorksCard data={showWork} />
 
         <SectionTransitions delay={0.1}>
           <ContentBox
