@@ -1,12 +1,13 @@
-import { Box } from '@chakra-ui/react';
+import { Box, useColorModeValue } from '@chakra-ui/react';
 
 const ContentBox = (props) => {
+  
   return (
     <Box
       maxW={props.maxW}
       h={props.h}
       marginTop={props.marginTop}
-      bgColor="RGBA(69, 86, 102, 0.3)"
+      bgColor={useColorModeValue("RGBA(171, 186, 201, 0.3)", "RGBA(69, 86, 102, 0.3)")}
       borderRadius="lg"
       px={4}
       py={2}

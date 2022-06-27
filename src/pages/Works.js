@@ -12,6 +12,7 @@ import {
   Text,
   Stack,
   VStack,
+  useColorModeValue,
 } from '@chakra-ui/react';
 import { ExternalLinkIcon } from '@chakra-ui/icons';
 import { LayoutTransitions, SectionTransitions } from '../theme/Transitions';
@@ -77,7 +78,7 @@ const Works = () => {
               
             </Stack>
             <VStack justifyContent="space-between" w="full">
-              <Text color="#dee3e3">
+              <Text color={useColorModeValue("#3e4444", "#dee3e3")}>
                 {showWork.description}
               </Text>
               <HStack w="full" justifyContent="flex-end" pr={2}>
