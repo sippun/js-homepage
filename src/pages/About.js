@@ -4,15 +4,7 @@ import {
   Container,
   Heading,
   Link,
-  Popover,
-  PopoverTrigger,
-  PopoverContent,
-  PopoverHeader,
-  PopoverBody,
-  PopoverArrow,
-  PopoverCloseButton,
   Tabs, TabList, TabPanels, Tab, TabPanel,
-  Text,
   VStack,
   HStack,
 } from '@chakra-ui/react';
@@ -21,6 +13,7 @@ import { Link as ReactLink } from 'react-router-dom';
 import { LayoutTransitions } from '../theme/Transitions';
 import { ContentBox } from '../components/ContentBox';
 import { aboutData } from '../data/AboutData';
+import EudaimonicPopover from '../components/EudaimonicPopover';
 
 const About = () => {
   return (
@@ -36,44 +29,14 @@ const About = () => {
           <Heading ml={4} fontSize="lg">
             I like to build stuff and read things.<br />
           </Heading>
-          <Popover variant="definition">
-            <Heading ml={4} fontSize="lg" fontWeight="light" as="span">
-              One of my life goals is to develop tools that improve human&nbsp;
-              <PopoverTrigger>
-                <Link color="accent.300" fontWeight="350">
-                  eudaimonic
-                </Link>
-              </PopoverTrigger>
-              &nbsp;wellbeing.
-            </Heading>
-            <PopoverContent w="sm">
-              <PopoverArrow />
-              <PopoverCloseButton />
-              <PopoverHeader>eudaimonic // eu·​dai·​mo·​nic</PopoverHeader>
-              <PopoverBody>
-                Relating to the “pursuit of virtue, excellence, and the best within us.”
-                As opposed to hedonic, or the pursuit of comfort and pleasure.
-                (Which is also good.)<br />
-                <Link
-                  color='accent.300'
-                  href='https://positivepsychology.com/eudaimonia/'
-                  target="_blank"
-                  rel="noreferrer noopener"
-                >
-                  https://positivepsychology.com/eudaimonia/
-                </Link>
-                <br />
-                <Link
-                  color='accent.300'
-                  href='https://www.researchgate.net/publication/258819690_Eudaimonia_and_Its_Distinction_from_Hedonia_Developing_a_Classification_and_Terminology_for_Understanding_Conceptual_and_Operational_Definitions'
-                  target="_blank"
-                  rel="noreferrer noopener"
-                >
-                  Huta, V., &amp; Waterman, A. S. (2014)
-                </Link>
-              </PopoverBody>
-            </PopoverContent>
-          </Popover>
+
+          <Heading ml={4} fontSize="lg" fontWeight="light" as="span">
+            One of my life goals is to develop tools that improve human&nbsp;
+          </Heading>
+          <EudaimonicPopover />
+          <Heading fontSize="lg" fontWeight="light" as="span">
+            &nbsp;wellbeing.
+          </Heading>
           
           <Tabs mt={6} isFitted colorScheme="accent">
             <TabList>
