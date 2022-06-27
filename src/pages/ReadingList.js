@@ -15,7 +15,7 @@ const mapBookIcons = (books) => {
   return books.map(function(book){
     var bookImage = 'images/books/' + book.image;
     return (
-      <LinkBox>
+      <LinkBox key={book.title}>
         <Box
           role="group"
           w="100%"
