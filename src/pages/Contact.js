@@ -34,13 +34,13 @@ const Home = () => {
       <Container h="calc(100vh - 64px)" maxW="container.md" p={0}>
         <Center h="calc((100vh - 64px) * 0.8)">
           <VStack w="full">
-            <Heading variant="mono">Get in touch</Heading>
+            <Heading>Get in touch</Heading>
             <HStack justifyContent="space-between">
               <Text alignSelf="start" mt={2}>Email:</Text>
               <VStack>
                 <Button
                   rightIcon={<CopyIcon />}
-                  onClick={copy("email")}
+                  onClick={() => copy("email")}
                 >
                   joel.s.sheng@gmail.com
                 </Button>
@@ -57,7 +57,7 @@ const Home = () => {
               <Text>Discord: </Text>
               <Button
                 rightIcon={<CopyIcon />}
-                onClick={copy("discord")}
+                onClick={() => copy("discord")}
               >
                 sippy#8480
               </Button>
