@@ -9,7 +9,6 @@ import {
   HStack,
   StackDivider,
   Text,
-  useColorModeValue,
   Tag,
 } from '@chakra-ui/react';
 import { DownloadIcon } from '@chakra-ui/icons';

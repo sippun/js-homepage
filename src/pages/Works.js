@@ -6,7 +6,6 @@ import {
   SimpleGrid,
 } from '@chakra-ui/react';
 import {
-  ContentTransitions,
   LayoutTransitions,
   SectionTransitions
 } from '../theme/Transitions';
