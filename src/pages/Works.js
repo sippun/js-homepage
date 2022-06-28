@@ -17,13 +17,15 @@ import { worksData } from '../data/WorksData';
 
 const Works = () => {
 
-  const showWorkInit = () => {
-    return worksData.find(({ id }) => id === "js-homepage");
-  };
-  const[showWork, setShowWork] = useState(showWorkInit());
+  // const showWorkInit = () => {
+  //   return worksData.find(({ id }) => id === "js-homepage");
+  // };
+  //const[showWork, setShowWork] = useState(showWorkInit());
+  const[showWork, setShowWork] = useState("js-homepage");
 
   const changeWork = (set) => {
-    setShowWork(worksData.find(({ id }) => id === set));
+    //setShowWork(worksData.find(({ id }) => id === set));
+    setShowWork(set);
   };
 
   const gridWorkIcons = worksData.map((work) => {
@@ -48,7 +50,7 @@ const Works = () => {
           {worksData.map(work => {
             return (
               <ContentTransitions key={work.id}>
-                <WorksCard data={work} isSelected={work.id === showWork.id}/>
+                <WorksCard data={work} isSelected={work.id === showWork}/>
               </ContentTransitions>
             );
           })}
