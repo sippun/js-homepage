@@ -76,15 +76,6 @@ const About = () => {
                     <br/>
                     <p>{aboutData.recent}</p>
                   </Box>
-                  
-                  <StackDivider h={16} />
-                  <Button
-                    as={ReactLink}
-                    to="/works"
-                    alignSelf="end"
-                  >
-                    Works
-                  </Button>
                 </VStack>
               </TabPanel>
               {/* Personal */}
@@ -92,21 +83,6 @@ const About = () => {
                 <p>{aboutData.interests}</p>
                 <br />
                 <p>{aboutData.books}</p>
-                <HStack
-                  position="absolute"
-                  bottom="calc((100vh - 64px) * 0.1)"
-                  w="95%"
-                  pr={4}
-                  pb={4}
-                  justifyContent="end"
-                >
-                  <Button as={ReactLink} to="/works">
-                    My works
-                  </Button>
-                  <Button as={ReactLink} to="/readinglist">
-                    Reading List
-                  </Button>
-                </HStack>
               </TabPanel>
               {/* Philosophical */}
               <TabPanel>
