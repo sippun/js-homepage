@@ -48,7 +48,7 @@ const Works = () => {
         >
           {worksData.map(work => {
             return (
-              <WorksCard data={work} isSelected={work.id === showWork}/>
+              <WorksCard key={work.id} data={work} isSelected={work.id === showWork}/>
             );
           })}
         </ContentBox>

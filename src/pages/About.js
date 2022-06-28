@@ -55,7 +55,7 @@ const About = () => {
                     <HStack>
                       {aboutData.skills.map((skill) => {
                         return(
-                          <Tag w="fit-content">
+                          <Tag key={skill} w="fit-content">
                             {skill}
                           </Tag>
                         );

@@ -33,7 +33,7 @@ const WorksCard = ({ data, isSelected }) => {
             <Flex flexFlow="row wrap" w="300px" h="inherit">
               {data.stack.map((tech) => {
                 return(
-                  <Tag w="fit-content" mr={4} mt={2}>
+                  <Tag key={tech} w="fit-content" mr={4} mt={2}>
                     {tech}
                   </Tag>
                 );
