@@ -11,6 +11,7 @@ import {
   Text,
   useColorModeValue,
 } from "@chakra-ui/react";
+import { ContentTransitions } from "../theme/Transitions";
 import { ExternalLinkIcon } from '@chakra-ui/icons';
 import { GithubIcon } from './GithubIcon';
 
@@ -19,6 +20,7 @@ const WorksCard = ({ data, isSelected }) => {
   const url = "images/works/" + data.image;
 
   return (
+    <ContentTransitions key ={isSelected}>
     <Box hidden={!isSelected}>
       <Heading fontSize="2xl" mb={3} variant="code">
         {data.title}
@@ -68,6 +70,8 @@ const WorksCard = ({ data, isSelected }) => {
         </VStack>
       </Stack>
     </Box>
+      
+      </ContentTransitions>
   );
 };
 

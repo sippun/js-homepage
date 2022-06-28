@@ -49,9 +49,7 @@ const Works = () => {
         >
           {worksData.map(work => {
             return (
-              <ContentTransitions key={work.id}>
-                <WorksCard data={work} isSelected={work.id === showWork}/>
-              </ContentTransitions>
+              <WorksCard data={work} isSelected={work.id === showWork}/>
             );
           })}
         </ContentBox>
