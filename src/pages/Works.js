@@ -45,9 +45,13 @@ const Works = () => {
           maxW="container.md"
           h="calc((100vh - 64px) * 0.65)"
         >
-          <ContentTransitions key={showWork.id}>
-            <WorksCard data={showWork} />
-          </ContentTransitions>
+          {worksData.map(work => {
+            return (
+              <ContentTransitions key={work.id}>
+                <WorksCard data={work} isSelected={work.id === showWork.id}/>
+              </ContentTransitions>
+            );
+          })}
         </ContentBox>
 
         <SectionTransitions delay={0.25}>

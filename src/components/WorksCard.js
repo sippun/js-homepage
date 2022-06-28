@@ -11,16 +11,15 @@ import {
   Text,
   useColorModeValue,
 } from "@chakra-ui/react";
-import { ContentBox } from './ContentBox';
 import { ExternalLinkIcon } from '@chakra-ui/icons';
 import { GithubIcon } from './GithubIcon';
 
-const WorksCard = ({ data }) => {
+const WorksCard = ({ data, isSelected }) => {
 
   const url = "images/works/" + data.image;
 
   return (
-    <>
+    <Box hidden={!isSelected}>
       <Heading fontSize="2xl" mb={3} variant="code">
         {data.title}
       </Heading>
@@ -68,7 +67,7 @@ const WorksCard = ({ data }) => {
           </HStack>
         </VStack>
       </Stack>
-    </>
+    </Box>
   );
 };
 
