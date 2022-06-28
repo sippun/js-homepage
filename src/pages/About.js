@@ -61,9 +61,9 @@ const About = () => {
                     Resume
                   </Button>
                   <Box>
-                    <p>{aboutData.education}</p>
-                    <br />
-                    <p>{aboutData.tech}</p>
+                    <p>{aboutData.history}</p>
+                    <br/>
+                    <p>{aboutData.recent}</p>
                   </Box>
                   
                   <StackDivider h={16} />

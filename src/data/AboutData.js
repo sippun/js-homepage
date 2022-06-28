@@ -1,6 +1,7 @@
 export const aboutData = {
-  education: "Graduated from UCSC in 2019 with a B.S. degree in Computer Science. While there I received Dean's Honors for an academic school year, and was nominated by faculty to receive the David S. Lee Scholarship.",
-  tech: "I've used many programming languages and technologies since I first started with Java in high school. Lately I have been working mainly on front end projects with Javascript, HTML, CSS, and React.",
+  education: "While at UCSC I received Dean's Honors for an academic school year, and was nominated by faculty to receive the David S. Lee Scholarship.",
+  history: "My first programming experience started with Java in high school. I learned OOP fundamentals and created a few games. Continuing to getting my B.S. in Computer Science at UCSC, I worked with C, C++, Python, Javascript, PostgreSQL, Unix shell scripts, etc. among many other languages and technologies. Outside of school I've learned some Android mobile and React web development on my own.",
+  recent: "Lately I have been working mainly on web front end projects with Javascript, HTML, CSS, and React.",
   interests: "I love to learn about philosophy, psychology, design, economics, and business. My hobbies include reading, gaming, skateboarding, fitness, and playing piano.",
   books: "My favorite books include Flow, by Mihaly Csikszentmihalyi, Quiet, by Susan Cain, and The Book, by Alan Watts.",
   collab: "",
@@ -20,8 +21,8 @@ export const quotesData = [
     link: "",
   },
   {
-    quote: "Each time you look at a tangerine, you can see deeply into it. You can see everything in the universe in one tangerine. When you peel it and smell it, it's wonderful. You can take your time eating a tangerine and be very happy.",
-    by: "Thich Nhat Hanh",
+    quote: "The only way to deal with an unfree world is to become so absolutely free that your very existence is an act of rebellion.",
+    by: "Albert Camus",
     link: "",
   },
   {
@@ -37,6 +38,11 @@ export const quotesData = [
   {
     quote: "Start by doing what's necessary; then do what's possible; and suddenly you are doing the impossible.",
     by: "Francis of Assisi",
+    link: "",
+  },
+  {
+    quote: "Each time you look at a tangerine, you can see deeply into it. You can see everything in the universe in one tangerine. When you peel it and smell it, it's wonderful. You can take your time eating a tangerine and be very happy.",
+    by: "Thich Nhat Hanh",
     link: "",
   },
 ];
