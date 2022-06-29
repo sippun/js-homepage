@@ -132,7 +132,7 @@ export const Bubbles =
       enable: true,
       overlap: {
         enable: false,
-        retries: 999
+        retries: 10
       }
     },
     color: {

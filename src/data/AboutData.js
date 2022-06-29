@@ -1,7 +1,7 @@
 export const aboutData = {
   education: "While at UCSC I received Dean's Honors for an academic school year, and was nominated by faculty to receive the David S. Lee Scholarship.",
   history: "My first programming experience started with Java in high school. I learned OOP fundamentals and created a few games. Continuing to getting my B.S. in Computer Science at UCSC, I worked with C, C++, Python, Javascript, PostgreSQL, Unix shell scripts, etc. among many other languages and technologies. Outside of school I've learned Android mobile and React web development on my own.",
-  recent: "Lately I have been working mainly on web front end projects with Javascript, HTML, CSS, and React. I am also constantly expanding my skills and staying curious about the world.",
+  recent: "Lately I have been working mainly on the front end for web projects with Javascript, HTML, CSS, and React. I am also constantly expanding my skills and staying curious about the world.",
   interests: "I love to learn about philosophy, psychology, design, economics, and business. My hobbies include reading, gaming, skateboarding, fitness, MMA, and playing piano.",
   books: "My favorite books include Flow, by Mihaly Csikszentmihalyi, Quiet, by Susan Cain, and The Book, by Alan Watts.",
   collab: "",
