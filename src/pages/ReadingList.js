@@ -1,15 +1,18 @@
 import { Box,
   Container,
   Heading,
+  HStack,
   Image,
   LinkBox,
   LinkOverlay,
+  Show,
   SimpleGrid,
   Text,
 } from "@chakra-ui/react";
 import { LayoutTransitions } from "../theme/Transitions";
 import { ContentBox } from "../components/ContentBox";
 import { booksData } from "../data/BooksData";
+import { NavLeft, NavRight } from "../components/NavArrowButtons";
 
 const mapBookIcons = (books) => {
   return books.map(function(book){
@@ -70,40 +73,48 @@ const bookList21 = mapBookIcons(booksData.books2021);
 const ReadingList = () => {
   return (
     <LayoutTransitions>
-      <Container h="calc(100vh - 64px)" maxW="container.md" p={0}>
-        <ContentBox h="calc((100vh - 64px) * 0.95)" maxW="inherit" >
-          <Heading fontSize="2xl" as="span" variant="code">
-            Reading List 
-          </Heading>
+      <HStack justifyContent="space-evenly">
+        <Show above="md">
+          <NavLeft target="/about" />
+        </Show>
+        <Container h="calc(100vh - 64px)" maxW="container.md" p={0}>
+          <ContentBox h="calc((100vh - 64px) * 0.95)" maxW="inherit" >
+            <Heading fontSize="2xl" as="span" variant="code">
+              Reading List 
+            </Heading>
 
-          <Heading mt={3} fontSize="xl">
-            Currently Reading
-          </Heading>
-          <Box mt={3} flex={1} alignItems="center">
-            <SimpleGrid columns={{base: 3, sm: 5}} rowGap={4}>
-              {currentList}
-            </SimpleGrid>
-          </Box>
+            <Heading mt={3} fontSize="xl">
+              Currently Reading
+            </Heading>
+            <Box mt={3} flex={1} alignItems="center">
+              <SimpleGrid columns={{base: 3, sm: 5}} rowGap={4}>
+                {currentList}
+              </SimpleGrid>
+            </Box>
 
-          <Heading mt={3} fontSize="xl">
-            2022
-          </Heading>
-          <Box mt={3} flex={1} alignItems="center">
-            <SimpleGrid columns={{base: 3, sm: 5}} rowGap={4}>
-              {bookList22}
-            </SimpleGrid>
-          </Box>
+            <Heading mt={3} fontSize="xl">
+              2022
+            </Heading>
+            <Box mt={3} flex={1} alignItems="center">
+              <SimpleGrid columns={{base: 3, sm: 5}} rowGap={4}>
+                {bookList22}
+              </SimpleGrid>
+            </Box>
 
-          <Heading mt={3} fontSize="xl">
-            2021
-          </Heading>
-          <Box mt={3} flex={1} alignItems="center">
-            <SimpleGrid columns={{base: 3, sm: 5}} rowGap={4}>
-              {bookList21}
-            </SimpleGrid>
-          </Box>
-        </ContentBox>
-      </Container>
+            <Heading mt={3} fontSize="xl">
+              2021
+            </Heading>
+            <Box mt={3} flex={1} alignItems="center">
+              <SimpleGrid columns={{base: 3, sm: 5}} rowGap={4}>
+                {bookList21}
+              </SimpleGrid>
+            </Box>
+          </ContentBox>
+        </Container>
+        <Show above="md">
+          <NavRight target="/contact" />
+        </Show>
+      </HStack>
     </LayoutTransitions>
   );
 };
