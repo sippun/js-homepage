@@ -21,7 +21,7 @@ import { ColorModeSwitcher } from './ColorModeSwitcher';
 
 const Navbar = () => {
   return (
-    <Box px={{base: 4, md: 16 }}>
+    <Box px={{base: 4, md: "4vw"}}>
       <Container as={Stack} maxW={'container.xl'}>
         <Flex h={16} alignItems={'center'} justifyContent={'space-between'}>
           <Menu>
