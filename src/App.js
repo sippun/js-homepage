@@ -27,7 +27,7 @@ function App() {
         <ParticlesBackground />
         <Navbar />
 
-        <Container maxW="container.md" overflow="hidden" p={0}>
+        <Container maxW="container.xl" overflow="hidden" p={0}>
           <AnimatePresence exitBeforeEnter>
             <Routes location={location} key={location.pathname}>
               <Route path="*" element={<NotFound />} />

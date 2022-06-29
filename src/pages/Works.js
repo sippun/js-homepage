@@ -41,7 +41,7 @@ const Works = () => {
 
   return (
     <LayoutTransitions>
-      <Container h={"calc(100vh - 64px)"} maxW="inherit" p={0}>
+      <Container h={"calc(100vh - 64px)"} maxW="container.md" p={0}>
         <ContentBox
           maxW="container.md"
           h="calc((100vh - 64px) * 0.65)"
