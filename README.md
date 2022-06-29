@@ -1,5 +1,7 @@
 # Joel's homepage
 
+[https://joelsheng.netlify.app/](https://joelsheng.netlify.app/)
+
 ## Built with
 React, Chakra UI, Framer Motion, tsParticles
 
