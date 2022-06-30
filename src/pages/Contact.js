@@ -6,7 +6,6 @@ import {
   VStack,
   HStack,
   Heading,
-  StackDivider,
   Text,
   useToast,
 } from '@chakra-ui/react';
