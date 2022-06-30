@@ -5,7 +5,8 @@ import { Link as ReactLink } from 'react-router-dom';
 const NavLeft = ({ target }) => {
   return (
     <IconButton
-      h="20vh"
+      h="100%"
+      w="100%"
       bg="none"
       as={ReactLink}
       to={target}
@@ -18,7 +19,8 @@ const NavLeft = ({ target }) => {
 const NavRight = ({ target }) => {
   return (
     <IconButton
-      h="20vh"
+      h="inherit"
+      w="inherit"
       bg="none"
       as={ReactLink}
       to={target}

@@ -21,14 +21,20 @@ import { NavLeft, NavRight } from '../components/NavArrowButtons';
 const About = () => {
   return (
     <LayoutTransitions>
-      <HStack justifyContent="space-evenly">
-        <Show above="md">
-          <SectionTransitions delay={0.25}>
-            <NavLeft target="/" />
-          </SectionTransitions>
-        </Show>
-        <Container h="calc(100vh - 64px)" maxW="container.md" p={0}>
-          <ContentBox h="calc((100vh - 64px) * 0.95)" maxW="inherit" >
+      <Container h="calc(100vh - 64px)" maxW="container.xl" p={0}>
+        <HStack justifyContent="space-evenly">
+          <Show above="md">
+            <SectionTransitions delay={0.25}>
+              <Box
+                h="calc((100vh - 64px) * 0.95)"
+                w={{md: "calc(((100vw - 768px) / 2) - 8px)", xl: "248px"}}
+                ml="8px"
+              >
+                <NavLeft target="/" />
+              </Box>
+            </SectionTransitions>
+          </Show>
+          <ContentBox h="calc((100vh - 64px) * 0.95)" maxW="container.md" >
             <Heading mb={3} fontSize="2xl" variant="code">
               About Me
             </Heading>
@@ -106,13 +112,19 @@ const About = () => {
               </TabPanels>
             </Tabs>
           </ContentBox>
-        </Container>
-        <Show above="md">
-          <SectionTransitions delay={0.25}>
-            <NavRight target="/works" />
-          </SectionTransitions>
-        </Show>
-      </HStack>
+          <Show above="md">
+            <SectionTransitions delay={0.25}>
+              <Box 
+                h="calc((100vh - 64px) * 0.95)"
+                w={{md: "calc(((100vw - 768px) / 2) - 8px)", xl: "248px"}}
+                mr="8px"
+              >
+                <NavRight target="/works" />
+              </Box>
+            </SectionTransitions>
+          </Show>
+        </HStack>
+      </Container>
     </LayoutTransitions>
   );
 };
