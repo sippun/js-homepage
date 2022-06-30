@@ -46,7 +46,9 @@ const Works = () => {
     <LayoutTransitions>
       <HStack justifyContent="space-evenly">
         <Show above="md">
-          <NavLeft target="/about" />
+          <SectionTransitions delay={0.25}>
+            <NavLeft target="/about" />
+          </SectionTransitions>
         </Show>
         <Container h={"calc(100vh - 64px)"} maxW="container.md" p={0}>
           <ContentBox
@@ -60,7 +62,7 @@ const Works = () => {
             })}
           </ContentBox>
 
-          <SectionTransitions delay={0.25}>
+          <SectionTransitions delay={0.5}>
             <ContentBox
               maxW="inherit"
               h="calc((100vh - 64px) * 0.25)"
@@ -85,7 +87,9 @@ const Works = () => {
           </SectionTransitions>
         </Container>
         <Show above="md">
-          <NavRight target="/readinglist" />
+          <SectionTransitions delay={0.25}>
+            <NavRight target="/readinglist" />
+          </SectionTransitions>
         </Show>
       </HStack>
     </LayoutTransitions>

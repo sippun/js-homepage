@@ -9,7 +9,7 @@ import { Box,
   SimpleGrid,
   Text,
 } from "@chakra-ui/react";
-import { LayoutTransitions } from "../theme/Transitions";
+import { LayoutTransitions, SectionTransitions } from "../theme/Transitions";
 import { ContentBox } from "../components/ContentBox";
 import { booksData } from "../data/BooksData";
 import { NavLeft, NavRight } from "../components/NavArrowButtons";
@@ -75,7 +75,9 @@ const ReadingList = () => {
     <LayoutTransitions>
       <HStack justifyContent="space-evenly">
         <Show above="md">
-          <NavLeft target="/about" />
+          <SectionTransitions delay={0.25}>
+            <NavLeft target="/about" />
+          </SectionTransitions>
         </Show>
         <Container h="calc(100vh - 64px)" maxW="container.md" p={0}>
           <ContentBox h="calc((100vh - 64px) * 0.95)" maxW="inherit" >
@@ -112,7 +114,9 @@ const ReadingList = () => {
           </ContentBox>
         </Container>
         <Show above="md">
-          <NavRight target="/contact" />
+          <SectionTransitions delay={0.25}>
+            <NavRight target="/contact" />
+          </SectionTransitions>
         </Show>
       </HStack>
     </LayoutTransitions>

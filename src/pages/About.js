@@ -12,7 +12,7 @@ import {
   Tag,
 } from '@chakra-ui/react';
 import { DownloadIcon } from '@chakra-ui/icons';
-import { LayoutTransitions } from '../theme/Transitions';
+import { LayoutTransitions, SectionTransitions } from '../theme/Transitions';
 import { ContentBox } from '../components/ContentBox';
 import { aboutData, quotesData } from '../data/AboutData';
 import EudaimonicPopover from '../components/EudaimonicPopover';
@@ -23,7 +23,9 @@ const About = () => {
     <LayoutTransitions>
       <HStack justifyContent="space-evenly">
         <Show above="md">
-          <NavLeft target="/" />
+          <SectionTransitions delay={0.25}>
+            <NavLeft target="/" />
+          </SectionTransitions>
         </Show>
         <Container h="calc(100vh - 64px)" maxW="container.md" p={0}>
           <ContentBox h="calc((100vh - 64px) * 0.95)" maxW="inherit" >
@@ -106,7 +108,9 @@ const About = () => {
           </ContentBox>
         </Container>
         <Show above="md">
-          <NavRight target="/works" />
+          <SectionTransitions delay={0.25}>
+            <NavRight target="/works" />
+          </SectionTransitions>
         </Show>
       </HStack>
     </LayoutTransitions>
