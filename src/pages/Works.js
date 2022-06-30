@@ -69,9 +69,10 @@ const Works = () => {
               <Heading fontSize="2xl" mb={3} variant="code">
                 Works
               </Heading>
-              <Box flex={1} alignItems="center">
+              <Box h="calc(100% - 3rem)" alignItems="center">
                 <SimpleGrid
-                  flex={1}
+                  h="full"
+                  alignItems="center"
                   rows={{base: 3, sm: 1}}
                   columns={{base: 4, sm:6}}
                   spacingX={{base: 2, sm: 8}}
