@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import {
   ChakraProvider,
   Box,
@@ -11,15 +11,30 @@ import ParticlesBackground from './components/ParticlesBackground';
 import Navbar from './components/Navbar';
 import Home from './pages/Home';
 import About from './pages/About';
-import Works from './pages/Works';
-import ReadingList from './pages/ReadingList';
+//import Works from './pages/Works';
+//import ReadingList from './pages/ReadingList';
 import Contact from './pages/Contact';
 import NotFound from './pages/NotFound';
 import theme from './theme/theme';
 import './theme/styles.css';
 
+const ReactLazyPreload = (importStatement) => {
+  const Component = React.lazy(importStatement);
+  Component.preload = importStatement;
+  return Component;
+};
+
+const Works = ReactLazyPreload(() => import('./pages/Works'));
+const ReadingList = ReactLazyPreload(() => import('./pages/ReadingList'));
+
 function App() {
   const location = useLocation();
+  
+  useEffect(() => {
+    Works.preload();
+    ReadingList.preload();
+  }, []);
+  
 
   return (
     <ChakraProvider theme={theme}>
