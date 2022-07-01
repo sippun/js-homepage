@@ -86,7 +86,7 @@ const ReadingList = () => {
             </Box>
           </SectionTransitions>
         </Show>
-        <Container maxW="container.md">
+        <Container maxW="container.md" p={0}>
           <ContentBox h="calc((100vh - 64px) * 0.95)" maxW="inherit" >
             <Heading fontSize="2xl" as="span" variant="code">
               Reading List 
