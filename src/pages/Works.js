@@ -44,54 +44,68 @@ const Works = () => {
 
   return (
     <LayoutTransitions>
-      <HStack justifyContent="space-evenly">
-        <Show above="md">
-          <SectionTransitions delay={0.25}>
-            <NavLeft target="/about" />
-          </SectionTransitions>
-        </Show>
-        <Container h={"calc(100vh - 64px)"} maxW="container.md" p={0}>
-          <ContentBox
-            maxW="container.md"
-            h="calc((100vh - 64px) * 0.65)"
-          >
-            {worksData.map(work => {
-              return (
-                <WorksCard key={work.id} data={work} isSelected={work.id === showWork}/>
-              );
-            })}
-          </ContentBox>
-
-          <SectionTransitions delay={0.5}>
-            <ContentBox
-              maxW="inherit"
-              h="calc((100vh - 64px) * 0.25)"
-              marginTop="calc((100vh - 64px) * 0.05)"
-            >
-              <Heading fontSize="2xl" mb={3} variant="code">
-                Works
-              </Heading>
-              <Box h="calc(100% - 3rem)" alignItems="center">
-                <SimpleGrid
-                  h="full"
-                  alignItems="center"
-                  rows={{base: 3, sm: 1}}
-                  columns={{base: 4, sm:6}}
-                  spacingX={{base: 2, sm: 8}}
-                  spacingY={8}
-                >
-                  {gridWorkIcons}
-                </SimpleGrid>
+      <Container h="calc(100vh - 64px)" maxW="container.xl" p={0}>
+        <HStack justifyContent="space-evenly">
+          <Show above="md">
+            <SectionTransitions delay={0.25}>
+              <Box 
+                h="calc((100vh - 64px) * 0.95)"
+                w={{md: "calc(((100vw - 768px) / 2) - 8px)", xl: "248px"}}
+                ml="8px"
+              >
+                <NavLeft target="/about" />
               </Box>
+            </SectionTransitions>
+          </Show>
+          <Container maxW="container.md" p={0}>
+            <ContentBox
+              maxW="container.md"
+              h="calc((100vh - 64px) * 0.65)"
+            >
+              {worksData.map(work => {
+                return (
+                  <WorksCard key={work.id} data={work} isSelected={work.id === showWork}/>
+                );
+              })}
             </ContentBox>
-          </SectionTransitions>
-        </Container>
-        <Show above="md">
-          <SectionTransitions delay={0.25}>
-            <NavRight target="/readinglist" />
-          </SectionTransitions>
-        </Show>
-      </HStack>
+
+            <SectionTransitions delay={0.5}>
+              <ContentBox
+                maxW="inherit"
+                h="calc((100vh - 64px) * 0.25)"
+                marginTop="calc((100vh - 64px) * 0.05)"
+              >
+                <Heading fontSize="2xl" mb={3} variant="code">
+                  Works
+                </Heading>
+                <Box h="calc(100% - 3rem)" alignItems="center">
+                  <SimpleGrid
+                    h="full"
+                    alignItems="center"
+                    rows={{base: 3, sm: 1}}
+                    columns={{base: 4, sm:6}}
+                    spacingX={{base: 2, sm: 8}}
+                    spacingY={8}
+                  >
+                    {gridWorkIcons}
+                  </SimpleGrid>
+                </Box>
+              </ContentBox>
+            </SectionTransitions>
+          </Container>
+          <Show above="md">
+            <SectionTransitions delay={0.25}>
+              <Box 
+                h="calc((100vh - 64px) * 0.95)"
+                w={{md: "calc(((100vw - 768px) / 2) - 8px)", xl: "248px"}}
+                mr="8px"
+              >
+                <NavRight target="/readinglist" />
+              </Box>
+            </SectionTransitions>
+          </Show>
+        </HStack>
+      </Container>
     </LayoutTransitions>
   );
 };
