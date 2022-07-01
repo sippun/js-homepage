@@ -22,7 +22,7 @@ export const worksData = [
   {
     id:"fighter-quiz",
     title:"Choose Your Isekai Character",
-    stack:["React", "Chakra UI"],
+    stack:["React", "HTML", "CSS"],
     thumbnail:"fighterthumb.png",
     image:"fighterquiz.png",
     description:"Created a quiz app to classify people into different fighting styles. Then the user can find out which anime characters they share their fighting personality with.",

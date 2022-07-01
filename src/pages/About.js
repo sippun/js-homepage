@@ -101,10 +101,22 @@ const About = () => {
                   {quotesData.map((q, i) => {
                     return (
                       <>
-                      <Text key={i} fontFamily={q.font} fontSize={q.size} fontStyle={q.style}>
+                      <Text
+                        key={i}
+                        fontFamily={q.font}
+                        fontSize={q.size}
+                        fontStyle={q.style}
+                      >
                         <q>{q.quote}</q>
                       </Text>
-                      <Text mb={8} mr={1} textAlign="end" fontFamily={q.font} fontSize="1rem">
+                      <Text
+                        mb={8}
+                        mr={1}
+                        textAlign="end"
+                        fontFamily={q.font}
+                        fontStyle={q.style}
+                        fontSize="1rem"
+                      >
                         &mdash;&nbsp;{q.by}
                       </Text>
                       </>

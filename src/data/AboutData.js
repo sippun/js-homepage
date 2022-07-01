@@ -13,7 +13,7 @@ export const aboutData = {
 export const quotesData = [
   {
     quote: "To my distress and perhaps to my delight, I order things in accordance with my passions... I put in my pictures everything I like. So much the worse for the things– they have to get along with one another.",
-    by: "Picasso",
+    by: "Pablo Picasso",
     font: "Life Savers",
     link: "",
   },
@@ -54,6 +54,12 @@ export const quotesData = [
     by: "Thich Nhat Hanh",
     font: "Darker Grotesque",
     size: "large",
+    link: "",
+  },
+  {
+    quote: "What, if some day or night a demon were to steal after you into your loneliest loneliness and say to you: 'This life as you now live it and have lived it, you will have to live once more and innumerable times more' ... Would you not throw yourself down and gnash your teeth and curse the demon who spoke thus? Or have you once experienced a tremendous moment when you would have answered him: 'You are a god and never have I heard anything more divine.'",
+    by: "Friedrich Nietzsche",
+    font: "Bitter",
     link: "",
   },
 ];
