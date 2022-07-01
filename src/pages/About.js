@@ -10,7 +10,6 @@ import {
   Show,
   Text,
   Tag,
-  useBreakpointValue,
 } from '@chakra-ui/react';
 import { DownloadIcon } from '@chakra-ui/icons';
 import { LayoutTransitions, SectionTransitions } from '../theme/Transitions';
