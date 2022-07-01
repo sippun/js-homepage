@@ -10,6 +10,7 @@ import {
   Show,
   Text,
   Tag,
+  useBreakpointValue,
 } from '@chakra-ui/react';
 import { DownloadIcon } from '@chakra-ui/icons';
 import { LayoutTransitions, SectionTransitions } from '../theme/Transitions';
@@ -55,9 +56,9 @@ const About = () => {
             
             <Tabs mt={6} isFitted colorScheme="accent">
               <TabList borderColor="cleargrey">
-                <Tab>Professional</Tab>
-                <Tab>Personal</Tab>
-                <Tab>Philosophical</Tab>
+                <Tab fontSize={{base: "xs", md: "md"}}>Professional</Tab>
+                <Tab fontSize={{base: "xs", md: "md"}}>Personal</Tab>
+                <Tab fontSize={{base: "xs", md: "md"}}>Philosophical</Tab>
               </TabList>
               <TabPanels>
                 {/* Professional */}
