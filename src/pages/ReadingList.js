@@ -73,13 +73,20 @@ const bookList21 = mapBookIcons(booksData.books2021);
 const ReadingList = () => {
   return (
     <LayoutTransitions>
+      <Container h="calc(100vh - 64px)" maxW="container.xl" p={0}>
       <HStack justifyContent="space-evenly">
         <Show above="md">
           <SectionTransitions delay={0.25}>
-            <NavLeft target="/about" />
+            <Box 
+              h="calc((100vh - 64px) * 0.95)"
+              w={{md: "calc(((100vw - 768px) / 2) - 8px)", xl: "248px"}}
+              ml="8px"
+            >
+              <NavLeft target="/works" />
+            </Box>
           </SectionTransitions>
         </Show>
-        <Container h="calc(100vh - 64px)" maxW="container.md" p={0}>
+        <Container maxW="container.md">
           <ContentBox h="calc((100vh - 64px) * 0.95)" maxW="inherit" >
             <Heading fontSize="2xl" as="span" variant="code">
               Reading List 
@@ -115,10 +122,17 @@ const ReadingList = () => {
         </Container>
         <Show above="md">
           <SectionTransitions delay={0.25}>
-            <NavRight target="/contact" />
+            <Box 
+              h="calc((100vh - 64px) * 0.95)"
+              w={{md: "calc(((100vw - 768px) / 2) - 8px)", xl: "248px"}}
+              mr="8px"
+            >
+              <NavRight target="/contact" />
+            </Box>
           </SectionTransitions>
         </Show>
       </HStack>
+      </Container>
     </LayoutTransitions>
   );
 };
