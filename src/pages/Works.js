@@ -60,7 +60,7 @@ const Works = () => {
           <Container maxW="container.md" p={0}>
             <ContentBox
               maxW="container.md"
-              h="calc((100vh - 64px) * 0.65)"
+              h="calc(((100vh - 64px) * 0.70) - 8px)"
             >
               {worksData.map(work => {
                 return (
@@ -73,7 +73,7 @@ const Works = () => {
               <ContentBox
                 maxW="inherit"
                 h="calc((100vh - 64px) * 0.25)"
-                marginTop="calc((100vh - 64px) * 0.05)"
+                marginTop="8px"
               >
                 <Heading fontSize="2xl" mb={3} variant="code">
                   Works

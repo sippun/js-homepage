@@ -21,7 +21,7 @@ const WorksCard = ({ data, isSelected }) => {
 
   return (
     <ContentTransitions key ={isSelected}>
-      <Box hidden={!isSelected} h="calc((100vh - 64px) * 0.55)">
+      <Box hidden={!isSelected} h="calc((100vh - 64px) * 0.6)" pb={2}>
         <Heading fontSize="2xl" mb={3} variant="code">
           {data.title}
         </Heading>
@@ -45,7 +45,7 @@ const WorksCard = ({ data, isSelected }) => {
             <Text color={useColorModeValue("#3e4444", "#dee3e3")}>
               {data.description}
             </Text>
-            <HStack w="full" justifyContent="flex-end" pr={2}>
+            <HStack w="full" justifyContent="flex-end">
               {data.github === "" ? <></> :
                 <a href={data.github} target="_blank" rel="noopener noreferrer">
                   <Button 
