@@ -3,6 +3,7 @@ import {
   ChakraProvider,
   Box,
   Container,
+  Text,
 } from '@chakra-ui/react';
 import { useLocation } from 'react-router-dom';
 import { Route, Routes } from 'react-router-dom';
@@ -54,6 +55,9 @@ function App() {
             </Routes>
           </AnimatePresence>
         </Container>
+        <Text position="absolute" bottom={2} right={2} color="edward" fontSize="xs">
+          © 2022 Joel Sheng
+        </Text>
       </Box>
     </ChakraProvider>
   );
