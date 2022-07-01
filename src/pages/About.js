@@ -100,10 +100,14 @@ const About = () => {
                 <TabPanel>
                   {quotesData.map((q, i) => {
                     return (
-                      <Text mb={4} key={i}>
+                      <>
+                      <Text key={i} fontFamily={q.font} fontSize={q.size} fontStyle={q.style}>
                         <q>{q.quote}</q>
-                        &nbsp;&mdash;&nbsp;{q.by}
                       </Text>
+                      <Text mb={8} mr={1} textAlign="end" fontFamily={q.font} fontSize="1rem">
+                        &mdash;&nbsp;{q.by}
+                      </Text>
+                      </>
                     )
                   })
                   }
