@@ -12,7 +12,8 @@ import { Markup } from 'interweave';
 const Book = () => {
   const [bookInfo, setBookInfo] = useState(null);
   // const baseURL = "https://www.googleapis.com/books/v1/volumes/_ojXNuzgHRcC?key=";
-  const baseURL = "https://www.googleapis.com/books/v1/volumes/zyTCAlFPjgYC?projection=lite&key=";
+  const id = "zyTCAlFPjgYC";
+  const baseURL = "https://www.googleapis.com/books/v1/volumes/" + id + "?projection=lite&key=";
 
   useEffect(() => {
     axios.get(baseURL + GOOGLE_API_KEY).then((response) => {
