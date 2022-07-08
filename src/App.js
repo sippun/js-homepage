@@ -14,6 +14,7 @@ import Home from './pages/Home';
 import About from './pages/About';
 //import Works from './pages/Works';
 //import ReadingList from './pages/ReadingList';
+import Book from './pages/Book';
 import Contact from './pages/Contact';
 import NotFound from './pages/NotFound';
 import theme from './theme/theme';
@@ -51,6 +52,7 @@ function App() {
               <Route path="/" element={<Home />} />
               <Route path="/works" element={<Works />} />
               <Route path="/readinglist" element={<ReadingList />} />
+              <Route path="/readinglist/book" element={<Book />} />
               <Route path="/contact" element={<Contact />} />
             </Routes>
           </AnimatePresence>
