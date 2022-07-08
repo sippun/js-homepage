@@ -27,7 +27,7 @@ const Book = () => {
 
   return (
     <LayoutTransitions>
-      <Container h="calc(100vh - 64px)" maxW="container.xl" p={0} alignItems="center">
+      <Container h="calc(100vh - 64px)" maxW="container.xl" p={0} centerContent>
         <ContentBox h="calc((100vh - 64px) * 0.95)" maxW="container.md">
           <Heading>Reading List -> title</Heading>
             <Markup content={desc} />
