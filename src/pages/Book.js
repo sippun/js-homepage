@@ -1,13 +1,13 @@
 import {
   Container,
   Heading,
-  Text,
 } from '@chakra-ui/react';
 import { LayoutTransitions } from '../theme/Transitions';
 import { ContentBox } from '../components/ContentBox'; 
 import { GOOGLE_API_KEY } from '../keys';
 import axios from 'axios';
 import { useEffect, useState } from 'react';
+import { Markup } from 'interweave';
 
 const Book = () => {
   const [bookInfo, setBookInfo] = useState(null);
@@ -23,12 +23,14 @@ const Book = () => {
 
   if(!bookInfo) return null;
 
+  const desc = bookInfo.data.volumeInfo.description;
+
   return (
     <LayoutTransitions>
       <Container h="calc(100vh - 64px)" maxW="container.xl" p={0} alignItems="center">
         <ContentBox h="calc((100vh - 64px) * 0.95)" maxW="container.md">
           <Heading>Reading List -> title</Heading>
-            {bookInfo.data.volumeInfo.description}
+            <Markup content={desc} />
         </ContentBox>
       </Container>
     </LayoutTransitions>
