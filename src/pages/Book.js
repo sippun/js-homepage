@@ -23,14 +23,14 @@ const Book = () => {
 
   if(!bookInfo) return null;
 
-  const desc = bookInfo.data.volumeInfo.description;
+  const bookDescription = bookInfo.data.volumeInfo.description;
 
   return (
     <LayoutTransitions>
       <Container h="calc(100vh - 64px)" maxW="container.xl" p={0} centerContent>
         <ContentBox h="calc((100vh - 64px) * 0.95)" maxW="container.md">
           <Heading>Reading List -> title</Heading>
-            <Markup content={desc} />
+            <Markup content={bookDescription} />
         </ContentBox>
       </Container>
     </LayoutTransitions>

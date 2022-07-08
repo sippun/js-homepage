@@ -9,6 +9,7 @@ import { Box,
   SimpleGrid,
   Text,
 } from "@chakra-ui/react";
+import { Link } from "react-router-dom";
 import { LayoutTransitions, SectionTransitions } from "../theme/Transitions";
 import { ContentBox } from "../components/ContentBox";
 import { booksData } from "../data/BooksData";
@@ -41,9 +42,8 @@ const mapBookIcons = (books) => {
             objectPosition="top"
           />
           <LinkOverlay
-            href={book.url}
-            target="_blank"
-            rel="noopener noreferrer"
+            as={Link}
+            to={"/readinglist/" + book.title}
           >
             <Text
               pos="absolute"
@@ -89,7 +89,7 @@ const ReadingList = () => {
         <Container maxW="container.md" p={0}>
           <ContentBox h="calc((100vh - 64px) * 0.95)" maxW="inherit" >
             <Heading fontSize="2xl" as="span" variant="code">
-              Reading List 
+              Reading List  
             </Heading>
 
             <Heading mt={3} fontSize="xl">

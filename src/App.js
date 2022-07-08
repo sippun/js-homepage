@@ -52,7 +52,7 @@ function App() {
               <Route path="/" element={<Home />} />
               <Route path="/works" element={<Works />} />
               <Route path="/readinglist" element={<ReadingList />} />
-              <Route path="/readinglist/book" element={<Book />} />
+              <Route path="/readinglist/:book" element={<Book />} />
               <Route path="/contact" element={<Contact />} />
             </Routes>
           </AnimatePresence>
