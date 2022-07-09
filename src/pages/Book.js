@@ -7,12 +7,16 @@ import { ContentBox } from '../components/ContentBox';
 import { GOOGLE_API_KEY } from '../keys';
 import axios from 'axios';
 import { useEffect, useState } from 'react';
+import { useParams } from 'react-router-dom';
+import { getBookId } from '../data/BooksData';
 import { Markup } from 'interweave';
 
 const Book = () => {
+  const { book } = useParams();
+  const id = getBookId(book);
   const [bookInfo, setBookInfo] = useState(null);
   // const baseURL = "https://www.googleapis.com/books/v1/volumes/_ojXNuzgHRcC?key=";
-  const id = "zyTCAlFPjgYC";
+  // const id = "zyTCAlFPjgYC";
   const baseURL = "https://www.googleapis.com/books/v1/volumes/" + id + "?projection=lite&key=";
 
   useEffect(() => {

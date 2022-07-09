@@ -1,6 +1,7 @@
 export const booksData = {
   "current" : [
     {
+      path:"bigsur",
       title:"Big Sur and the Oranges of Hieronymus Bosch",
       id:"Q4zL_kXuN4gC",
       info:"",
@@ -8,6 +9,7 @@ export const booksData = {
       url:"https://www.goodreads.com/book/show/248.Big_Sur_and_the_Oranges_of_Hieronymus_Bosch"
     },
     {
+      path:"richestman",
       title:"The Richest Man in Babylon",
       id:"wlQLrgEACAAJ",
       info:"",
@@ -15,6 +17,7 @@ export const booksData = {
       url:"https://www.goodreads.com/book/show/1052.The_Richest_Man_in_Babylon"
     },
     {
+      path:"thinking",
       title:"Thinking, Fast and Slow",
       id:"ZuKTvERuPG8C",
       info:"",
@@ -22,6 +25,7 @@ export const booksData = {
       url:"https://www.goodreads.com/book/show/11468377-thinking-fast-and-slow"
     },
     {
+      path:"bodyscore",
       title:"The Body Keeps The Score",
       id:"vHnZCwAAQBAJ",
       info:"",
@@ -29,6 +33,7 @@ export const booksData = {
       url:"https://www.goodreads.com/book/show/18693771-the-body-keeps-the-score"
     },
     {
+      path:"nobadparts",
       title:"No Bad Parts",
       id:"sLoxEAAAQBAJ",
       info:"Healing Trauma and Restoring Wholeness with the Internal Family Systems Model",
@@ -263,3 +268,7 @@ export const booksData = {
     }
   ],
 };
+
+export function getBookId(search) {
+  return booksData.current.find(({ title }) => title === search).id;
+}
