@@ -270,5 +270,10 @@ export const booksData = {
 };
 
 export function getBookId(search) {
-  return booksData.current.find(({ title }) => title === search).id;
+  let title = booksData.current.find(({ title }) => title === search);
+  if (title) return title.id;
+  title = booksData.books2022.find(({ title }) => title === search);
+  if (title) return title.id;
+  title = booksData.books2021.find(({ title }) => title === search);
+  return title.id;
 }

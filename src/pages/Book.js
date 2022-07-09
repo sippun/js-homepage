@@ -24,7 +24,7 @@ const Book = () => {
       setBookInfo(response);
       console.log(response.data);
     });
-  }, []);
+  }, [baseURL]);
 
   if(!bookInfo) return null;
 
