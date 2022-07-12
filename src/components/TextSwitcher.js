@@ -6,7 +6,7 @@ export const TextSwitcher = (props) => {
   const [index, setIndex] = useState(0);
   const imaColor = useColorModeValue("edwarddark", "edward");
   const animPropsVowel = useBreakpointValue({base: { x: 82, opacity: 1 }, sm: { x: 104, opacity: 1 }});
-  const animProps = useBreakpointValue({base: { x: 70, opacity: 1 }, sm: { x: 86, opacity: 1 }});
+  const animProps = useBreakpointValue({base: { x: 72, opacity: 1 }, sm: { x: 88, opacity: 1 }});
 
   const vowels = ['a', 'e', 'i', 'o', 'u'];
 

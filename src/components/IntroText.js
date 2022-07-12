@@ -22,6 +22,7 @@ const labels = [
   'martial artist',
   'book lover',
   'rhythm gamer',
+  'outdoors enthusiast',
 ];
 
 const containerVariants = {
