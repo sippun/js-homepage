@@ -39,7 +39,7 @@ const About = () => {
               About Me
             </Heading>
             <Heading ml={4} fontSize="lg" variant="kanit" fontWeight="light">
-              A product person pleasingly and perpetually perusing publications.
+              A product person perpetually and pleasingly perusing publications.
             </Heading>
             <Heading ml={4} fontSize="lg">
               I like to build stuff and read things.<br />

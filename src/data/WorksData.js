@@ -2,7 +2,7 @@ export const worksData = [
   {
     id:"js-homepage",
     title:"Homepage v2",
-    stack:["React", "Chakra UI", "Framer Motion", "tsParticles"],
+    stack:["React", "Chakra UI", "Framer Motion", "tsParticles", "Google Books API"],
     thumbnail:"jslogo.jpg",
     image:"homepage.jpg",
     description:"You're on this site right now! Built and designed by yours truly to showcase my skills, interests, and personality. Also serves as a place to keep track of books and quotes I enjoy.",
@@ -22,10 +22,10 @@ export const worksData = [
   {
     id:"fighter-quiz",
     title:"Choose Your Isekai Character",
-    stack:["React", "HTML", "CSS"],
+    stack:["React", "HTML", "CSS", "Jikan API"],
     thumbnail:"fighterthumb.png",
     image:"fighterquiz.png",
-    description:"Created a quiz app to classify people into different fighting styles. Then the user can find out which anime characters they share their fighting personality with.",
+    description:"Created a quiz app to classify people into different fighting styles. Then the user can find out which anime characters they share their fighting personality with. Uses Axios to interact with the Jikan REST API to get anime character data.",
     github:"https://github.com/sippun/fighter-quiz",
     link:"https://sippun.github.io/fighter-quiz/",
   },

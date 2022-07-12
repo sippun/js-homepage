@@ -63,6 +63,7 @@ const Book = () => {
               return <>{author}</>;
             })}
             </Text>
+            <br/>
             <Markup content={bookDescription} />
             <Text>{bookInfo.data.id}</Text>
           </Box>
