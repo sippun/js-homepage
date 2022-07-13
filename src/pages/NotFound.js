@@ -2,7 +2,7 @@ import { Button, Container, Center } from '@chakra-ui/react';
 import { LayoutTransitions } from '../theme/Transitions';
 import { Link as ReactLink } from 'react-router-dom';
 
-const Home = () => {
+const NotFound = () => {
   return (
     <LayoutTransitions>
       <Container h="calc(100vh - 64px)" maxW="container.md" p={0}>
@@ -18,4 +18,4 @@ const Home = () => {
   );
 };
 
-export default Home;
+export default NotFound;

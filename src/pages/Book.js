@@ -10,6 +10,7 @@ import {
 import { ChevronRightIcon } from '@chakra-ui/icons';
 import { LayoutTransitions } from '../theme/Transitions';
 import { ContentBox } from '../components/ContentBox'; 
+import NotFound from './NotFound';
 import { GOOGLE_API_KEY } from '../keys';
 import axios from 'axios';
 import { getBookId } from '../data/BooksData';
@@ -19,8 +20,6 @@ const Book = () => {
   const { book } = useParams();
   const id = getBookId(book);
   const [bookInfo, setBookInfo] = useState(null);
-  // const baseURL = "https://www.googleapis.com/books/v1/volumes/_ojXNuzgHRcC?key=";
-  // const id = "zyTCAlFPjgYC";
   const baseURL = "https://www.googleapis.com/books/v1/volumes/" + id + "?projection=lite&key=";
 
   useEffect(() => {
@@ -30,7 +29,11 @@ const Book = () => {
     });
   }, [baseURL]);
 
-  if(!bookInfo) return null;
+  if(!bookInfo) return (
+    <Container h="calc(100vh - 64px)" maxW="container.xl" p={0} centerContent>
+      Loading
+    </Container>
+  );
 
   const bookDescription = bookInfo.data.volumeInfo.description;
 

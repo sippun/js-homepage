@@ -57,6 +57,7 @@ function App() {
             </Routes>
           </AnimatePresence>
         </Container>
+        
         <Text position="absolute" bottom={2} right={2} color="edward" fontSize="xs">
           © 2022 Joel Sheng
         </Text>
