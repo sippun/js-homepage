@@ -269,11 +269,11 @@ export const booksData = {
   ],
 };
 
-export function getBookId(search) {
+export function getBook(search) {
   let title = booksData.current.find(({ title }) => title === search);
-  if (title) return title.id;
+  if (title) return title;
   title = booksData.books2022.find(({ title }) => title === search);
-  if (title) return title.id;
+  if (title) return title;
   title = booksData.books2021.find(({ title }) => title === search);
-  return title.id;
+  return title;
 }
