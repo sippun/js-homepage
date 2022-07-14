@@ -34,7 +34,7 @@ const Book = () => {
 
   if(!bookInfo) return (
     <Container h="calc(100vh - 64px)" maxW="container.xl" p={0} centerContent justifyContent="center">
-      Loading
+      
     </Container>
   );
 
