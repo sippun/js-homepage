@@ -148,7 +148,7 @@ export const IntroText = () => {
         >
           <Center mt={6}>
             <Button as={ReactLink} to="/about">
-              Learn more
+              About me
             </Button>
           </Center>
         </MotionBox>
