@@ -1,4 +1,5 @@
 import {
+  Box,
   Button,
   Container,
   Center,
@@ -6,11 +7,13 @@ import {
   VStack,
   HStack,
   Heading,
+  Show,
   Text,
   useToast,
 } from '@chakra-ui/react';
 import { CopyIcon, EmailIcon } from '@chakra-ui/icons';
-import { LayoutTransitions } from '../theme/Transitions';
+import { LayoutTransitions, SectionTransitions } from '../theme/Transitions';
+import { NavLeft } from '../components/NavArrowButtons';
 
 const Home = () => {
   const toast = useToast();
@@ -31,43 +34,68 @@ const Home = () => {
 
   return (
     <LayoutTransitions>
-      <Container h="calc(100vh - 64px)" maxW="container.md" p={0}>
-        <Center h="calc((100vh - 64px) * 0.8)">
-          <VStack w="sm" spacing={8}>
-            <Heading>Get in touch</Heading>
-            <HStack w="full" justifyContent="space-between">
-              <Text alignSelf="start" mt={2}>Email:</Text>
-              <VStack>
-                <Button
-                  //value="email"
-                  rightIcon={<CopyIcon />}
-                  onClick={() => copy("email")}
-                  //onClick={(e) => copy(e.target.value)}
+      <Container h="calc(100vh - 64px)" maxW="container.xl" p={0}>
+        <HStack>
+          <Show above="md">
+              <SectionTransitions delay={0.25}>
+                <Box 
+                  h="calc((100vh - 64px) * 0.95)"
+                  w={{md: "calc(((100vw - 768px) / 2) - 8px)", xl: "248px"}}
+                  ml="8px"
                 >
-                  joel.s.sheng@gmail.com
-                </Button>
-                <Button
-                  as={Link}
-                  href="mailto:joel.s.sheng@gmail.com"
-                  rightIcon={<EmailIcon />}
-                  alignSelf="end"
+                  <NavLeft target="/readinglist" />
+                </Box>
+              </SectionTransitions>
+            </Show>
+            <Container h="calc(100vh - 64px)" maxW="container.md" p={0}>
+              <Center h="calc((100vh - 64px) * 0.8)">
+                <VStack w="full" spacing={8}>
+                  <Heading>Get in touch</Heading>
+                  <HStack w="full" justifyContent="space-between">
+                    <Text alignSelf="start" mt={2}>Email:</Text>
+                    <HStack>
+                      <Button
+                        //value="email"
+                        rightIcon={<CopyIcon />}
+                        onClick={() => copy("email")}
+                        //onClick={(e) => copy(e.target.value)}
+                      >
+                        joel.s.sheng@gmail.com
+                      </Button>
+                      <Button
+                        as={Link}
+                        href="mailto:joel.s.sheng@gmail.com"
+                        rightIcon={<EmailIcon />}
+                        alignSelf="end"
+                      >
+                        Send email
+                      </Button>
+                    </HStack>
+                  </HStack>
+                  <HStack w="full" justifyContent="space-between">
+                    <Text>Discord: </Text>
+                    <Button
+                      rightIcon={<CopyIcon />}
+                      onClick={() => copy("discord")}
+                    >
+                      sippy#8480
+                    </Button>
+                  </HStack>
+                </VStack>
+              </Center>
+            </Container>
+            <Show above="md">
+              <SectionTransitions delay={0.25}>
+                <Box 
+                  h="calc((100vh - 64px) * 0.95)"
+                  w={{md: "calc(((100vw - 768px) / 2) - 8px)", xl: "248px"}}
+                  ml="8px"
                 >
-                  Send email
-                </Button>
-              </VStack>
-            </HStack>
-            <HStack w="full" justifyContent="space-between">
-              <Text>Discord: </Text>
-              <Button
-                rightIcon={<CopyIcon />}
-                onClick={() => copy("discord")}
-              >
-                sippy#8480
-              </Button>
-            </HStack>
-          </VStack>
-        </Center>
-      </Container>
+                </Box>
+              </SectionTransitions>
+            </Show>       
+          </HStack>
+        </Container>
     </LayoutTransitions>
     
   );
