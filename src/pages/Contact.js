@@ -47,7 +47,7 @@ const Home = () => {
                 </Box>
               </SectionTransitions>
             </Show>
-            <Container h="calc(100vh - 64px)" maxW="container.md" p={0}>
+            <Container h="calc(100vh - 64px)" maxW="container.md" px={8}>
               <Center h="calc((100vh - 64px) * 0.8)">
                 <VStack w="full" spacing={8}>
                   <Heading>Get in touch</Heading>
@@ -74,12 +74,22 @@ const Home = () => {
                   </HStack>
                   <HStack w="full" justifyContent="space-between">
                     <Text>Discord: </Text>
-                    <Button
-                      rightIcon={<CopyIcon />}
-                      onClick={() => copy("discord")}
-                    >
-                      sippy#8480
-                    </Button>
+                    <HStack>
+                      <Button
+                        rightIcon={<CopyIcon />}
+                        onClick={() => copy("discord")}
+                      >
+                        sippy#8480
+                      </Button>
+                      <Button
+                        as={Link}
+                        href="discord:///discord.com/users/sippy#8480"
+                        rightIcon={<EmailIcon />}
+                        alignSelf="end"
+                      >
+                        Open discord
+                      </Button>
+                    </HStack>
                   </HStack>
                 </VStack>
               </Center>
