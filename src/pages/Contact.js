@@ -59,6 +59,7 @@ const Home = () => {
                         rightIcon={<CopyIcon />}
                         onClick={() => copy("email")}
                         //onClick={(e) => copy(e.target.value)}
+                        variant="default"
                       >
                         joel.s.sheng@gmail.com
                       </Button>
@@ -87,7 +88,7 @@ const Home = () => {
                         rightIcon={<EmailIcon />}
                         alignSelf="end"
                       >
-                        Open discord
+                        Add discord
                       </Button>
                     </HStack>
                   </HStack>
