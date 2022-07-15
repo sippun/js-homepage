@@ -1,3 +1,4 @@
+import { useState } from 'react';
 import {
   Box,
   Button,
@@ -19,6 +20,12 @@ import EudaimonicPopover from '../components/EudaimonicPopover';
 import { NavLeft, NavRight } from '../components/NavArrowButtons';
 
 const About = () => {
+  const [tabIndex, setTabIndex] = useState(0);
+
+  const handleTabsChange = (index) => {
+    setTabIndex(index);
+  };
+
   return (
     <LayoutTransitions>
       <Container h="calc(100vh - 64px)" maxW="container.xl" p={0}>
@@ -35,6 +42,8 @@ const About = () => {
             </SectionTransitions>
           </Show>
           <ContentBox h="calc((100vh - 64px) * 0.95)" maxW="container.md" >
+            <VStack h="full" justifyContent="space-between">
+            <Box>
             <Heading mb={3} fontSize="2xl" variant="code">
               About Me
             </Heading>
@@ -53,7 +62,7 @@ const About = () => {
               &nbsp;wellbeing.
             </Heading>
             
-            <Tabs mt={6} isFitted colorScheme="accent">
+            <Tabs mt={6} isFitted colorScheme="accent" index={tabIndex} onChange={handleTabsChange}>
               <TabList borderColor="cleargrey">
                 <Tab fontSize={{base: "xs", md: "md"}}>Professional</Tab>
                 <Tab fontSize={{base: "xs", md: "md"}}>Personal</Tab>
@@ -127,6 +136,11 @@ const About = () => {
                 </TabPanel>
               </TabPanels>
             </Tabs>
+            </Box>
+            <HStack w="full" justifyContent="flex-end">
+              <Button>{tabIndex}</Button>
+            </HStack>
+            </VStack>
           </ContentBox>
           <Show above="md">
             <SectionTransitions delay={0.25}>
