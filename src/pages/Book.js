@@ -91,16 +91,18 @@ const Book = () => {
                 <Markup content={bookDescription} />
               </Text>
             </Box>
-            <HStack w="full" justifyContent="flex-end">
-                
-              <a href={bookData.url} target="_blank" rel="noopener noreferrer">
-                <Button 
-                  rightIcon={<ExternalLinkIcon />}
-                >
-                  Link
-                </Button>
-              </a>
-            </HStack>
+            <VStack w="full">
+              <HStack w="full" justifyContent="flex-end">
+                <a href={bookData.url} target="_blank" rel="noopener noreferrer">
+                  <Button 
+                    rightIcon={<ExternalLinkIcon />}
+                  >
+                    Link
+                  </Button>
+                </a>
+              </HStack>
+              <Box w="full" h="4px"/>
+            </VStack>
           </VStack>
         </ContentBox>
       </Container>
