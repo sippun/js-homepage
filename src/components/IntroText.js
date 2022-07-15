@@ -81,12 +81,12 @@ const lineContainerVariants = {
 const lineVariants = {
   before: {
     opacity: 0,
-    width: 0,
+    width: '0%',
   },
   after: {
     opacity: 1,
     width: '100%',
-    transition: {ease: 'easeIn', duration: 0.8},
+    transition: {ease: 'easeIn', duration: 0.6, delay: 0.2},
   },
 };
 
@@ -135,7 +135,7 @@ export const IntroText = () => {
             animate="after"
             position="absolute"
             height="1px"
-            bg="whiteAlpha.800"
+            bg={useColorModeValue("blackAlpha.800", "whiteAlpha.800")}
           />
         </MotionBox>
         <MotionBox
@@ -143,7 +143,7 @@ export const IntroText = () => {
           animate= {{
             y: 0,
             opacity: 1,
-            transition: {ease: 'easeOut', duration: 0.4, delay: 0.4},
+            transition: {ease: 'easeOut', duration: 0.4, delay: 0.8},
           }}
         >
           <Center mt={6}>
