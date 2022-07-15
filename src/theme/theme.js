@@ -9,6 +9,7 @@ const theme = extendTheme({
     icedark: '#8fd6c8',
     clearergrey: 'RGBA(176, 191, 206, 0.2)',
     cleargrey: 'RGBA(69, 86, 102, 0.3)',
+    cghover: 'RGBA(69, 86, 102, 0.35)',
     aqua: 'RGBA(131, 206, 191, 0.4)',
     particle: '#A7233A3f',
     canary: 'RGBA(255, 255, 159, 0.35)',
@@ -36,6 +37,9 @@ const theme = extendTheme({
     Button: {
       baseStyle: (props) => ({
         bg: props.colorMode === 'dark' ? 'whiteAlpha.200' : 'clearergrey',
+        _hover: {
+          bg: props.colorMode === 'dark' ? 'whiteAlpha.300' : 'cghover',
+        }
       }),
       defaultProps: {
         variant: 'default',
