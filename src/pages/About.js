@@ -18,6 +18,7 @@ import { ContentBox } from '../components/ContentBox';
 import { aboutData, quotesData } from '../data/AboutData';
 import EudaimonicPopover from '../components/EudaimonicPopover';
 import { NavLeft, NavRight } from '../components/NavArrowButtons';
+import { Markup } from 'interweave';
 
 const About = () => {
   const [tabIndex, setTabIndex] = useState(0);
@@ -96,6 +97,11 @@ const About = () => {
                       <p>{aboutData.history}</p>
                       <br/>
                       <p>{aboutData.recent}</p>
+                      <br />
+                      <p>{aboutData.goal}</p>
+                      <Box ml={8} mt={2}>
+                        <Markup content={aboutData.domains} />
+                      </Box>
                     </Box>
                   </VStack>
                 </TabPanel>
