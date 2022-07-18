@@ -28,8 +28,7 @@ export const quotesData = [
   {
     quote: "The only way to deal with an unfree world is to become so absolutely free that your very existence is an act of rebellion.",
     by: "Albert Camus",
-    font: "Playfair Display",
-    size: "large",
+    font: "Playfair Display", 
     link: "",
   },
   {
