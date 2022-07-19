@@ -28,6 +28,17 @@ const About = () => {
     setTabIndex(index);
   };
 
+  const footerLinks = () => {
+    if(tabIndex === 0) {
+      return (
+        <HStack w="full" justifyContent="flex-end">
+          <Text>See my</Text>
+          <Button>Works</Button>
+        </HStack>
+      );
+    }
+  }
+
   return (
     <LayoutTransitions>
       <Container h="calc(100vh - 64px)" maxW="container.xl" p={0}>
@@ -45,110 +56,110 @@ const About = () => {
           </Show>
           <ContentBox h="calc((100vh - 64px) * 0.95)" maxW="container.md" >
             <VStack h="full" justifyContent="space-between">
-            <Box>
-            <Heading mb={3} fontSize="2xl" variant="code">
-              About Me
-            </Heading>
-            <Heading ml={4} fontSize="lg" variant="kanit" fontWeight="light">
-              A product person perpetually and pleasingly perusing publications.
-            </Heading>
-            <Heading ml={4} fontSize="lg">
-              I like to build stuff and read things.<br />
-            </Heading>
+              <Box>
+                <Heading mb={3} fontSize="2xl" variant="code">
+                  About Me
+                </Heading>
+                <Heading ml={4} fontSize="lg" variant="kanit" fontWeight="light">
+                  A product person perpetually and pleasingly perusing publications.
+                </Heading>
+                <Heading ml={4} fontSize="lg">
+                  I like to build stuff and read things.<br />
+                </Heading>
 
-            <Heading ml={4} fontSize="lg" fontWeight="light" as="span">
-              One of my life goals is to develop tools that improve human&nbsp;
-            </Heading>
-            <EudaimonicPopover />
-            <Heading fontSize="lg" fontWeight="light" as="span">
-              &nbsp;wellbeing.
-            </Heading>
-            
-            <Tabs mt={6} isFitted colorScheme="accent" index={tabIndex} onChange={handleTabsChange}>
-              <TabList borderColor="cleargrey">
-                <Tab fontSize={{base: "xs", md: "md"}}>Professional</Tab>
-                <Tab fontSize={{base: "xs", md: "md"}}>Personal</Tab>
-                <Tab fontSize={{base: "xs", md: "md"}}>Philosophical</Tab>
-              </TabList>
-              <TabPanels>
-                {/* Professional */}
-                <TabPanel>
-                  <VStack h="full" justifyContent="space-between" flexFlow="column">
-                    <HStack w="full" justifyContent="space-between">
-                      <Wrap>
-                        {aboutData.skills.map((skill) => {
-                          return(
-                            <WrapItem>
-                              <Tag key={skill} w="fit-content">
-                                {skill}
-                              </Tag>
-                            </WrapItem>
-                          );
-                        })}
-                      </Wrap>
-                      <Button
-                        as={Link}
-                        rightIcon={<DownloadIcon />}
-                        href="jsresume.pdf"
-                        target="_blank"
-                        alignSelf="end"
-                      >
-                        Resume
-                      </Button>
-                    </HStack>
-                    <Box>
-                      <p>{aboutData.history}</p>
-                      <br/>
-                      <p>{aboutData.recent}</p>
+                <Heading ml={4} fontSize="lg" fontWeight="light" as="span">
+                  One of my life goals is to develop tools that improve human&nbsp;
+                </Heading>
+                <EudaimonicPopover />
+                <Heading fontSize="lg" fontWeight="light" as="span">
+                  &nbsp;wellbeing.
+                </Heading>
+                
+                <Tabs mt={6} isFitted colorScheme="accent" index={tabIndex} onChange={handleTabsChange}>
+                  <TabList borderColor="cleargrey">
+                    <Tab fontSize={{base: "xs", md: "md"}}>Professional</Tab>
+                    <Tab fontSize={{base: "xs", md: "md"}}>Personal</Tab>
+                    <Tab fontSize={{base: "xs", md: "md"}}>Philosophical</Tab>
+                  </TabList>
+                  <TabPanels>
+                    {/* Professional */}
+                    <TabPanel>
+                      <VStack h="full" justifyContent="space-between" flexFlow="column">
+                        <HStack w="full" justifyContent="space-between">
+                          <Wrap>
+                            {aboutData.skills.map((skill) => {
+                              return(
+                                <WrapItem>
+                                  <Tag key={skill} w="fit-content">
+                                    {skill}
+                                  </Tag>
+                                </WrapItem>
+                              );
+                            })}
+                          </Wrap>
+                          <Button
+                            as={Link}
+                            rightIcon={<DownloadIcon />}
+                            href="jsresume.pdf"
+                            target="_blank"
+                            alignSelf="end"
+                          >
+                            Resume
+                          </Button>
+                        </HStack>
+                        <Box>
+                          <p>{aboutData.history}</p>
+                          <br/>
+                          <p>{aboutData.recent}</p>
+                          <br />
+                          <p>{aboutData.goal}</p>
+                          <Box ml={8} mt={2}>
+                            <Markup content={aboutData.domains} />
+                          </Box>
+                        </Box>
+                      </VStack>
+                    </TabPanel>
+                    {/* Personal */}
+                    <TabPanel>
+                      <p>{aboutData.interests}</p>
                       <br />
-                      <p>{aboutData.goal}</p>
-                      <Box ml={8} mt={2}>
-                        <Markup content={aboutData.domains} />
-                      </Box>
-                    </Box>
-                  </VStack>
-                </TabPanel>
-                {/* Personal */}
-                <TabPanel>
-                  <p>{aboutData.interests}</p>
-                  <br />
-                  <p>{aboutData.books}</p>
-                </TabPanel>
-                {/* Philosophical */}
-                <TabPanel>
-                  {quotesData.map((q, i) => {
-                    return (
-                      <>
-                      <Text
-                        key={i}
-                        fontFamily={q.font}
-                        fontSize={q.size}
-                        fontStyle={q.style}
-                      >
-                        <q>{q.quote}</q>
-                      </Text>
-                      <Text
-                        mb={8}
-                        mr={1}
-                        textAlign="end"
-                        fontFamily={q.font}
-                        fontStyle={q.style}
-                        fontSize="1rem"
-                      >
-                        &mdash;&nbsp;{q.by}
-                      </Text>
-                      </>
-                    )
-                  })
-                  }
-                  
-                </TabPanel>
-              </TabPanels>
-            </Tabs>
-            </Box>
-            <HStack w="full" justifyContent="flex-end">
-              <Button>{tabIndex}</Button>
-            </HStack>
+                      <p>{aboutData.books}</p>
+                    </TabPanel>
+                    {/* Philosophical */}
+                    <TabPanel>
+                      {quotesData.map((q, i) => {
+                        return (
+                          <>
+                          <Text
+                            key={i}
+                            fontFamily={q.font}
+                            fontSize={q.size}
+                            fontStyle={q.style}
+                          >
+                            <q>{q.quote}</q>
+                          </Text>
+                          <Text
+                            mb={8}
+                            mr={1}
+                            textAlign="end"
+                            fontFamily={q.font}
+                            fontStyle={q.style}
+                            fontSize="1rem"
+                          >
+                            &mdash;&nbsp;{q.by}
+                          </Text>
+                          </>
+                        )
+                      })
+                      }
+                    </TabPanel>
+                  </TabPanels>
+                </Tabs>
+              </Box>
+              {/* <HStack w="full" justifyContent="flex-end">
+                <Button>{tabIndex}</Button>
+              </HStack> */}
+              {footerLinks()}
             </VStack>
           </ContentBox>
           <Show above="md">
