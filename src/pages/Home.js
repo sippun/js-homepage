@@ -1,6 +1,6 @@
 import { Container, Center } from '@chakra-ui/react';
 import { LayoutTransitions } from '../theme/Transitions';
-import { IntroText } from '../components/IntroText';
+import { IntroText } from '../components/home/IntroText';
 
 const Home = () => {
   return (

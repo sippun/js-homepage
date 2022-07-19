@@ -12,7 +12,7 @@ import {
   useToast,
 } from '@chakra-ui/react';
 import { CopyIcon, EmailIcon } from '@chakra-ui/icons';
-import { DiscordIcon } from '../components/DiscordIcon';
+import { DiscordIcon } from '../components/icons/DiscordIcon';
 import { LayoutTransitions, SectionTransitions } from '../theme/Transitions';
 import { NavLeft } from '../components/NavArrowButtons';
 

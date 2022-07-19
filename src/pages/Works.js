@@ -11,9 +11,9 @@ import {
   LayoutTransitions,
   SectionTransitions
 } from '../theme/Transitions';
-import { GridItem } from '../components/GridItem';
+import { GridItem } from '../components/works/GridItem';
 import { ContentBox } from '../components/ContentBox';
-import WorksCard from '../components/WorksCard';
+import WorksCard from '../components/works/WorksCard';
 import { worksData } from '../data/WorksData';
 import { NavLeft, NavRight } from '../components/NavArrowButtons';
 

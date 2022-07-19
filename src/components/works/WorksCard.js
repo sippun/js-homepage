@@ -11,9 +11,9 @@ import {
   Text,
   useColorModeValue,
 } from "@chakra-ui/react";
-import { ContentTransitions } from "../theme/Transitions";
+import { ContentTransitions } from "../../theme/Transitions";
 import { ExternalLinkIcon } from '@chakra-ui/icons';
-import { GithubIcon } from './GithubIcon';
+import { GithubIcon } from '../icons/GithubIcon';
 
 const WorksCard = ({ data, isSelected }) => {
 

@@ -18,7 +18,7 @@ import { DownloadIcon } from '@chakra-ui/icons';
 import { LayoutTransitions, SectionTransitions } from '../theme/Transitions';
 import { ContentBox } from '../components/ContentBox';
 import { aboutData, quotesData } from '../data/AboutData';
-import EudaimonicPopover from '../components/EudaimonicPopover';
+import EudaimonicPopover from '../components/about/EudaimonicPopover';
 import { NavLeft, NavRight } from '../components/NavArrowButtons';
 import { Markup } from 'interweave';
 
