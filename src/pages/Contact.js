@@ -12,6 +12,7 @@ import {
   useToast,
 } from '@chakra-ui/react';
 import { CopyIcon, EmailIcon } from '@chakra-ui/icons';
+import { DiscordIcon } from '../components/DiscordIcon';
 import { LayoutTransitions, SectionTransitions } from '../theme/Transitions';
 import { NavLeft } from '../components/NavArrowButtons';
 
@@ -85,7 +86,7 @@ const Home = () => {
                       <Button
                         as={Link}
                         href="discord:///discord.com/users/sippy#8480"
-                        rightIcon={<EmailIcon />}
+                        rightIcon={<DiscordIcon />}
                         alignSelf="end"
                       >
                         Add discord
