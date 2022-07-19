@@ -14,7 +14,6 @@ import {
 import { ChevronLeftIcon, ExternalLinkIcon } from '@chakra-ui/icons';
 import { LayoutTransitions } from '../theme/Transitions';
 import { ContentBox } from '../components/ContentBox'; 
-import { GOOGLE_API_KEY } from '../keys';
 import axios from 'axios';
 import { getBook } from '../data/BooksData';
 import { Markup } from 'interweave';
@@ -26,7 +25,7 @@ const Book = () => {
   const baseURL = "https://www.googleapis.com/books/v1/volumes/" + bookData.id + "?projection=lite&key=";
 
   useEffect(() => {
-    axios.get(baseURL + GOOGLE_API_KEY).then((response) => {
+    axios.get(baseURL + process.env.REACT_APP_GOOGLE_API_KEY).then((response) => {
       setBookInfo(response);
       //console.log(response.data);
     });
