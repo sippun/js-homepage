@@ -1,4 +1,5 @@
 import { useState } from 'react';
+import { Link as ReactLink } from 'react-router-dom';
 import {
   Box,
   Button,
@@ -29,14 +30,23 @@ const About = () => {
   };
 
   const footerLinks = () => {
-    if(tabIndex === 0) {
-      return (
-        <HStack w="full" justifyContent="flex-end">
-          <Text>See my</Text>
-          <Button>Works</Button>
-        </HStack>
-      );
-    }
+    return(
+      <VStack w="full">
+        { tabIndex === 0 ?
+          <HStack w="full" justifyContent="flex-end">
+            <Text>See my</Text>
+            <Button as={ReactLink} to="/works">Works</Button>
+          </HStack> :
+          tabIndex === 1 ?
+          <HStack w="full" justifyContent="flex-end">
+            <Text>See my</Text>
+            <Button as={ReactLink} to="/readinglist">Reading List</Button>
+          </HStack> :
+          <></>
+        }
+        <Box w="full" h="4px"/>
+      </VStack>
+    );
   }
 
   return (
