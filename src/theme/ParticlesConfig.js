@@ -177,7 +177,7 @@ export const Bubbles =
             value: "#ffffff"
           },
           stroke: {
-            width: 2,
+            width: 1,
             color: "#A7233A"
           }
         }
