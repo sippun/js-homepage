@@ -11,6 +11,7 @@ import {
   Show,
   Text,
   Tag,
+  Wrap, WrapItem,
 } from '@chakra-ui/react';
 import { DownloadIcon } from '@chakra-ui/icons';
 import { LayoutTransitions, SectionTransitions } from '../theme/Transitions';
@@ -74,15 +75,17 @@ const About = () => {
                 <TabPanel>
                   <VStack h="full" justifyContent="space-between" flexFlow="column">
                     <HStack w="full" justifyContent="space-between">
-                      <HStack>
+                      <Wrap>
                         {aboutData.skills.map((skill) => {
                           return(
-                            <Tag key={skill} w="fit-content">
-                              {skill}
-                            </Tag>
+                            <WrapItem>
+                              <Tag key={skill} w="fit-content">
+                                {skill}
+                              </Tag>
+                            </WrapItem>
                           );
                         })}
-                      </HStack>
+                      </Wrap>
                       <Button
                         as={Link}
                         rightIcon={<DownloadIcon />}

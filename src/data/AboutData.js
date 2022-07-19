@@ -1,14 +1,14 @@
 export const aboutData = {
   education: "While at UCSC I received Dean's Honors for an academic school year, and was nominated by faculty to receive the David S. Lee Scholarship.",
   history: "My first programming experience started with Java in high school. I learned OOP fundamentals and created a few games. While getting my B.S. in Computer Science at UCSC, I continued working with Java and learned C, C++, Python, Javascript, Firebase, PostgreSQL, Unix shell scripts, etc. among many other languages and technologies. Outside of school I've learned Android mobile and React web development on my own.",
-  recent: "Lately I have been working mainly on the front end for web projects with Javascript, HTML, and CSS. My current frameworks of choice are React and Chakra UI. I am also constantly expanding my skillset and staying curious about tech and the world.",
-  goal: "Currently I am looking to solve problems and level up at an engineering company working to bring out our best as humans. I'm most interested in creating solutions that help people with one or more of the following:",
+  recent: "Lately I have been working mainly on the front end for web projects with Javascript, HTML, and CSS. Right now I use React and Chakra UI as my frameworks of choice. I am also constantly expanding my skillset and staying curious about tech and the world.",
+  goal: "Currently I am looking to solve problems and level up my abilities at an engineering company working to bring out our best as humans. I'm most interested in creating solutions that help people with one or more of the following:",
   domains: "<ul><li>Learn and acquire knowledge.</li><li>Gain self-determination (autonomy, competence, relatedness).</li><li>Move towards self-actualization (the complete realization of one's potential).</li><li>Improve their physical and/or mental health.</li></ul>",
   interests: "I love to learn about philosophy, psychology, design, economics, and business. My hobbies include reading, gaming, skateboarding, fitness, MMA, and playing piano.",
   books: "My favorite books include Flow, by Mihaly Csikszentmihalyi, Quiet, by Susan Cain, and The Book, by Alan Watts.",
   general: "test",
   personal: "test",
-  skills: ["Javascript", "HTML", "CSS", "React"],
+  skills: ["Javascript", "HTML", "CSS", "React", "Chakra UI"],
 };
 
 export const quotesData = [
