@@ -3,19 +3,20 @@ import { Box,
   Heading,
   HStack,
   Image,
+  Link,
   LinkBox,
   LinkOverlay,
   Show,
   SimpleGrid,
   Text,
 } from "@chakra-ui/react";
-import { Link } from "react-router-dom";
+import { Link as ReactLink } from "react-router-dom";
 import { LayoutTransitions, SectionTransitions } from "../theme/Transitions";
 import { ContentBox } from "../components/ContentBox";
 import { booksData } from "../data/BooksData";
 import { NavLeft, NavRight } from "../components/NavArrowButtons";
 
-const mapBookIcons = (books) => {
+const mapBookIcons = (books, type = "book") => {
   return books.map(function(book){
     var bookImage = 'images/books/' + book.image;
     return (
@@ -42,8 +43,10 @@ const mapBookIcons = (books) => {
             objectPosition="top"
           />
           <LinkOverlay
-            as={Link}
-            to={"/readinglist/" + book.title}
+            as={type === "book" ? ReactLink : Link}
+            to={type === "book" ? "/readinglist/" + book.title : ""}
+            href={type === "book" ? "" : book.url}
+            target="_blank" rel="noopener noreferrer"
           >
             <Text
               pos="absolute"
@@ -69,6 +72,7 @@ const mapBookIcons = (books) => {
 const currentList = mapBookIcons(booksData.current);
 const bookList22 = mapBookIcons(booksData.books2022);
 const bookList21 = mapBookIcons(booksData.books2021);
+const courses = mapBookIcons(booksData.courses, "course");
 
 const ReadingList = () => {
   return (
@@ -116,6 +120,15 @@ const ReadingList = () => {
             <Box mt={3} flex={1} alignItems="center">
               <SimpleGrid columns={{base: 3, sm: 5}} rowGap={4}>
                 {bookList21}
+              </SimpleGrid>
+            </Box>
+
+            <Heading mt={3} fontSize="xl">
+              Lectures and Courses
+            </Heading>
+            <Box mt={3} mb={3} flex={1} alignItems="center">
+              <SimpleGrid columns={{base: 3, sm: 5}} rowGap={4}>
+                 {courses}
               </SimpleGrid>
             </Box>
           </ContentBox>
