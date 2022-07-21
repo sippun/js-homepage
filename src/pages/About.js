@@ -11,7 +11,6 @@ import {
   HStack,
   Show,
   Text,
-  Tag,
   Wrap, WrapItem,
 } from '@chakra-ui/react';
 import { DownloadIcon } from '@chakra-ui/icons';
@@ -20,6 +19,7 @@ import { ContentBox } from '../components/ContentBox';
 import { aboutData, quotesData } from '../data/AboutData';
 import EudaimonicPopover from '../components/about/EudaimonicPopover';
 import { NavLeft, NavRight } from '../components/NavArrowButtons';
+import { TechTag } from '../components/TechTag';
 import { Markup } from 'interweave';
 
 const About = () => {
@@ -99,10 +99,8 @@ const About = () => {
                           <Wrap>
                             {aboutData.skills.map((skill) => {
                               return(
-                                <WrapItem>
-                                  <Tag key={skill} w="fit-content">
-                                    {skill}
-                                  </Tag>
+                                <WrapItem key={skill}>
+                                  <TechTag>{skill}</TechTag>
                                 </WrapItem>
                               );
                             })}
