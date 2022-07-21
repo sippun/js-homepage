@@ -10,7 +10,7 @@ const ContentBox = (props) => {
       bgColor={useColorModeValue("clearergrey", "cleargrey")}
       borderRadius="lg"
       px={4}
-      py={2}
+      pt={2}
       overflow="auto"
       __css={{
         '&::-webkit-scrollbar': {
