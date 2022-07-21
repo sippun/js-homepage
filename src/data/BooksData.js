@@ -232,6 +232,13 @@ export const booksData = {
       image:"9780140238563_p0_v1_s1200x630.jpg",
       url:"https://www.goodreads.com/book/show/270746.A_Short_History_of_Financial_Euphoria"
     },
+    {
+      title:"The Essence of the Bhagavad Gita",
+      id:"esAyEAAAQBAJ",
+      info:"",
+      image:"512znIh0QDL._SL500_.jpg",
+      url:"https://www.audible.com/pd/The-Essence-of-the-Bhagavad-Gita-Audiobook/B002V1COVY"
+    },
   ],
   "courses" : [
     {

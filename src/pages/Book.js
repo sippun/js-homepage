@@ -62,7 +62,7 @@ const Book = () => {
               
               <HStack alignItems="start" mt={3}>
                 
-                <Box w='200px' h='200px' bg='aqua' mb={1}>
+                <Box w="200px" h="200px" bg="aqua" mb={1}>
                   <Image
                     w="200px"
                     h="200px"
@@ -71,7 +71,7 @@ const Book = () => {
                     src={bookImage}
                   />
                 </Box>
-                <Box>
+                <Box maxW="calc(768px - 200px - 2rem - 12px)">
                   <Heading fontSize="2xl" fontFamily="Inter">{bookInfo.data.volumeInfo.title}</Heading>
                   <Heading fontSize="md">{bookInfo.data.volumeInfo.subtitle}</Heading>
                   <Heading fontSize="md" fontFamily="Inter" mt={2}>By&nbsp;
