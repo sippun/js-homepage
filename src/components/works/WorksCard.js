@@ -10,7 +10,10 @@ import {
   HStack,
   Text,
   useColorModeValue,
+  Wrap,
+  WrapItem,
 } from "@chakra-ui/react";
+import { TechTag } from '../TechTag';
 import { ContentTransitions } from "../../theme/Transitions";
 import { ExternalLinkIcon } from '@chakra-ui/icons';
 import { GithubIcon } from '../icons/GithubIcon';
@@ -30,15 +33,15 @@ const WorksCard = ({ data, isSelected }) => {
             <Box w='300px' h='200px' bg='aqua' mb={1}>
             <Image  w='300px' h='200px' src={url} fit="cover" objectPosition="center" />
             </Box>
-            <Flex flexFlow="row wrap" w="300px" h="inherit">
+            <Wrap spacing={3}>
               {data.stack.map((tech) => {
                 return(
-                  <Tag key={tech} w="fit-content" mr={4} mt={2}>
-                    {tech}
-                  </Tag>
+                  <WrapItem>
+                    <TechTag>{tech}</TechTag>
+                  </WrapItem>
                 );
               })}
-            </Flex>
+            </Wrap>
             
           </Stack>
           <VStack justifyContent="space-between" w="full">
