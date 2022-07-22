@@ -34,7 +34,7 @@ const WorksCard = ({ data, isSelected }) => {
             <Wrap spacing={3}>
               {data.stack.map((tech) => {
                 return(
-                  <WrapItem>
+                  <WrapItem key={tech}>
                     <TechTag>{tech}</TechTag>
                   </WrapItem>
                 );
