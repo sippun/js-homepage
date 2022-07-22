@@ -46,7 +46,8 @@ const mapBookIcons = (books, type = "book") => {
             as={type === "book" ? ReactLink : Link}
             to={type === "book" ? "/readinglist/" + book.title : ""}
             href={type === "book" ? "" : book.url}
-            target="_blank" rel="noopener noreferrer"
+            target={type === "book" ? "" : "_blank"}
+            rel="noopener noreferrer"
           >
             <Text
               pos="absolute"
