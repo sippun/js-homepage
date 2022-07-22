@@ -1,7 +1,13 @@
 export const booksData = {
   "current" : [
     {
-      path:"bigsur",
+      title:"Software Engineering at Google",
+      id:"WXTTDwAAQBAJ",
+      info:"",
+      image:"51qxBkkwLpL._SL500_.jpg",
+      url:"https://www.audible.com/pd/Software-Engineering-at-Google-Audiobook/B08VLS9Y95"
+    },
+    {
       title:"Big Sur and the Oranges of Hieronymus Bosch",
       id:"Q4zL_kXuN4gC",
       info:"",
@@ -9,7 +15,6 @@ export const booksData = {
       url:"https://www.goodreads.com/book/show/248.Big_Sur_and_the_Oranges_of_Hieronymus_Bosch"
     },
     {
-      path:"richestman",
       title:"The Richest Man in Babylon",
       id:"wlQLrgEACAAJ",
       info:"",
@@ -17,7 +22,6 @@ export const booksData = {
       url:"https://www.goodreads.com/book/show/1052.The_Richest_Man_in_Babylon"
     },
     {
-      path:"thinking",
       title:"Thinking, Fast and Slow",
       id:"ZuKTvERuPG8C",
       info:"",
@@ -25,7 +29,6 @@ export const booksData = {
       url:"https://www.goodreads.com/book/show/11468377-thinking-fast-and-slow"
     },
     {
-      path:"bodyscore",
       title:"The Body Keeps The Score",
       id:"vHnZCwAAQBAJ",
       info:"",
@@ -33,7 +36,6 @@ export const booksData = {
       url:"https://www.goodreads.com/book/show/18693771-the-body-keeps-the-score"
     },
     {
-      path:"nobadparts",
       title:"No Bad Parts",
       id:"sLoxEAAAQBAJ",
       info:"Healing Trauma and Restoring Wholeness with the Internal Family Systems Model",
@@ -42,6 +44,13 @@ export const booksData = {
     },
   ],
   "books2022" : [
+    {
+      title:"Championship Fighting",
+      id:"tBNDCQAAQBAJ",
+      info:"",
+      image:"23522313.jpg",
+      url:"https://www.goodreads.com/book/show/23522313-championship-fighting",
+    },
     {
       title:"Peace Is Every Step",
       id:"3-8KAAAAYAAJ",
