@@ -10,12 +10,12 @@ export const worksData = [
     link:"",
   },
   {
-    id:"stealth",
-    title:"Stealth Healthcare Startup",
+    id:"kaizen",
+    title:"Kaizen EHR",
     stack:["MongoDB", "Express.js", "React", "Node.js", "Chakra UI"],
     thumbnail:"1519952073073.jfif",
     image:"AdobeStock_439644641.jpeg",
-    description:"Currently building the front end for a mental health startup's prototype and speeding up their time to market. We're keeping the details under wraps for now but more information to be revealed in the near future.",
+    description:"Currently building the front end for a mental health startup's prototype and speeding up their time to market.",
     github:"",
     link:"",
   },
@@ -37,6 +37,6 @@ export const worksData = [
     image:"home_v1.jpg",
     description:"My first personal website made with a React template. A great introduction into some of the details of working with web technology.",
     github:"https://github.com/sippun/js-resume",
-    link:"https://joelsheng.com",
+    link:"https://old.joelsheng.com",
   },
 ];
