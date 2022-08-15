@@ -38,7 +38,9 @@ const Book = () => {
   );
 
   const bookDescription = bookInfo.data.volumeInfo.description;
-  const bookImage = '/images/books/' + bookData.image;
+  const bookImage = bookData.image ?
+                      '/images/books/' + bookData.image
+                      : bookInfo.data.volumeInfo.imageLinks.medium;
 
   return (
     <LayoutTransitions>
@@ -92,13 +94,13 @@ const Book = () => {
             </Box>
             <VStack w="full">
               <HStack w="full" justifyContent="flex-end">
-                <a href={bookData.url} target="_blank" rel="noopener noreferrer">
+                {bookData.url && <a href={bookData.url} target="_blank" rel="noopener noreferrer">
                   <Button 
                     rightIcon={<ExternalLinkIcon />}
                   >
                     Link
                   </Button>
-                </a>
+                </a>}
               </HStack>
               <Box w="full" h="4px"/>
             </VStack>
