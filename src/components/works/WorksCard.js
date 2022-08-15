@@ -44,7 +44,9 @@ const WorksCard = ({ data, isSelected }) => {
           </Stack>
           <VStack justifyContent="space-between" w="full">
             <Text color={useColorModeValue("#3e4444", "#dee3e3")}>
-              {data.description}
+              {data.description.map((desc, i) => {
+                return(<Text key={i}>{desc}</Text>);
+              })}
             </Text>
             <HStack w="full" justifyContent="flex-end">
               {data.github === "" ? <></> :

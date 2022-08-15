@@ -23,7 +23,7 @@ const Works = () => {
   //   return worksData.find(({ id }) => id === "js-homepage");
   // };
   //const[showWork, setShowWork] = useState(showWorkInit());
-  const[showWork, setShowWork] = useState("js-homepage");
+  const[showWork, setShowWork] = useState("kaizen");
 
   const changeWork = (set) => {
     //setShowWork(worksData.find(({ id }) => id === set));
