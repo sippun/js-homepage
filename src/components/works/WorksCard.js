@@ -45,7 +45,13 @@ const WorksCard = ({ data, isSelected }) => {
           <VStack justifyContent="space-between" w="full">
             <Text color={useColorModeValue("#3e4444", "#dee3e3")}>
               {data.description.map((desc, i) => {
-                return(<Text key={i}>{desc}</Text>);
+                return(
+                  <Box>
+                    {/* Line break for multi line descriptions */}
+                    {(i > 0) && <br/>} 
+                    <Text key={i}>{desc}</Text>
+                  </Box>
+                );
               })}
             </Text>
             <HStack w="full" justifyContent="flex-end">
