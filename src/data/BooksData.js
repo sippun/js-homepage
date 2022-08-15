@@ -48,8 +48,8 @@ export const booksData = {
       title:"The Big Leap",
       id:"RSLjcPaFcKAC",
       info:"",
-      image:"",
-      url:"",
+      image:"6391876.jpg",
+      url:"https://www.goodreads.com/book/show/6391876-the-big-leap",
     },
     {
       title:"Championship Fighting",

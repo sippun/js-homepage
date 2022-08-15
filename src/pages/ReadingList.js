@@ -18,7 +18,7 @@ import { NavLeft, NavRight } from "../components/NavArrowButtons";
 
 const mapBookIcons = (books, type = "book") => {
   return books.map(function(book){
-    var bookImage = 'images/books/' + book.image;
+    const bookImage = 'images/books/' + book.image;
     return (
       <LinkBox key={book.title}>
         <Box
