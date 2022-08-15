@@ -27,14 +27,15 @@ const EudaimonicPopover = () => {
         <PopoverBody>
           Relating to the “pursuit of virtue, excellence, and the best within us.”
           As opposed to hedonic, or the pursuit of comfort and pleasure.
-          (Which is also good.)<br />
+          (Which can be good too.)
+          <br />
           <Link
             color='accent.300'
             href='https://positivepsychology.com/eudaimonia/'
             target="_blank"
             rel="noreferrer noopener"
           >
-            https://positivepsychology.com/eudaimonia/
+            positivepsychology.com/eudaimonia/
           </Link>
           <br />
           <Link

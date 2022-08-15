@@ -18,9 +18,11 @@ import { LayoutTransitions, SectionTransitions } from '../theme/Transitions';
 import { ContentBox } from '../components/ContentBox';
 import { aboutData, quotesData } from '../data/AboutData';
 import EudaimonicPopover from '../components/about/EudaimonicPopover';
+import SDTPopover from '../components/about/SDTPopover';
 import { NavLeft, NavRight } from '../components/NavArrowButtons';
 import { TechTag } from '../components/TechTag';
 import { Markup } from 'interweave';
+import ActualizationPopover from '../components/about/ActualizationPopover';
 
 const About = () => {
   const [tabIndex, setTabIndex] = useState(0);
@@ -122,7 +124,13 @@ const About = () => {
                           <br />
                           <p>{aboutData.goal}</p>
                           <Box ml={8} mt={2}>
-                            <Markup content={aboutData.domains} />
+                            {/* <Markup content={aboutData.domains} /> */}
+                            <ul>
+                              <li>Learn and acquire knowledge.</li>
+                              <li>Gain <SDTPopover />.</li>
+                              <li>Move towards <ActualizationPopover />.</li>
+                              <li>Improve their physical and/or mental health.</li>
+                            </ul>
                           </Box>
                         </Box>
                       </VStack>
