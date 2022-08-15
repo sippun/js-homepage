@@ -21,7 +21,7 @@ import EudaimonicPopover from '../components/about/EudaimonicPopover';
 import SDTPopover from '../components/about/SDTPopover';
 import { NavLeft, NavRight } from '../components/NavArrowButtons';
 import { TechTag } from '../components/TechTag';
-import { Markup } from 'interweave';
+//import { Markup } from 'interweave';
 import ActualizationPopover from '../components/about/ActualizationPopover';
 
 const About = () => {
