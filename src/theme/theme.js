@@ -53,7 +53,8 @@ const theme = extendTheme({
           fontFamily: 'code'
         },
         'kanit': {
-          fontFamily: 'kanit'
+          fontFamily: 'kanit',
+          fontStyle: 'italic'
         }
       }
     },
