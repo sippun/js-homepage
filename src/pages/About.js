@@ -145,9 +145,8 @@ const About = () => {
                     <TabPanel>
                       {quotesData.map((q, i) => {
                         return (
-                          <>
+                          <Box key={i}>
                           <Text
-                            key={i}
                             fontFamily={q.font}
                             fontSize={q.size}
                             fontStyle={q.style}
@@ -164,7 +163,7 @@ const About = () => {
                           >
                             &mdash;&nbsp;{q.by}
                           </Text>
-                          </>
+                          </Box>
                         )
                       })
                       }
