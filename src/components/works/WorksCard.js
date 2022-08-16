@@ -46,10 +46,10 @@ const WorksCard = ({ data, isSelected }) => {
             <Text color={useColorModeValue("#3e4444", "#dee3e3")}>
               {data.description.map((desc, i) => {
                 return(
-                  <Box>
+                  <Box key={i}>
                     {/* Line break for multi line descriptions */}
                     {(i > 0) && <br/>} 
-                    <Text key={i}>{desc}</Text>
+                    <Text>{desc}</Text>
                   </Box>
                 );
               })}
