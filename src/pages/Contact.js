@@ -8,6 +8,7 @@ import {
   HStack,
   Heading,
   Show,
+  Stack,
   Text,
   useToast,
 } from '@chakra-ui/react';
@@ -54,7 +55,10 @@ const Home = () => {
                   <Heading>Get in touch</Heading>
                   <HStack w="full" justifyContent="space-between">
                     <Text alignSelf="start" mt={2}>Email:</Text>
-                    <HStack>
+                    <Stack
+                      direction={{ base: "column", sm: "row"}}
+                      alignItems="end"
+                    >
                       <Button
                         //value="email"
                         rightIcon={<CopyIcon />}
@@ -68,15 +72,17 @@ const Home = () => {
                         as={Link}
                         href="mailto:joel.s.sheng@gmail.com"
                         rightIcon={<EmailIcon />}
-                        alignSelf="end"
                       >
                         Send email
                       </Button>
-                    </HStack>
+                    </Stack>
                   </HStack>
                   <HStack w="full" justifyContent="space-between">
-                    <Text>Discord: </Text>
-                    <HStack>
+                    <Text alignSelf="start" mt={2}>Discord: </Text>
+                    <Stack
+                      direction={{ base: "column", sm: "row"}}
+                      alignItems="end"
+                    >
                       <Button
                         rightIcon={<CopyIcon />}
                         onClick={() => copy("discord")}
@@ -91,7 +97,7 @@ const Home = () => {
                       >
                         Add discord
                       </Button>
-                    </HStack>
+                    </Stack>
                   </HStack>
                 </VStack>
               </Center>
