@@ -41,7 +41,7 @@ export const GridItem = ({ id, title, thumbnail = "logo192.png", setWork }) => {
         }}
         transition="0.3s"
         align="center"
-        overflow="break-word"
+        whiteSpace="normal"
       >
         {title}
       </Text>
