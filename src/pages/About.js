@@ -72,20 +72,21 @@ const About = () => {
                 <Heading mb={3} fontSize="2xl" variant="code">
                   About Me
                 </Heading>
-                <Heading ml={4} fontSize="lg" variant="kanit" fontWeight="light">
-                  A product person perpetually and pleasingly perusing publications.
-                </Heading>
-                <Heading ml={4} fontSize="lg">
-                  I like to build stuff and read things.<br />
-                </Heading>
-
-                <Heading ml={4} fontSize="lg" fontWeight="light" as="span">
-                  One of my life goals is to develop tools that improve human&nbsp;
-                </Heading>
-                <EudaimonicPopover />
-                <Heading fontSize="lg" fontWeight="light" as="span">
-                  &nbsp;wellbeing.
-                </Heading>
+                <Box pl={4}>
+                  <Heading fontSize="lg" variant="kanit" fontWeight="light">
+                    A product person perpetually and pleasingly perusing publications.
+                  </Heading>
+                  <Heading fontSize="lg">
+                    I like to build stuff and read things.<br />
+                  </Heading>
+                  <Heading fontSize="lg" fontWeight="light" as="span">
+                    One of my life goals is to develop tools that improve human {' '}
+                  </Heading>
+                  <EudaimonicPopover />
+                  <Heading fontSize="lg" fontWeight="light" as="span">
+                    wellbeing.
+                  </Heading>
+                </Box>
                 
                 <Tabs mt={6} isFitted colorScheme="accent" index={tabIndex} onChange={handleTabsChange}>
                   <TabList borderColor="cleargrey">

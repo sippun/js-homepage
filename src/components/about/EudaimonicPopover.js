@@ -16,7 +16,7 @@ const EudaimonicPopover = () => {
       <Heading fontSize="lg" fontWeight="light" as="span">
         <PopoverTrigger>
           <Link color="accent.300" fontWeight="350">
-            eudaimonic
+            eudaimonic {' '}
           </Link>
         </PopoverTrigger>
       </Heading>
