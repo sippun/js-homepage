@@ -38,6 +38,7 @@ const Book = () => {
   );
 
   const bookDescription = bookInfo.data.volumeInfo.description;
+  const bookAuthors = bookInfo.data.volumeInfo.authors;
   const bookImage = bookData.image ?
                       '/images/books/' + bookData.image
                       : bookInfo.data.volumeInfo.imageLinks.medium;
@@ -76,13 +77,13 @@ const Book = () => {
                 <Box maxW="calc(768px - 200px - 2rem - 12px)">
                   <Heading fontSize="2xl" fontFamily="Inter">{bookInfo.data.volumeInfo.title}</Heading>
                   <Heading fontSize="md">{bookInfo.data.volumeInfo.subtitle}</Heading>
-                  <Heading fontSize="md" fontFamily="Inter" mt={2} as="span">By&nbsp;</Heading>
+                  {bookAuthors && <Heading fontSize="md" fontFamily="Inter" mt={2} as="span">By&nbsp;</Heading>}
                   <Heading fontSize="md" fontFamily="Inter" mt={2} as="span">
-                    {bookInfo.data.volumeInfo.authors.map((author, i, { length }) => {
-                      if(length === 1) return author;
-                      if(i < length - 1) return author + " ";
-                      return author;
-                    })}
+                    {bookAuthors && bookAuthors.map((author, i, { length }) => {
+                        if(length === 1) return author;
+                        if(i < length - 1) return author + " ";
+                        return author;
+                      })}
                   </Heading>
                 </Box>
               </HStack>

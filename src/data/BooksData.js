@@ -89,6 +89,13 @@ export const booksData = {
   ],
   "books2021" : [
     {
+      title:"Mahabharata: The Eternal Quest",
+      id:"L-0-ngEACAAJ",
+      info:"",
+      image:"18404933.jpg",
+      url:"https://www.goodreads.com/book/show/18404933-mahabharata"
+    },
+    {
       title:"Product Management's Sacred Seven",
       id:"EeGGzgEACAAJ",
       info:"The Skills Required to Crush Product Manager Interviews and be a World-Class PM",
