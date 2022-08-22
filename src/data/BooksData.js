@@ -1,6 +1,13 @@
 export const booksData = {
   "current" : [
     {
+      title:"How to See",
+      id:"cwBlDwAAQBAJ",
+      info:"",
+      image:"40981040._SY475_.jpg",
+      url:"https://www.goodreads.com/book/show/41563870-how-to-see"
+    },
+    {
       title:"Software Engineering at Google",
       id:"WXTTDwAAQBAJ",
       info:"",
