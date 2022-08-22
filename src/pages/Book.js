@@ -81,7 +81,7 @@ const Book = () => {
                   <Heading fontSize="md" fontFamily="Inter" mt={2} as="span">
                     {bookAuthors && bookAuthors.map((author, i, { length }) => {
                         if(length === 1) return author;
-                        if(i < length - 1) return author + " ";
+                        if(i < length - 1) return author + ", ";
                         return author;
                       })}
                   </Heading>

@@ -138,6 +138,13 @@ export const booksData = {
       url:"https://www.audible.com/pd/One-Up-On-Wall-Street-Audiobook/B002UZZ12A"
     },
     {
+      title:"N*****",
+      id:"heizE1MIk4gC",
+      info:"",
+      image:"178528.jpg",
+      url:"https://www.goodreads.com/book/show/178528.Nigger"
+    },
+    {
       title:"The Autobiography of Malcolm X",
       id:"EtVfCgAAQBAJ",
       info:"",
