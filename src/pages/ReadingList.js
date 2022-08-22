@@ -1,4 +1,6 @@
-import { Box,
+import {
+  Box,
+  Button,
   Container,
   Heading,
   HStack,
@@ -20,7 +22,13 @@ const mapBookIcons = (books, type = "book") => {
   return books.map(function(book){
     const bookImage = 'images/books/' + book.image;
     return (
-      <LinkBox key={book.title}>
+      <LinkBox
+        key={book.title}
+        as={Button}
+        p={0}
+        w="fit-content"
+        h="fit-content"
+      >
         <Box
           role="group"
           w="100%"
@@ -48,18 +56,23 @@ const mapBookIcons = (books, type = "book") => {
             href={type === "book" ? "" : book.url}
             target={type === "book" ? "" : "_blank"}
             rel="noopener noreferrer"
+            tabIndex="-1"
           >
             <Text
               pos="absolute"
+              w="full"
               top="5%"
               px={1}
               fontSize={14}
+              fontWeight="medium"
               color="white"
               opacity={0}
               _groupHover={{
                 opacity: 1
               }}
               transition="0.3s"
+              align="center"
+              whiteSpace="normal"
             >
               {book.title}
             </Text>
