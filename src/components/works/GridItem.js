@@ -34,6 +34,7 @@ export const GridItem = ({ id, title, thumbnail = "logo192.png", setWork }) => {
         top="5%"
         px={1}
         fontSize={14}
+        fontWeight="medium"
         color="white"
         opacity={0}
         _groupHover={{
