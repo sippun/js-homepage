@@ -76,12 +76,13 @@ const Book = () => {
                 <Box maxW="calc(768px - 200px - 2rem - 12px)">
                   <Heading fontSize="2xl" fontFamily="Inter">{bookInfo.data.volumeInfo.title}</Heading>
                   <Heading fontSize="md">{bookInfo.data.volumeInfo.subtitle}</Heading>
-                  <Heading fontSize="md" fontFamily="Inter" mt={2}>By&nbsp;
-                  {bookInfo.data.volumeInfo.authors.map((author, i, { length }) => {
-                    if(length === 1) return <>{author}</>;
-                    if(i < length - 1) return <>{author}, &nbsp;</>;
-                    return <>{author}</>;
-                  })}
+                  <Heading fontSize="md" fontFamily="Inter" mt={2} as="span">By&nbsp;</Heading>
+                  <Heading fontSize="md" fontFamily="Inter" mt={2} as="span">
+                    {bookInfo.data.volumeInfo.authors.map((author, i, { length }) => {
+                      if(length === 1) return author;
+                      if(i < length - 1) return author + " ";
+                      return author;
+                    })}
                   </Heading>
                 </Box>
               </HStack>
