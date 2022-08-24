@@ -17,6 +17,7 @@ import { ContentBox } from '../components/ContentBox';
 import axios from 'axios';
 import { getBook } from '../data/BooksData';
 import { Markup } from 'interweave';
+import CoverModal from '../components/book/CoverModal';
 
 const Book = () => {
   const { book } = useParams();
@@ -34,6 +35,7 @@ const Book = () => {
   if(!bookInfo) return (
     <Container h="calc(100vh - 64px)" maxW="container.xl" p={0} centerContent justifyContent="center">
       
+      <CoverModal bookImage={'/images/books/' + bookData.image} />
     </Container>
   );
 
