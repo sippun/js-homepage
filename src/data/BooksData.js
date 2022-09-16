@@ -1,6 +1,20 @@
 export const booksData = {
   "current" : [
     {
+      title:"The Secret of Shelter Island",
+      id:"GQyODAEACAAJ",
+      info:"",
+      image:"6474975.jpg",
+      url:"https://www.goodreads.com/book/show/6474975-the-secret-of-shelter-island"
+    },
+    {
+      title:"What Color is Your Parachute",
+      id:"4AILEAAAQBAJ",
+      info:"",
+      image:"55083611._SY475_.jpg",
+      url:"https://www.goodreads.com/book/show/55083611-what-color-is-your-parachute-2021"
+    },
+    {
       title:"How to See",
       id:"cwBlDwAAQBAJ",
       info:"",
@@ -13,13 +27,6 @@ export const booksData = {
       info:"",
       image:"51qxBkkwLpL._SL500_.jpg",
       url:"https://www.audible.com/pd/Software-Engineering-at-Google-Audiobook/B08VLS9Y95"
-    },
-    {
-      title:"Big Sur and the Oranges of Hieronymus Bosch",
-      id:"Q4zL_kXuN4gC",
-      info:"",
-      image:"248.jpg",
-      url:"https://www.goodreads.com/book/show/248.Big_Sur_and_the_Oranges_of_Hieronymus_Bosch"
     },
     {
       title:"The Richest Man in Babylon",
@@ -51,6 +58,13 @@ export const booksData = {
     },
   ],
   "books2022" : [
+    {
+      title:"Big Sur and the Oranges of Hieronymus Bosch",
+      id:"Q4zL_kXuN4gC",
+      info:"",
+      image:"248.jpg",
+      url:"https://www.goodreads.com/book/show/248.Big_Sur_and_the_Oranges_of_Hieronymus_Bosch"
+    },
     {
       title:"The Big Leap",
       id:"RSLjcPaFcKAC",
@@ -289,6 +303,12 @@ export const booksData = {
       info:"Instructor: Professor Robert Sapolsky",
       image:"1200x630bb.jpg",
       url:"https://www.youtube.com/watch?v=NNnIGh9g6fA"
+    },
+    {
+      title:"Learning How to Learn",
+      info:"",
+      image:"Learning-How-to-Learn-Logo-with-text.png",
+      url:"https://www.coursera.org/learn/learning-how-to-learn"
     },
   ],
   "wishlist" : [
