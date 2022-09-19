@@ -35,7 +35,6 @@ const Book = () => {
   if(!bookInfo) return (
     <Container h="calc(100vh - 64px)" maxW="container.xl" p={0} centerContent justifyContent="center">
       
-      <CoverModal bookImage={'/images/books/' + bookData.image} />
     </Container>
   );
 
@@ -68,13 +67,15 @@ const Book = () => {
               <HStack alignItems="start" mt={3}>
                 
                 <Box w="200px" h="200px" bg="aqua" mb={1}>
-                  <Image
+                  
+                  <CoverModal bookImage={bookImage} />
+                  {/* <Image
                     w="200px"
                     h="200px"
                     objectFit="cover"
                     objectPosition="top"
                     src={bookImage}
-                  />
+                  /> */}
                 </Box>
                 <Box maxW="calc(768px - 200px - 2rem - 12px)">
                   <Heading fontSize="2xl" fontFamily="Inter">{bookInfo.data.volumeInfo.title}</Heading>

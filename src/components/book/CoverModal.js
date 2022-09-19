@@ -31,8 +31,8 @@ const CoverModal = ({bookImage}) => {
             <ModalBody>
               <Image
                 w="full"
-                h="full"
-                objectFit="cover"
+                h="75vh"
+                objectFit="contain"
                 src={bookImage}
                 onClick={onClose}
                 cursor="pointer"
