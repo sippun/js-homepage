@@ -1,6 +1,13 @@
 export const booksData = {
   "current" : [
     {
+      title:"Measure What Matters",
+      id:"iOzCswEACAAJ",
+      info:"",
+      image:"51HNGEmZEnL._SL500_.jpg",
+      url:"https://www.audible.com/pd/Measure-What-Matters-Audiobook/B07BMHFBCM"
+    },
+    {
       title:"The Secret of Shelter Island",
       id:"GQyODAEACAAJ",
       info:"",
@@ -58,6 +65,34 @@ export const booksData = {
     },
   ],
   "books2022" : [
+    {
+      title:"Why You Will Marry the Wrong Person",
+      id:"t0RUAQAACAAJ",
+      info:"",
+      image:"35006962._SY475_.jpg",
+      url:"https://www.goodreads.com/book/show/35006962-why-you-will-marry-the-wrong-person"
+    },
+    {
+      title:"Why We Hate Cheap Things",
+      id:"vjppAQAACAAJ",
+      info:"",
+      image:"36585353._SY475_.jpg",
+      url:"https://www.goodreads.com/book/show/36585353-why-we-hate-cheap-things"
+    },
+    {
+      title:"On Confidence",
+      id:"CGIxtAEACAAJ",
+      info:"",
+      image:"35890182._SY475_.jpg",
+      url:"https://www.goodreads.com/book/show/35890182-on-confidence"
+    },
+    {
+      title:"How to Find Love",
+      id:"qM7UswEACAAJ",
+      info:"",
+      image:"36135707._SY475_.jpg",
+      url:"https://www.goodreads.com/book/show/36135707-how-to-find-love"
+    },
     {
       title:"Consent",
       id:"AZbVDwAAQBAJ",
