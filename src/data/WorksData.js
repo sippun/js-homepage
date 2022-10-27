@@ -7,7 +7,7 @@ export const worksData = [
     image:"screens_calendar.png",
     description:["Building the front end for a mental health startup's web app using the MERN stack with Chakra UI, and speeding up their time to market.", "I'm also building the landing page with Next.js.", "Stay tuned for updates!"],
     github:"",
-    link:"",
+    link:"https://projectkaizen.io/",
   },
   {
     id:"js-homepage",
