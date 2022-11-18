@@ -12,7 +12,7 @@ import {
   Text,
   useToast,
 } from '@chakra-ui/react';
-import { CopyIcon, EmailIcon } from '@chakra-ui/icons';
+import { CopyIcon, EmailIcon, LinkIcon } from '@chakra-ui/icons';
 import { DiscordIcon } from '../components/icons/DiscordIcon';
 import { LayoutTransitions, SectionTransitions } from '../theme/Transitions';
 import { NavLeft } from '../components/NavArrowButtons';
@@ -98,6 +98,18 @@ const Home = () => {
                         Add discord
                       </Button>
                     </Stack>
+                  </HStack>
+                  <HStack w="full" justifyContent="space-between">
+                    <Text alignSelf="start" mt={2}>See more: </Text>
+                    <Button
+                      as={Link}
+                      href="https://links.joelsheng.com"
+                      rel="noreferrer noopener"
+                      rightIcon={<LinkIcon />}
+                      alignSelf="end"
+                    >
+                      Visit my links page
+                    </Button>
                   </HStack>
                 </VStack>
               </Center>
