@@ -400,12 +400,12 @@ export const booksData = {
 };
 
 export function getBook(search) {
-  let title = "";
+  let book;
   for(let key in booksData) {
-    title = booksData[key].find(({ title }) => title === search)
-    if(title) return title;
+    book = booksData[key].find(({ title }) => title === search)
+    if(book) return book;
   }
-  return title;
+  return book;
   // booksData.current.find(({ title }) => title === search);
   // if (title) return title;
   // title = booksData.books2022.find(({ title }) => title === search);
