@@ -400,12 +400,18 @@ export const booksData = {
 };
 
 export function getBook(search) {
-  let title = booksData.current.find(({ title }) => title === search);
-  if (title) return title;
-  title = booksData.books2022.find(({ title }) => title === search);
-  if (title) return title;
-  title = booksData.books2021.find(({ title }) => title === search);
-  if (title) return title;
-  title = booksData.favorites.find(({ title }) => title === search);
+  let title = "";
+  for(let key in booksData) {
+    title = booksData[key].find(({ title }) => title === search)
+    if(title) return title;
+  }
   return title;
+  // booksData.current.find(({ title }) => title === search);
+  // if (title) return title;
+  // title = booksData.books2022.find(({ title }) => title === search);
+  // if (title) return title;
+  // title = booksData.books2021.find(({ title }) => title === search);
+  // if (title) return title;
+  // title = booksData.favorites.find(({ title }) => title === search);
+  // return title;
 }
