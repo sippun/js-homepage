@@ -1,5 +1,5 @@
 import { useEffect, useState } from 'react';
-import { Link as ReactLink, useParams } from 'react-router-dom';
+import { Link as ReactLink, useNavigate, useParams } from 'react-router-dom';
 import {
   Box,
   Button,
@@ -19,17 +19,22 @@ import { Markup } from 'interweave';
 import CoverModal from '../components/book/CoverModal';
 
 const Book = () => {
+  const navigate = useNavigate();
   const { book } = useParams();
   const bookData = getBook(book); //bookData - local book data
   const [bookInfo, setBookInfo] = useState(null); //bookInfo - from google books api
-  const baseURL = "https://www.googleapis.com/books/v1/volumes/" + bookData.id + "?projection=lite&key=";
 
   useEffect(() => {
-    axios.get(baseURL + process.env.REACT_APP_GOOGLE_API_KEY).then((response) => {
-      setBookInfo(response);
-      //console.log(response.data);
-    });
-  }, [baseURL]);
+    if(!bookData) {
+      navigate("/404");
+    } else {
+      const baseURL = "https://www.googleapis.com/books/v1/volumes/" + bookData.id + "?projection=lite&key=";
+      axios.get(baseURL + process.env.REACT_APP_GOOGLE_API_KEY).then((response) => {
+        setBookInfo(response);
+        //console.log(response.data);
+      });
+    }
+  }, []);
 
   if(!bookInfo) return (
     <Container h="calc(100vh - 64px)" maxW="container.xl" p={0} centerContent justifyContent="center">

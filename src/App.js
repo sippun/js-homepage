@@ -47,13 +47,14 @@ function App() {
         <Container maxW="container.xl" overflow="hidden" p={0}>
           <AnimatePresence exitBeforeEnter>
             <Routes location={location} key={location.pathname}>
-              <Route path="*" element={<NotFound />} />
               <Route path="/about" element={<About />} />
               <Route path="/" element={<Home />} />
               <Route path="/works" element={<Works />} />
               <Route path="/readinglist" element={<ReadingList />} />
               <Route path="/readinglist/:book" element={<Book />} />
               <Route path="/contact" element={<Contact />} />
+              <Route path="/404" element={<NotFound />} />
+              <Route path="*" element={<NotFound />} />
             </Routes>
           </AnimatePresence>
         </Container>
