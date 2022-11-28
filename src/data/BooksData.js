@@ -353,26 +353,50 @@ export const booksData = {
       url:"https://www.coursera.org/learn/learning-how-to-learn"
     },
   ],
-  "wishlist" : [
+  // "wishlist" : [
+  //   {
+  //     title:"A Personal Matter",
+  //     info:"",
+  //     image:"",
+  //     url:"https://www.goodreads.com/book/show/25191.A_Personal_Matter"
+  //   },
+  //   {
+  //     title:"Snow Country",
+  //     info:"",
+  //     image:"",
+  //     url:"https://www.goodreads.com/book/show/14028.Snow_Country"
+  //   },
+  //   {
+  //     title:"No Longer Human",
+  //     info:"",
+  //     image:"",
+  //     url:"https://www.goodreads.com/book/show/194746.No_Longer_Human"
+  //   }
+  // ],
+  "favorites" : [
     {
-      title:"A Personal Matter",
+      title:"Flow",
+      id:"QVjPsd1UukEC",
       info:"",
-      image:"",
-      url:"https://www.goodreads.com/book/show/25191.A_Personal_Matter"
+      image:"117101.jpg",
+      url:"https://www.goodreads.com/book/show/66354.Flow"
     },
     {
-      title:"Snow Country",
+      title:"Quiet",
+      id:"iuuMEAAAQBAJ",
       info:"",
-      image:"",
-      url:"https://www.goodreads.com/book/show/14028.Snow_Country"
+      image:"8520610.jpg",
+      url:"https://www.goodreads.com/book/show/8520610-quiet",
+      thumbPosition:"center",
     },
     {
-      title:"No Longer Human",
+      title:"The Book",
+      id:"YKPt96ZdidYC",
       info:"",
-      image:"",
-      url:"https://www.goodreads.com/book/show/194746.No_Longer_Human"
+      image:"The-book-Alan-watts.jpg",
+      url:"https://www.goodreads.com/book/show/60551.The_Book"
     }
-  ],
+  ]
 };
 
 export function getBook(search) {
@@ -381,5 +405,7 @@ export function getBook(search) {
   title = booksData.books2022.find(({ title }) => title === search);
   if (title) return title;
   title = booksData.books2021.find(({ title }) => title === search);
+  if (title) return title;
+  title = booksData.favorites.find(({ title }) => title === search);
   return title;
 }

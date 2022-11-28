@@ -23,6 +23,7 @@ import { NavLeft, NavRight } from '../components/NavArrowButtons';
 import { TechTag } from '../components/TechTag';
 //import { Markup } from 'interweave';
 import ActualizationPopover from '../components/about/ActualizationPopover';
+import FavBooks from '../components/about/FavBooks';
 
 const About = () => {
   const [tabIndex, setTabIndex] = useState(0);
@@ -141,29 +142,31 @@ const About = () => {
                       <p>{aboutData.interests}</p>
                       <br />
                       <p>{aboutData.books}</p>
+                      <br />
+                      <FavBooks />
                     </TabPanel>
                     {/* Philosophical */}
                     <TabPanel>
                       {quotesData.map((q, i) => {
                         return (
-                          <Box key={i}>
-                          <Text
-                            fontFamily={q.font}
-                            fontSize={q.size}
-                            fontStyle={q.style}
-                          >
-                            <q>{q.quote}</q>
-                          </Text>
-                          <Text
-                            mb={8}
-                            mr={1}
-                            textAlign="end"
-                            fontFamily={q.font}
-                            fontStyle={q.style}
-                            fontSize="1rem"
-                          >
-                            &mdash;&nbsp;{q.by}
-                          </Text>
+                          <Box key={q.quote.substring(0, 8)}>
+                            <Text
+                              fontFamily={q.font}
+                              fontSize={q.size}
+                              fontStyle={q.style}
+                            >
+                              <q>{q.quote}</q>
+                            </Text>
+                            <Text
+                              mb={8}
+                              mr={1}
+                              textAlign="end"
+                              fontFamily={q.font}
+                              fontStyle={q.style}
+                              fontSize="1rem"
+                            >
+                              &mdash;&nbsp;{q.by}
+                            </Text>
                           </Box>
                         )
                       })
