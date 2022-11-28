@@ -402,7 +402,7 @@ export const booksData = {
 export function getBook(search) {
   let book;
   for(let key in booksData) {
-    book = booksData[key].find(({ title }) => title === search)
+    book = booksData[key].find(({ title }) => title === search);
     if(book) return book;
   }
   return book;

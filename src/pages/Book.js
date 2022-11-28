@@ -25,14 +25,28 @@ const Book = () => {
   const [bookInfo, setBookInfo] = useState(null); //bookInfo - from google books api
 
   useEffect(() => {
+    const controller = new AbortController();
+    
     if(!bookData) {
       navigate("/404");
     } else {
       const baseURL = "https://www.googleapis.com/books/v1/volumes/" + bookData.id + "?projection=lite&key=";
-      axios.get(baseURL + process.env.REACT_APP_GOOGLE_API_KEY).then((response) => {
-        setBookInfo(response);
-        //console.log(response.data);
-      });
+      axios.get(baseURL + process.env.REACT_APP_GOOGLE_API_KEY, { signal : controller.signal})
+        .then((response) => {
+          setBookInfo(response);
+          //console.log(response.data);
+        })
+        .catch(err => {
+          if(err.name === "AbortError") {
+            console.log("Cancelled google books api request");
+          } else {
+            //handle error
+          }
+        })
+    }
+
+    return () => {
+      controller.abort();
     }
   }, [bookData, navigate]);
 
